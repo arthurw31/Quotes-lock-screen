@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "updated": "2026-11-08",
   "description": "Citations affichées sur l'écran de verrouillage. Voir docs/CONSIGNES_CLAUDE.md pour le format.",
   "quotes": [
@@ -1290,6 +1290,62 @@
       "author": "Carl Sagan",
       "source": "Cosmos, 1980",
       "theme": "sciences"
+    },
+    {
+      "id": "kery-james-echec",
+      "text": "On n'est pas condamnés à l'échec.",
+      "author": "Kery James",
+      "source": "« Banlieusards », 2008",
+      "theme": "rap"
+    },
+    {
+      "id": "tupac-changes",
+      "text": "Changeons notre façon de manger, notre façon de vivre, et notre façon de nous traiter les uns les autres.",
+      "author": "Tupac Shakur",
+      "source": "« Changes », 1998 (traduction)",
+      "theme": "rap"
+    },
+    {
+      "id": "j-cole-love-yourz",
+      "text": "Il n'existe pas de vie meilleure que la tienne.",
+      "author": "J. Cole",
+      "source": "« Love Yourz », 2014 (traduction)",
+      "theme": "rap"
+    },
+    {
+      "id": "j-cole-maison",
+      "text": "Il y aura toujours une maison plus grande quelque part. Ce qui compte, c'est que les gens qui vivent dans la tienne t'aiment sincèrement.",
+      "author": "J. Cole",
+      "source": "« Love Yourz », 2014 (traduction)",
+      "theme": "rap"
+    },
+    {
+      "id": "eminem-une-chance",
+      "text": "Si tu avais une seule chance, un seul moment pour saisir tout ce que tu as toujours voulu, le saisirais-tu, ou le laisserais-tu filer ?",
+      "author": "Eminem",
+      "source": "« Lose Yourself », 2002 (traduction)",
+      "theme": "rap"
+    },
+    {
+      "id": "lauryn-hill-within",
+      "text": "Comment veux-tu gagner si, au fond de toi, ça ne va pas ?",
+      "author": "Lauryn Hill",
+      "source": "« Doo Wop (That Thing) », 1998 (traduction)",
+      "theme": "rap"
+    },
+    {
+      "id": "nas-i-can",
+      "text": "Je sais que je peux devenir ce que je veux être. Si je travaille dur, j'arriverai là où je veux être.",
+      "author": "Nas",
+      "source": "« I Can », 2002 (traduction)",
+      "theme": "rap"
+    },
+    {
+      "id": "kid-cudi-or",
+      "text": "Je suis à la poursuite du bonheur, et je sais que tout ce qui brille n'est pas toujours de l'or.",
+      "author": "Kid Cudi",
+      "source": "« Pursuit of Happiness », 2009 (traduction)",
+      "theme": "rap"
     }
   ]
 }
