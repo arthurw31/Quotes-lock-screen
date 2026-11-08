@@ -47,6 +47,8 @@ data class Appearance(
     val font: FontChoice = FontChoice.SERIF,
     val color: ColorChoice = ColorChoice.AUTO,
     val scrim: Float = 0.3f,
+    /** Ombrage doux autour du texte (0 = aucun, 1 = très marqué). */
+    val halo: Float = 0f,
     val shadow: Boolean = true,
     val showAuthor: Boolean = true
 )
@@ -65,6 +67,7 @@ class SettingsStore(context: Context) {
             font = enumOr(p.getString("font", null), d.font),
             color = enumOr(p.getString("color", null), d.color),
             scrim = p.getFloat("scrim", d.scrim),
+            halo = p.getFloat("halo", d.halo),
             shadow = p.getBoolean("shadow", d.shadow),
             showAuthor = p.getBoolean("showAuthor", d.showAuthor)
         )
@@ -80,6 +83,7 @@ class SettingsStore(context: Context) {
             .putString("font", a.font.name)
             .putString("color", a.color.name)
             .putFloat("scrim", a.scrim)
+            .putFloat("halo", a.halo)
             .putBoolean("shadow", a.shadow)
             .putBoolean("showAuthor", a.showAuthor)
             .apply()

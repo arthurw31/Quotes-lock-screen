@@ -66,6 +66,8 @@ class QuoteRendererTest {
             "sombre_defaut" to (false to Appearance()),
             "clair_auto" to (true to Appearance()),
             "sombre_italique_gauche" to (false to Appearance(font = FontChoice.SERIF_ITALIC, align = TextAlignChoice.LEFT, position = 0.55f, scrim = 0f)),
+            "clair_ombrage_moyen" to (true to Appearance(color = ColorChoice.WHITE, scrim = 0f, halo = 0.45f)),
+            "clair_ombrage_fort" to (true to Appearance(color = ColorChoice.WHITE, scrim = 0f, halo = 0.9f, hPosition = 0.4f)),
             "clair_moderne_grand" to (true to Appearance(font = FontChoice.SANS_LIGHT, size = 0.8f, color = ColorChoice.BLACK, scrim = 0.6f))
         )
         for ((name, c) in cases) {

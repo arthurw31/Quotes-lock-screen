@@ -24,7 +24,7 @@ Android ne permet pas à une appli d'écrire directement sur l'écran de verroui
 
 1. Ouvre **Citations**.
 2. Onglet **Apparence** : touche **Choisir ma photo** et sélectionne la photo que tu utilises comme fond d'écran.
-3. Fais glisser ton doigt sur l'aperçu pour placer la citation à l'endroit le plus lisible de ta photo (la position est retenue). Ajuste ensuite la taille, la police, la couleur et le voile de lisibilité. L'aperçu montre aussi l'horloge pour vérifier que rien ne se chevauche.
+3. Fais glisser ton doigt sur l'aperçu pour placer la citation à l'endroit le plus lisible de ta photo (la position est retenue). ajuste ensuite la taille, la police, la couleur, l'ombrage autour de la citation et le voile. L'aperçu montre aussi l'horloge pour vérifier que rien ne se chevauche.
 4. Touche **Appliquer**, puis verrouille ton téléphone pour voir le résultat.
 5. Onglet **Citations**, carte « Fonctionnement en arrière-plan » :
    * touche **Autoriser** pour que l'appli fonctionne sans restriction de batterie (sinon Android peut retarder le changement de citation d'un jour ou plus si tu n'ouvres jamais l'appli) ;

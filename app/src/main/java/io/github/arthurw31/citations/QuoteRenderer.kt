@@ -1,6 +1,7 @@
 package io.github.arthurw31.citations
 
 import android.graphics.Bitmap
+import android.graphics.BlurMaskFilter
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.LinearGradient
@@ -62,6 +63,7 @@ object QuoteRenderer {
         val lightText = luminance(textColor) > 0.5f
 
         if (a.scrim > 0.01f) drawScrim(canvas, w, top, block.height, block.textSize, lightText, a.scrim)
+        if (a.halo > 0.01f) drawHalo(canvas, block, left, top, lightText, a.halo)
 
         val quotePaint = block.quote.paint
         quotePaint.color = textColor
@@ -171,6 +173,37 @@ object QuoteRenderer {
                 intArrayOf(clear, solid, solid, clear), floatArrayOf(0f, 0.32f, 0.68f, 1f), Shader.TileMode.CLAMP)
         }
         canvas.drawRect(0f, y0, w.toFloat(), y1, paint)
+    }
+
+    /**
+     * Ombrage doux qui épouse le bloc de texte : un rectangle arrondi flouté,
+     * sombre derrière un texte clair (ou clair derrière un texte foncé).
+     */
+    private fun drawHalo(canvas: Canvas, block: Block, left: Float, top: Float, lightText: Boolean, strength: Float) {
+        var minX = Float.MAX_VALUE
+        var maxX = -Float.MAX_VALUE
+        fun scan(layout: StaticLayout) {
+            for (i in 0 until layout.lineCount) {
+                minX = min(minX, layout.getLineLeft(i))
+                maxX = max(maxX, layout.getLineRight(i))
+            }
+        }
+        scan(block.quote)
+        block.author?.let { scan(it) }
+        if (minX > maxX) return
+
+        val s = block.textSize
+        val padX = s * 1.1f
+        val padY = s * 0.9f
+        val rect = RectF(left + minX - padX, top - padY, left + maxX + padX, top + block.height + padY)
+        val t = strength.coerceIn(0f, 1f)
+        val alpha = (t * (if (lightText) 0.78f else 0.82f) * 255).toInt()
+        val rgb = if (lightText) 0x000000 else 0xFFFFFF
+        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = (alpha shl 24) or rgb
+            maskFilter = BlurMaskFilter(s * 1.8f, BlurMaskFilter.Blur.NORMAL)
+        }
+        canvas.drawRoundRect(rect, s * 1.5f, s * 1.5f, paint)
     }
 
     /** Luminosité moyenne (0 = noir, 1 = blanc) de la zone sous le texte. */

@@ -157,7 +157,9 @@ private fun AppearanceScreen(vm: MainViewModel, state: UiState, preview: android
         Hint("Auto choisit un texte clair ou foncé selon la luminosité de la photo derrière la citation.")
 
         Section("Lisibilité")
-        LabeledSlider("Voile derrière le texte", a.scrim, 0f..1f, "Aucun", "Marqué") { v -> set { copy(scrim = v) } }
+        LabeledSlider("Ombrage autour de la citation", a.halo, 0f..1f, "Aucun", "Marqué") { v -> set { copy(halo = v) } }
+        Hint("Une ombre douce et transparente qui suit la forme du texte. Pratique sur une zone claire de la photo.")
+        LabeledSlider("Bande sur toute la largeur", a.scrim, 0f..1f, "Aucune", "Marquée") { v -> set { copy(scrim = v) } }
         SwitchRow("Ombre douce", a.shadow) { v -> set { copy(shadow = v) } }
         SwitchRow("Afficher l'auteur", a.showAuthor) { v -> set { copy(showAuthor = v) } }
         SwitchRow("Simuler l'horloge dans l'aperçu", showClock) { showClock = it }
