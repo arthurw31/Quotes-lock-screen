@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "updated": "2026-11-08",
   "description": "Citations affichées sur l'écran de verrouillage. Voir docs/CONSIGNES_CLAUDE.md pour le format.",
   "quotes": [
@@ -298,102 +298,788 @@
       "theme": "sagesses orientales"
     },
     {
-      "id": "jobs-temps-limite",
-      "text": "Votre temps est limité, alors ne le gâchez pas à vivre la vie de quelqu'un d'autre.",
-      "author": "Steve Jobs",
-      "source": "Discours à l'université Stanford, 2005",
-      "theme": "entrepreneurs"
+      "id": "epictete-progresser",
+      "text": "Si tu veux progresser, accepte de passer pour un sot aux yeux des autres.",
+      "author": "Épictète",
+      "source": "Manuel, XIII",
+      "theme": "stoïcisme"
     },
     {
-      "id": "jobs-relier-points",
-      "text": "On ne peut pas relier les points en regardant vers l'avant ; on ne peut les relier qu'en regardant en arrière. Il faut donc faire confiance au fait qu'ils se relieront un jour.",
-      "author": "Steve Jobs",
-      "source": "Discours à l'université Stanford, 2005",
-      "theme": "entrepreneurs"
+      "id": "epictete-gemir",
+      "text": "Il faut que je meure. Faut-il donc aussi que je meure en gémissant ?",
+      "author": "Épictète",
+      "source": "Entretiens, I, 1",
+      "theme": "stoïcisme"
     },
     {
-      "id": "bezos-gentil",
-      "text": "Il est plus difficile d'être gentil que d'être intelligent.",
-      "author": "Jeff Bezos",
-      "source": "Discours à l'université de Princeton, 2010",
-      "theme": "entrepreneurs"
+      "id": "epictete-rendu",
+      "text": "Ne dis jamais d'une chose : « Je l'ai perdue », mais : « Je l'ai rendue ».",
+      "author": "Épictète",
+      "source": "Manuel, XI",
+      "theme": "stoïcisme"
     },
     {
-      "id": "bezos-choix",
-      "text": "Au bout du compte, nous sommes nos choix.",
-      "author": "Jeff Bezos",
-      "source": "Discours à l'université de Princeton, 2010",
-      "theme": "entrepreneurs"
+      "id": "epictete-maitre",
+      "text": "Nul n'est libre s'il n'est maître de lui-même.",
+      "author": "Épictète",
+      "source": "Fragments",
+      "theme": "stoïcisme"
     },
     {
-      "id": "gates-succes",
-      "text": "Le succès est un piètre professeur. Il pousse les gens intelligents à croire qu'ils ne peuvent pas perdre.",
-      "author": "Bill Gates",
-      "source": "La Route du futur, 1995",
-      "theme": "entrepreneurs"
+      "id": "epictete-outrage",
+      "text": "Ce n'est pas celui qui t'insulte ou te frappe qui t'outrage, mais le jugement que tu portes sur lui.",
+      "author": "Épictète",
+      "source": "Manuel, XX",
+      "theme": "stoïcisme"
     },
     {
-      "id": "munger-plus-sage",
-      "text": "Passez chaque journée à essayer d'être un peu plus sage qu'au moment où vous vous êtes réveillé.",
-      "author": "Charlie Munger",
-      "source": "Discours à l'université de Californie du Sud, 2007",
-      "theme": "entrepreneurs"
+      "id": "epictete-habitude",
+      "text": "Tout ce que tu veux rendre habituel, pratique-le.",
+      "author": "Épictète",
+      "source": "Entretiens, II, 18",
+      "theme": "stoïcisme"
     },
     {
-      "id": "musk-important",
-      "text": "Quand quelque chose est suffisamment important, on le fait même si les chances ne sont pas en notre faveur.",
-      "author": "Elon Musk",
-      "source": "Interview à l'émission 60 Minutes, 2014",
-      "theme": "entrepreneurs"
+      "id": "seneque-temps-a-nous",
+      "text": "Tout nous est étranger ; seul le temps est à nous.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, I, 3",
+      "theme": "stoïcisme"
     },
     {
-      "id": "naval-long-terme",
-      "text": "Jouez à des jeux sur le long terme, avec des gens qui pensent sur le long terme.",
-      "author": "Naval Ravikant",
-      "source": "« How to Get Rich », 2018",
-      "theme": "entrepreneurs"
+      "id": "seneque-nature-opinion",
+      "text": "Si tu vis selon la nature, tu ne seras jamais pauvre ; si tu vis selon l'opinion, tu ne seras jamais riche.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, XVI, 7",
+      "theme": "stoïcisme"
     },
     {
-      "id": "dalio-progres",
-      "text": "Douleur + réflexion = progrès.",
-      "author": "Ray Dalio",
-      "source": "Principes, 2017",
-      "theme": "entrepreneurs"
+      "id": "seneque-pauvre",
+      "text": "Ce n'est pas celui qui a peu qui est pauvre, mais celui qui désire davantage.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, II, 6",
+      "theme": "stoïcisme"
     },
     {
-      "id": "clear-systemes",
-      "text": "On ne s'élève pas au niveau de ses objectifs. On retombe au niveau de ses systèmes.",
-      "author": "James Clear",
-      "source": "Un rien peut tout changer (Atomic Habits), 2018",
-      "theme": "développement personnel"
+      "id": "seneque-changer-ame",
+      "text": "C'est d'âme que tu dois changer, non de ciel.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, XXVIII, 1",
+      "theme": "stoïcisme"
     },
     {
-      "id": "jordan-echecs",
-      "text": "J'ai raté plus de 9 000 tirs dans ma carrière. J'ai échoué encore et encore dans ma vie. Et c'est pour ça que je réussis.",
-      "author": "Michael Jordan",
-      "source": "Publicité Nike, 1997",
-      "theme": "sport"
+      "id": "seneque-piece-theatre",
+      "text": "Il en va de la vie comme d'une pièce de théâtre : ce qui compte, ce n'est pas sa longueur, mais la qualité du jeu.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, LXXVII, 20",
+      "theme": "stoïcisme"
     },
     {
-      "id": "pausch-murs",
-      "text": "Les murs de briques sont là pour une raison : ils nous laissent montrer à quel point nous voulons quelque chose.",
-      "author": "Randy Pausch",
-      "source": "La Dernière Leçon, 2007",
-      "theme": "contemporains"
+      "id": "seneque-chaque-jour",
+      "text": "Considère chaque jour comme une vie entière.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, CI, 10",
+      "theme": "stoïcisme"
     },
     {
-      "id": "mandela-courage",
-      "text": "J'ai appris que le courage n'est pas l'absence de peur, mais la capacité de la vaincre.",
-      "author": "Nelson Mandela",
-      "source": "Un long chemin vers la liberté, 1994",
-      "theme": "contemporains"
+      "id": "seneque-se-commander",
+      "text": "Se commander à soi-même est le plus grand des pouvoirs.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, CXIII, 30",
+      "theme": "stoïcisme"
     },
     {
-      "id": "feynman-tromper",
-      "text": "Le premier principe est de ne pas se tromper soi-même, et on est la personne la plus facile à tromper.",
-      "author": "Richard Feynman",
-      "source": "Discours au Caltech, « Cargo Cult Science », 1974",
-      "theme": "science"
+      "id": "seneque-attente",
+      "text": "Le plus grand obstacle à la vie est l'attente : elle s'accroche à demain et perd aujourd'hui.",
+      "author": "Sénèque",
+      "source": "De la brièveté de la vie, IX",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-tourmentent",
+      "text": "Certaines choses nous tourmentent plus qu'il ne faut, d'autres avant qu'il ne faut, d'autres alors qu'elles ne devraient pas nous tourmenter du tout.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, XIII, 5",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-courte-folie",
+      "text": "La colère est une courte folie.",
+      "author": "Sénèque",
+      "source": "De la colère, I, 1",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-esperer-craindre",
+      "text": "Tu cesseras de craindre si tu cesses d'espérer.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, V, 7",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-souffrir-avant",
+      "text": "Celui qui souffre avant qu'il ne soit nécessaire souffre plus qu'il n'est nécessaire.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, XCVIII, 8",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-apprendre-vivre",
+      "text": "Il faut toute la vie pour apprendre à vivre.",
+      "author": "Sénèque",
+      "source": "De la brièveté de la vie, VII, 3",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-aime",
+      "text": "Si tu veux être aimé, aime.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, IX, 6",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-comment-endurer",
+      "text": "Ce qui importe, ce n'est pas ce que tu endures, mais la manière dont tu l'endures.",
+      "author": "Sénèque",
+      "source": "De la providence, II, 4",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-mourir-chaque-jour",
+      "text": "Nous mourons chaque jour.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, XXIV, 20",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-couleur",
+      "text": "L'âme prend la couleur de ses pensées.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, V, 16",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-avenir",
+      "text": "Ne te laisse pas troubler par l'avenir. Tu l'affronteras, s'il le faut, avec la même raison qui te sert aujourd'hui pour le présent.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, VII, 8",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-promontoire",
+      "text": "Sois semblable au promontoire contre lequel les flots se brisent sans cesse : lui reste debout, et autour de lui s'apaise le bouillonnement des eaux.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, IV, 49",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-present",
+      "text": "Chacun ne vit que l'instant présent ; le reste, ou bien on l'a déjà vécu, ou bien il est incertain.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, III, 10",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-obstacle",
+      "text": "Ce qui fait obstacle à l'action fait avancer l'action. Ce qui barre la route devient la route.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, V, 20",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-opinion-autres",
+      "text": "Chacun s'aime plus que tous les autres, et pourtant attache plus d'importance à l'opinion des autres sur lui qu'à la sienne.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, XII, 4",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-oubli",
+      "text": "Bientôt tu auras tout oublié ; bientôt tous t'auront oublié.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, VII, 21",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-peu-de-choses",
+      "text": "Fais peu de choses, si tu veux être tranquille.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, IV, 24",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-essaim",
+      "text": "Ce qui n'est pas utile à l'essaim n'est pas utile à l'abeille.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, VI, 54",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-supporter",
+      "text": "Rien n'arrive à personne qu'il ne soit capable de supporter.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, V, 18",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-sans-orgueil",
+      "text": "Recevoir sans orgueil, se détacher sans regret.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, VIII, 33",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "epicure-philosopher",
+      "text": "Qu'on ne tarde pas à philosopher quand on est jeune, ni qu'on ne se lasse de philosopher quand on est vieux.",
+      "author": "Épicure",
+      "source": "Lettre à Ménécée",
+      "theme": "épicurisme"
+    },
+    {
+      "id": "epicure-suffit",
+      "text": "Rien ne suffit à qui ce qui suffit est trop peu.",
+      "author": "Épicure",
+      "source": "Sentences vaticanes, 68",
+      "theme": "épicurisme"
+    },
+    {
+      "id": "epicure-mort-absente",
+      "text": "Quand nous sommes là, la mort n'est pas là, et quand la mort est là, nous ne sommes plus.",
+      "author": "Épicure",
+      "source": "Lettre à Ménécée",
+      "theme": "épicurisme"
+    },
+    {
+      "id": "epicure-amitie",
+      "text": "De tous les biens que la sagesse procure pour le bonheur de toute une vie, le plus grand de loin est l'amitié.",
+      "author": "Épicure",
+      "source": "Maximes capitales, 27",
+      "theme": "épicurisme"
+    },
+    {
+      "id": "heraclite-caractere",
+      "text": "Le caractère d'un homme, c'est son destin.",
+      "author": "Héraclite",
+      "source": "Fragment 119 (Diels-Kranz)",
+      "theme": "Antiquité"
+    },
+    {
+      "id": "heraclite-inespere",
+      "text": "Si l'on n'espère pas l'inespéré, on ne le trouvera pas.",
+      "author": "Héraclite",
+      "source": "Fragment 18 (Diels-Kranz)",
+      "theme": "Antiquité"
+    },
+    {
+      "id": "platon-injustice",
+      "text": "Il vaut mieux subir l'injustice que la commettre.",
+      "author": "Platon",
+      "source": "Gorgias, 469c",
+      "theme": "Antiquité"
+    },
+    {
+      "id": "aristote-pratiquer",
+      "text": "C'est en pratiquant la justice que l'on devient juste, et en pratiquant le courage que l'on devient courageux.",
+      "author": "Aristote",
+      "source": "Éthique à Nicomaque, II, 1",
+      "theme": "Antiquité"
+    },
+    {
+      "id": "aristote-hirondelle",
+      "text": "Une hirondelle ne fait pas le printemps, ni un seul jour : de même, le bonheur n'est pas l'affaire d'une seule journée.",
+      "author": "Aristote",
+      "source": "Éthique à Nicomaque, I, 6",
+      "theme": "Antiquité"
+    },
+    {
+      "id": "aristote-ami",
+      "text": "L'ami est un autre soi-même.",
+      "author": "Aristote",
+      "source": "Éthique à Nicomaque, IX, 4",
+      "theme": "Antiquité"
+    },
+    {
+      "id": "horace-cueille",
+      "text": "Cueille le jour présent, en te fiant le moins possible au lendemain.",
+      "author": "Horace",
+      "source": "Odes, I, 11",
+      "theme": "Antiquité"
+    },
+    {
+      "id": "horace-ose",
+      "text": "Qui a commencé a fait la moitié du travail : ose être sage.",
+      "author": "Horace",
+      "source": "Épîtres, I, 2",
+      "theme": "Antiquité"
+    },
+    {
+      "id": "plutarque-feu",
+      "text": "L'esprit n'est pas un vase qu'il faut remplir, mais un feu qu'il faut allumer.",
+      "author": "Plutarque",
+      "source": "Comment écouter, 18",
+      "theme": "Antiquité"
+    },
+    {
+      "id": "montaigne-joie",
+      "text": "Le signe le plus certain de la sagesse, c'est une joie constante.",
+      "author": "Montaigne",
+      "source": "Essais, I, 26 (français modernisé)",
+      "theme": "humanisme"
+    },
+    {
+      "id": "montaigne-opinion",
+      "text": "Le goût des biens et des maux dépend en bonne partie de l'opinion que nous en avons.",
+      "author": "Montaigne",
+      "source": "Essais, I, 14",
+      "theme": "humanisme"
+    },
+    {
+      "id": "montaigne-craint-souffrir",
+      "text": "Qui craint de souffrir souffre déjà de ce qu'il craint.",
+      "author": "Montaigne",
+      "source": "Essais, III, 13 (français modernisé)",
+      "theme": "humanisme"
+    },
+    {
+      "id": "montaigne-arriere-boutique",
+      "text": "Il faut se réserver une arrière-boutique toute à nous, toute libre, où établir notre vraie liberté.",
+      "author": "Montaigne",
+      "source": "Essais, I, 39 (français modernisé)",
+      "theme": "humanisme"
+    },
+    {
+      "id": "montaigne-mort-partout",
+      "text": "On ne sait pas où la mort nous attend : attendons-la partout.",
+      "author": "Montaigne",
+      "source": "Essais, I, 20 (français modernisé)",
+      "theme": "humanisme"
+    },
+    {
+      "id": "pascal-esperons-vivre",
+      "text": "Ainsi nous ne vivons jamais, mais nous espérons de vivre ; et, nous préparant toujours à être heureux, il est inévitable que nous ne le soyons jamais.",
+      "author": "Pascal",
+      "source": "Pensées (Brunschvicg 172)",
+      "theme": "moralistes"
+    },
+    {
+      "id": "pascal-ange-bete",
+      "text": "L'homme n'est ni ange ni bête, et le malheur veut que qui veut faire l'ange fait la bête.",
+      "author": "Pascal",
+      "source": "Pensées (Brunschvicg 358)",
+      "theme": "moralistes"
+    },
+    {
+      "id": "pascal-silence",
+      "text": "Le silence éternel de ces espaces infinis m'effraie.",
+      "author": "Pascal",
+      "source": "Pensées (Brunschvicg 206)",
+      "theme": "moralistes"
+    },
+    {
+      "id": "pascal-plus-courte",
+      "text": "Je n'ai fait celle-ci plus longue que parce que je n'ai pas eu le loisir de la faire plus courte.",
+      "author": "Pascal",
+      "source": "Les Provinciales, XVI",
+      "theme": "moralistes"
+    },
+    {
+      "id": "descartes-me-vaincre",
+      "text": "Tâcher toujours plutôt à me vaincre que la fortune, et à changer mes désirs que l'ordre du monde.",
+      "author": "Descartes",
+      "source": "Discours de la méthode, III",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "descartes-appliquer",
+      "text": "Ce n'est pas assez d'avoir l'esprit bon, mais le principal est de l'appliquer bien.",
+      "author": "Descartes",
+      "source": "Discours de la méthode, I",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "spinoza-homme-libre",
+      "text": "L'homme libre ne pense à rien moins qu'à la mort, et sa sagesse est une méditation non de la mort mais de la vie.",
+      "author": "Spinoza",
+      "source": "Éthique, IV, proposition 67",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "spinoza-desir",
+      "text": "Le désir est l'essence même de l'homme.",
+      "author": "Spinoza",
+      "source": "Éthique, III, définition 1",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "spinoza-beatitude",
+      "text": "La béatitude n'est pas la récompense de la vertu, mais la vertu elle-même.",
+      "author": "Spinoza",
+      "source": "Éthique, V, proposition 42",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "la-rochefoucauld-maux-autrui",
+      "text": "Nous avons tous assez de force pour supporter les maux d'autrui.",
+      "author": "La Rochefoucauld",
+      "source": "Maximes, 19",
+      "theme": "moralistes"
+    },
+    {
+      "id": "la-rochefoucauld-amis",
+      "text": "Il est plus honteux de se défier de ses amis que d'en être trompé.",
+      "author": "La Rochefoucauld",
+      "source": "Maximes, 84",
+      "theme": "moralistes"
+    },
+    {
+      "id": "la-rochefoucauld-heureux",
+      "text": "On n'est jamais si heureux ni si malheureux qu'on s'imagine.",
+      "author": "La Rochefoucauld",
+      "source": "Maximes, 49",
+      "theme": "moralistes"
+    },
+    {
+      "id": "la-rochefoucauld-promettons",
+      "text": "Nous promettons selon nos espérances, et nous tenons selon nos craintes.",
+      "author": "La Rochefoucauld",
+      "source": "Maximes, 38",
+      "theme": "moralistes"
+    },
+    {
+      "id": "la-rochefoucauld-plus-fin",
+      "text": "Le vrai moyen d'être trompé, c'est de se croire plus fin que les autres.",
+      "author": "La Rochefoucauld",
+      "source": "Maximes, 127",
+      "theme": "moralistes"
+    },
+    {
+      "id": "la-bruyere-rire",
+      "text": "Il faut rire avant que d'être heureux, de peur de mourir sans avoir ri.",
+      "author": "La Bruyère",
+      "source": "Les Caractères, Du cœur, 63",
+      "theme": "moralistes"
+    },
+    {
+      "id": "la-bruyere-misérable",
+      "text": "La plupart des hommes emploient la meilleure partie de leur vie à rendre l'autre misérable.",
+      "author": "La Bruyère",
+      "source": "Les Caractères, De l'homme, 102",
+      "theme": "moralistes"
+    },
+    {
+      "id": "chamfort-bonheur",
+      "text": "Le bonheur n'est pas chose aisée : il est très difficile de le trouver en nous, et impossible de le trouver ailleurs.",
+      "author": "Chamfort",
+      "source": "Maximes et pensées",
+      "theme": "moralistes"
+    },
+    {
+      "id": "vauvenargues-coeur",
+      "text": "Les grandes pensées viennent du cœur.",
+      "author": "Vauvenargues",
+      "source": "Réflexions et maximes, 127",
+      "theme": "moralistes"
+    },
+    {
+      "id": "montesquieu-lecture",
+      "text": "Je n'ai jamais eu de chagrin qu'une heure de lecture ne m'ait ôté.",
+      "author": "Montesquieu",
+      "source": "Mes pensées",
+      "theme": "moralistes"
+    },
+    {
+      "id": "voltaire-jardin",
+      "text": "Il faut cultiver notre jardin.",
+      "author": "Voltaire",
+      "source": "Candide, XXX",
+      "theme": "Lumières"
+    },
+    {
+      "id": "voltaire-mieux",
+      "text": "Le mieux est l'ennemi du bien.",
+      "author": "Voltaire",
+      "source": "La Bégueule",
+      "theme": "Lumières"
+    },
+    {
+      "id": "rousseau-agir",
+      "text": "Vivre, ce n'est pas respirer, c'est agir.",
+      "author": "Jean-Jacques Rousseau",
+      "source": "Émile, I",
+      "theme": "Lumières"
+    },
+    {
+      "id": "rousseau-fers",
+      "text": "L'homme est né libre, et partout il est dans les fers.",
+      "author": "Jean-Jacques Rousseau",
+      "source": "Du contrat social, I, 1",
+      "theme": "Lumières"
+    },
+    {
+      "id": "kant-entendement",
+      "text": "Aie le courage de te servir de ton propre entendement.",
+      "author": "Kant",
+      "source": "Qu'est-ce que les Lumières ?",
+      "theme": "Lumières"
+    },
+    {
+      "id": "kant-fin",
+      "text": "Agis de telle sorte que tu traites l'humanité, en toi comme en autrui, toujours aussi comme une fin, et jamais simplement comme un moyen.",
+      "author": "Kant",
+      "source": "Fondements de la métaphysique des mœurs",
+      "theme": "Lumières"
+    },
+    {
+      "id": "kant-ciel-etoile",
+      "text": "Deux choses remplissent le cœur d'une admiration toujours nouvelle : le ciel étoilé au-dessus de moi et la loi morale en moi.",
+      "author": "Kant",
+      "source": "Critique de la raison pratique, conclusion",
+      "theme": "Lumières"
+    },
+    {
+      "id": "goethe-agir",
+      "text": "Il ne suffit pas de savoir, il faut aussi appliquer ; il ne suffit pas de vouloir, il faut aussi agir.",
+      "author": "Goethe",
+      "source": "Maximes et réflexions",
+      "theme": "Lumières"
+    },
+    {
+      "id": "hegel-passion",
+      "text": "Rien de grand ne s'est accompli dans le monde sans passion.",
+      "author": "Hegel",
+      "source": "Leçons sur la philosophie de l'histoire, introduction",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "schopenhauer-manque",
+      "text": "Nous pensons rarement à ce que nous avons, mais toujours à ce qui nous manque.",
+      "author": "Schopenhauer",
+      "source": "Aphorismes sur la sagesse dans la vie",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "schopenhauer-genie",
+      "text": "Le talent atteint une cible que personne d'autre ne peut atteindre ; le génie atteint une cible que personne d'autre ne peut voir.",
+      "author": "Schopenhauer",
+      "source": "Le Monde comme volonté et comme représentation, suppléments",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "nietzsche-plus-fort",
+      "text": "Ce qui ne me tue pas me rend plus fort.",
+      "author": "Nietzsche",
+      "source": "Crépuscule des idoles, Maximes et traits, 8",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "nietzsche-etoile",
+      "text": "Il faut porter encore en soi un chaos pour pouvoir mettre au monde une étoile dansante.",
+      "author": "Nietzsche",
+      "source": "Ainsi parlait Zarathoustra, prologue, 5",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "nietzsche-musique",
+      "text": "Sans la musique, la vie serait une erreur.",
+      "author": "Nietzsche",
+      "source": "Crépuscule des idoles, Maximes et traits, 33",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "nietzsche-deviens",
+      "text": "Que dit ta conscience ? Tu dois devenir celui que tu es.",
+      "author": "Nietzsche",
+      "source": "Le Gai Savoir, III, 270",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "nietzsche-abime",
+      "text": "Quand tu regardes longtemps dans un abîme, l'abîme regarde aussi en toi.",
+      "author": "Nietzsche",
+      "source": "Par-delà bien et mal, 146",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "kierkegaard-angoisse",
+      "text": "L'angoisse est le vertige de la liberté.",
+      "author": "Kierkegaard",
+      "source": "Le Concept d'angoisse",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "thoreau-desespoir",
+      "text": "La plupart des hommes mènent une vie de tranquille désespoir.",
+      "author": "Henry David Thoreau",
+      "source": "Walden, I",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "thoreau-tambour",
+      "text": "Si un homme ne marche pas au même pas que ses compagnons, c'est peut-être qu'il entend un autre tambour.",
+      "author": "Henry David Thoreau",
+      "source": "Walden, conclusion",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "emerson-paix",
+      "text": "Rien ne peut t'apporter la paix, sinon toi-même.",
+      "author": "Ralph Waldo Emerson",
+      "source": "La Confiance en soi",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "bergson-action",
+      "text": "Il faut agir en homme de pensée et penser en homme d'action.",
+      "author": "Henri Bergson",
+      "source": "Message au Congrès Descartes, 1937",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "alain-penser",
+      "text": "Penser, c'est dire non.",
+      "author": "Alain",
+      "source": "Propos",
+      "theme": "moralistes"
+    },
+    {
+      "id": "alain-bonheur-recompense",
+      "text": "Le bonheur est une récompense qui vient à ceux qui ne l'ont pas cherchée.",
+      "author": "Alain",
+      "source": "Propos sur le bonheur",
+      "theme": "moralistes"
+    },
+    {
+      "id": "alain-une-idee",
+      "text": "Rien n'est plus dangereux qu'une idée, quand on n'a qu'une idée.",
+      "author": "Alain",
+      "source": "Propos sur la religion",
+      "theme": "moralistes"
+    },
+    {
+      "id": "russell-doutes",
+      "text": "Les imbéciles sont sûrs d'eux, tandis que les gens intelligents sont pleins de doutes.",
+      "author": "Bertrand Russell",
+      "source": "Le Triomphe de la stupidité, 1933",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "russell-bonne-vie",
+      "text": "La bonne vie est une vie inspirée par l'amour et guidée par la connaissance.",
+      "author": "Bertrand Russell",
+      "source": "Ce que je crois, 1925",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "wittgenstein-langage",
+      "text": "Les limites de mon langage signifient les limites de mon monde.",
+      "author": "Wittgenstein",
+      "source": "Tractatus logico-philosophicus, 5.6",
+      "theme": "philosophie moderne"
+    },
+    {
+      "id": "camus-amour-vivre",
+      "text": "Il n'y a pas d'amour de vivre sans désespoir de vivre.",
+      "author": "Albert Camus",
+      "source": "L'Envers et l'Endroit",
+      "theme": "absurde"
+    },
+    {
+      "id": "camus-mal-nommer",
+      "text": "Mal nommer les choses, c'est ajouter au malheur du monde.",
+      "author": "Albert Camus",
+      "source": "Sur une philosophie de l'expression, 1944",
+      "theme": "absurde"
+    },
+    {
+      "id": "sartre-enfer",
+      "text": "L'enfer, c'est les autres.",
+      "author": "Jean-Paul Sartre",
+      "source": "Huis clos",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "beauvoir-devient",
+      "text": "On ne naît pas femme : on le devient.",
+      "author": "Simone de Beauvoir",
+      "source": "Le Deuxième Sexe",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "weil-enracinement",
+      "text": "L'enracinement est peut-être le besoin le plus important et le plus méconnu de l'âme humaine.",
+      "author": "Simone Weil",
+      "source": "L'Enracinement",
+      "theme": "philosophie morale"
+    },
+    {
+      "id": "lao-tseu-contente",
+      "text": "Celui qui sait se contenter est riche.",
+      "author": "Lao-tseu",
+      "source": "Tao-tö-king, 33",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "lao-tseu-eau",
+      "text": "La bonté suprême est comme l'eau : elle est utile à tous les êtres et ne lutte pas.",
+      "author": "Lao-tseu",
+      "source": "Tao-tö-king, 8",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "lao-tseu-sait-parle",
+      "text": "Celui qui sait ne parle pas ; celui qui parle ne sait pas.",
+      "author": "Lao-tseu",
+      "source": "Tao-tö-king, 56",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "lao-tseu-souple",
+      "text": "Le dur et le rigide sont compagnons de la mort ; le souple et le tendre sont compagnons de la vie.",
+      "author": "Lao-tseu",
+      "source": "Tao-tö-king, 76",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "zhuangzi-inutile",
+      "text": "Tout le monde connaît l'utilité de l'utile, mais personne ne connaît l'utilité de l'inutile.",
+      "author": "Zhuangzi",
+      "source": "Zhuangzi, IV",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "confucius-apprendre",
+      "text": "Apprendre sans réfléchir est vain ; réfléchir sans apprendre est dangereux.",
+      "author": "Confucius",
+      "source": "Entretiens, II, 15",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "confucius-ne-fais-pas",
+      "text": "Ce que tu ne voudrais pas que l'on te fasse, ne le fais pas aux autres.",
+      "author": "Confucius",
+      "source": "Entretiens, XV, 23",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "confucius-savoir",
+      "text": "Savoir que l'on sait ce que l'on sait, et savoir que l'on ne sait pas ce que l'on ne sait pas : voilà le vrai savoir.",
+      "author": "Confucius",
+      "source": "Entretiens, II, 17",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "dhammapada-pensees",
+      "text": "Nous sommes ce que nous pensons. Tout ce que nous sommes naît de nos pensées.",
+      "author": "Le Bouddha",
+      "source": "Dhammapada, 1",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "dhammapada-haine",
+      "text": "La haine ne cesse jamais par la haine ; elle ne cesse que par l'amour.",
+      "author": "Le Bouddha",
+      "source": "Dhammapada, 5",
+      "theme": "sagesses orientales"
     }
   ]
 }
