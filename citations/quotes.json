@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "updated": "2026-11-08",
   "description": "Citations affichées sur l'écran de verrouillage. Voir docs/CONSIGNES_CLAUDE.md pour le format.",
   "quotes": [
@@ -1658,78 +1658,6 @@
       "theme": "sciences",
       "explanation": "Plus une affirmation est surprenante, plus elle doit être appuyée par des preuves solides avant qu'on y croie.",
       "example": "Si quelqu'un prétend qu'un produit fait perdre dix kilos en une semaine sans effort, il faut des preuves bien plus solides qu'un témoignage."
-    },
-    {
-      "id": "kery-james-echec",
-      "text": "On n'est pas condamnés à l'échec.",
-      "author": "Kery James",
-      "source": "« Banlieusards », 2008",
-      "theme": "rap",
-      "explanation": "Venir d'un milieu difficile ne condamne personne. Le point de départ n'est pas une fatalité.",
-      "example": "Beaucoup de personnes qui ont grandi dans des quartiers défavorisés sont devenues médecins, entrepreneurs ou artistes. Le chemin est plus dur, mais il existe."
-    },
-    {
-      "id": "tupac-changes",
-      "text": "Changeons notre façon de manger, notre façon de vivre, et notre façon de nous traiter les uns les autres.",
-      "author": "Tupac Shakur",
-      "source": "« Changes », 1998 (traduction)",
-      "theme": "rap",
-      "explanation": "Changer le monde commence par changer nos habitudes et notre façon de nous comporter les uns envers les autres.",
-      "example": "Être poli avec un caissier stressé ou aider un voisin âgé, c'est déjà changer, à ton échelle, la façon dont on se traite."
-    },
-    {
-      "id": "j-cole-love-yourz",
-      "text": "Il n'existe pas de vie meilleure que la tienne.",
-      "author": "J. Cole",
-      "source": "« Love Yourz », 2014 (traduction)",
-      "theme": "rap",
-      "explanation": "Comparer sa vie à celle des autres est un piège : on ne voit que leur façade. Ta vie a sa propre valeur.",
-      "example": "Sur les réseaux, la vie des autres semble parfaite. Mais personne ne publie ses doutes, ses disputes ou ses mauvais jours."
-    },
-    {
-      "id": "j-cole-maison",
-      "text": "Il y aura toujours une maison plus grande quelque part. Ce qui compte, c'est que les gens qui vivent dans la tienne t'aiment sincèrement.",
-      "author": "J. Cole",
-      "source": "« Love Yourz », 2014 (traduction)",
-      "theme": "rap",
-      "explanation": "Le confort matériel aura toujours une limite plus haute. Ce qui donne de la valeur à un foyer, c'est l'amour qu'on y trouve.",
-      "example": "Un petit appartement plein de rires vaut mieux qu'une grande maison silencieuse où chacun vit de son côté."
-    },
-    {
-      "id": "eminem-une-chance",
-      "text": "Si tu avais une seule chance, un seul moment pour saisir tout ce que tu as toujours voulu, le saisirais-tu, ou le laisserais-tu filer ?",
-      "author": "Eminem",
-      "source": "« Lose Yourself », 2002 (traduction)",
-      "theme": "rap",
-      "explanation": "Certaines occasions ne se présentent qu'une fois. La question est de savoir si on ose les saisir ou si on les laisse passer par peur.",
-      "example": "On te propose de partir étudier à l'étranger. La peur te pousse à refuser, mais l'occasion ne reviendra peut-être pas."
-    },
-    {
-      "id": "lauryn-hill-within",
-      "text": "Comment veux-tu gagner si, au fond de toi, ça ne va pas ?",
-      "author": "Lauryn Hill",
-      "source": "« Doo Wop (That Thing) », 1998 (traduction)",
-      "theme": "rap",
-      "explanation": "Les réussites extérieures ne servent à rien si l'on n'est pas en paix avec soi-même. Le travail intérieur passe en premier.",
-      "example": "On peut réussir sa carrière et se sentir vide. Prendre soin de son équilibre intérieur donne du sens au reste."
-    },
-    {
-      "id": "nas-i-can",
-      "text": "Je sais que je peux devenir ce que je veux être. Si je travaille dur, j'arriverai là où je veux être.",
-      "author": "Nas",
-      "source": "« I Can », 2002 (traduction)",
-      "theme": "rap",
-      "explanation": "Avec du travail et de la persévérance, il est possible de devenir ce que l'on souhaite. La confiance en soi doit être accompagnée d'effort.",
-      "example": "Tu veux devenir développeur sans diplôme. Avec des mois de pratique régulière, des projets et de la persévérance, c'est atteignable."
-    },
-    {
-      "id": "kid-cudi-or",
-      "text": "Je suis à la poursuite du bonheur, et je sais que tout ce qui brille n'est pas toujours de l'or.",
-      "author": "Kid Cudi",
-      "source": "« Pursuit of Happiness », 2009 (traduction)",
-      "theme": "rap",
-      "explanation": "Dans la quête du bonheur, il faut se méfier des apparences : ce qui brille (l'argent, la célébrité) n'apporte pas toujours le bonheur.",
-      "example": "Beaucoup de célébrités parlent de leur solitude ou de leur mal-être, malgré la richesse et la gloire."
     }
   ]
 }
