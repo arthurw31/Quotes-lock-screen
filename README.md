@@ -14,10 +14,8 @@ Android ne permet pas à une appli d'écrire directement sur l'écran de verroui
 
 ## 1. Installer l'appli (une seule fois)
 
-Avant la toute première installation, fais la « Mise en route sur GitHub » plus bas (une seule fois).
-
 1. Sur ton Pixel, ouvre ce lien dans Chrome :
-   **https://github.com/arthurw31/Quotes-lock-screen/releases/latest/download/citations.apk**
+   **https://github.com/arthurw31/Quotes-lock-screen/raw/HEAD/apk/citations.apk**
 2. Chrome télécharge `citations.apk`. Touche la notification de téléchargement (ou ouvre l'appli Fichiers, dossier Téléchargements) et ouvre le fichier.
 3. Android affiche « Pour votre sécurité, votre téléphone n'est pas autorisé à installer des applis inconnues ». Touche **Paramètres**, active **Autoriser cette source**, puis reviens en arrière.
 4. Touche **Installer**. Si Google Play Protect affiche un avertissement (appli inconnue), choisis **Plus de détails** puis **Installer quand même**. C'est normal pour une appli qui ne vient pas du Play Store.
@@ -39,18 +37,18 @@ C'est tout. La citation change ensuite toute seule, peu après minuit.
 1. Dans l'appli, onglet **Citations**, touche **Exporter mes avis** et envoie le texte dans ta conversation avec Claude (copier, ou partager vers l'appli Claude).
 2. Donne aussi à Claude les consignes du fichier [`docs/CONSIGNES_CLAUDE.md`](docs/CONSIGNES_CLAUDE.md) (il suffit de les copier une fois dans la conversation ou dans un projet Claude). Claude te renvoie un fichier JSON complet.
 3. Sur GitHub (navigateur ou appli), ouvre le fichier [`citations/quotes.json`](citations/quotes.json), touche le **crayon** (Edit), sélectionne tout le contenu, remplace-le par celui donné par Claude, puis touche **Commit changes**.
-4. GitHub vérifie automatiquement le fichier (onglet **Actions**, contrôle « Vérifier les citations »). Une coche verte veut dire que c'est bon. Une croix rouge indique une erreur de format : ouvre le détail, l'erreur est expliquée en français. Même en cas d'erreur, l'appli ne casse pas : elle garde l'ancienne liste.
+4. Si le fichier contient une erreur de format, l'appli ne casse pas : elle garde l'ancienne liste et affiche « Dernier problème » dans l'onglet Citations. Il suffit alors de corriger le fichier (ou de demander à Claude de le vérifier).
 5. Le téléphone récupère la nouvelle liste dans les 12 heures. Pour le faire tout de suite : onglet **Citations**, **Vérifier maintenant**.
 
 La citation affichée ne change pas au moment de la mise à jour : la nouvelle liste est utilisée à partir du prochain changement.
 
 ## 4. Installer une nouvelle version de l'appli
 
-Quand le code de l'appli est modifié, GitHub compile et publie automatiquement une nouvelle version dans l'onglet **Releases**. Pour l'installer, refais simplement l'étape 1 avec le même lien : la nouvelle version s'installe par-dessus l'ancienne, et ta photo, tes réglages et tes avis sont conservés.
+Le fichier `apk/citations.apk` du dépôt est toujours la dernière version. Pour mettre l'appli à jour, refais simplement l'étape 1 avec le même lien : la nouvelle version s'installe par-dessus l'ancienne, et ta photo, tes réglages et tes avis sont conservés.
 
-Option pratique : l'appli gratuite **Obtainium** peut surveiller ce dépôt et te prévenir des nouvelles versions. Il suffit d'y ajouter l'adresse `https://github.com/arthurw31/Quotes-lock-screen`.
+Pour qu'une nouvelle version s'installe par-dessus, elle doit être signée avec la même clé. Cette clé n'est pas dans le dépôt (il est public). Elle est dans le fichier `secrets-github.txt` que Claude t'a envoyé : **garde-le précieusement** (gestionnaire de mots de passe, Google Drive privé...). Quand tu demandes une modification de l'appli à Claude, joins-lui ce fichier pour qu'il signe la nouvelle version.
 
-Modifier seulement les citations ne crée pas de nouvelle version de l'appli : ce n'est pas nécessaire.
+Modifier seulement les citations ne demande pas de nouvelle version de l'appli.
 
 ## Limites à connaître
 
@@ -60,28 +58,9 @@ Modifier seulement les citations ne crée pas de nouvelle version de l'appli : c
 * **Changer de fond d'écran** : si tu changes de photo dans les réglages du Pixel, l'écran de verrouillage sera écrasé jusqu'au prochain changement de citation. Change plutôt la photo dans l'appli Citations.
 * **Vérification des développeurs** : Google déploie progressivement l'obligation de vérifier l'identité des développeurs pour les applis installées hors Play Store. En France, rien ne bloque pour l'instant. Si un jour l'installation est refusée, il restera l'installation par câble (adb) ou un compte développeur gratuit « amateur ».
 
-## Mise en route sur GitHub (à faire une seule fois)
+## Option : compilation automatique par GitHub
 
-### a. Activer la compilation automatique
-
-Claude n'a pas le droit de créer les fichiers d'automatisation (« workflows ») dans ton dépôt. Il les a rangés dans `docs/workflows/`. Il suffit de les déplacer :
-
-1. Sur github.com, ouvre le fichier `docs/workflows/build.yml` et touche le **crayon** (Edit).
-2. En haut, dans le champ du nom de fichier, efface `docs/workflows/` et remplace-le par `.github/workflows/` (le nom devient `.github/workflows/build.yml`).
-3. Touche **Commit changes**.
-4. Fais pareil pour `docs/workflows/citations.yml`.
-
-### b. Ajouter la clé de signature
-
-Pour que chaque nouvelle version s'installe par-dessus l'ancienne, toutes les versions doivent être signées avec la même clé. Comme le dépôt est public, cette clé n'y est pas : elle est rangée dans les **Secrets** du dépôt, que personne d'autre ne peut lire.
-
-1. Sur github.com, ouvre le dépôt, puis **Settings** > **Secrets and variables** > **Actions**.
-2. Touche **New repository secret** et crée ces deux secrets (les valeurs sont dans le fichier `secrets-github.txt` que Claude t'a envoyé) :
-   * `SIGNING_PASSWORD`
-   * `SIGNING_KEYSTORE_BASE64`
-3. Onglet **Actions**, choisis **Construire l'appli**, puis **Run workflow** (choisis la branche par défaut). Au bout de quelques minutes, l'APK apparaît dans **Releases**.
-
-Garde une copie de `secrets-github.txt` en lieu sûr (gestionnaire de mots de passe, par exemple). Si la clé était perdue, il faudrait désinstaller l'appli une fois pour installer une version signée avec une nouvelle clé.
+Ce n'est pas nécessaire. Les fichiers `docs/workflows/` permettent à GitHub de compiler l'appli et de vérifier les citations tout seul. Pour les activer, il faut les déplacer dans `.github/workflows/` depuis un ordinateur, et ajouter les deux valeurs de `secrets-github.txt` dans Settings > Secrets and variables > Actions.
 
 ## Organisation du dépôt
 
@@ -89,5 +68,6 @@ Garde une copie de `secrets-github.txt` en lieu sûr (gestionnaire de mots de pa
 | --- | --- |
 | `citations/quotes.json` | La liste de citations (le seul fichier à modifier chaque mois) |
 | `docs/CONSIGNES_CLAUDE.md` | Les consignes à donner à Claude pour préparer une nouvelle liste |
+| `apk/citations.apk` | L'appli prête à installer (dernière version) |
 | `app/` | Le code de l'appli Android (Kotlin) |
-| `.github/workflows/` | Compilation automatique de l'APK et vérification des citations (copies d'origine dans `docs/workflows/`) |
+| `docs/workflows/` | Compilation automatique optionnelle (voir ci-dessus) |
