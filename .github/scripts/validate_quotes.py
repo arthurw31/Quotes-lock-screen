@@ -42,7 +42,7 @@ for n, q in enumerate(quotes, start=1):
         errors.append(f"{where} : champ \"author\" vide")
     if len(text) > MAX_LEN:
         errors.append(f"{where} : texte trop long ({len(text)} caractères, maximum {MAX_LEN})")
-    for field in ("text", "author", "source", "theme"):
+    for field in ("text", "author", "source", "theme", "explanation", "example"):
         value = str(q.get(field) or "")
         for ch, name in FORBIDDEN.items():
             if ch in value:

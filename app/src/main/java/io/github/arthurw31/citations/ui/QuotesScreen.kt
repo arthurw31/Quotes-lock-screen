@@ -1,6 +1,12 @@
 package io.github.arthurw31.citations.ui
 
 import android.content.Intent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.outlined.ExpandLess
+import androidx.compose.material.icons.outlined.Lightbulb
 import android.net.Uri
 import android.provider.Settings
 import androidx.compose.foundation.layout.Arrangement
@@ -85,6 +91,7 @@ fun QuotesScreen(vm: MainViewModel, state: UiState) {
                         Text(it, style = MaterialTheme.typography.bodySmall.copy(fontStyle = FontStyle.Italic),
                             color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
+                    Explanation(q)
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         RatingButtons(state.ratings[q.id] ?: 0) { vm.rate(q.id, it) }
                         Spacer(Modifier.weight(1f))
@@ -192,9 +199,13 @@ fun QuotesScreen(vm: MainViewModel, state: UiState) {
         }
         if (state.history.isEmpty()) {
             item { Hint("Les citations affichées apparaîtront ici.") }
+        } else {
+            item { Hint("Touche une citation pour afficher son explication.") }
         }
         items(state.history.take(80), key = { it.id + it.shownAt }) { e ->
-            Column {
+            var open by rememberSaveable(e.id + e.shownAt) { mutableStateOf(false) }
+            val full = state.quotesById[e.id]
+            Column(Modifier.clickable(enabled = full?.explanation != null) { open = !open }) {
                 Text("« " + QuoteRenderer.frenchTypography(e.text) + " »",
                     style = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Serif))
                 Row(verticalAlignment = Alignment.CenterVertically) {
@@ -202,6 +213,7 @@ fun QuotesScreen(vm: MainViewModel, state: UiState) {
                         color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.weight(1f))
                     RatingButtons(state.ratings[e.id] ?: 0) { vm.rate(e.id, it) }
                 }
+                if (open && full != null) ExplanationText(full)
                 HorizontalDivider()
             }
         }
@@ -227,6 +239,40 @@ fun QuotesScreen(vm: MainViewModel, state: UiState) {
                     }
                 }
             }
+        }
+    }
+}
+
+/** Bouton « Comprendre » qui déplie l'explication et l'exemple. */
+@Composable
+private fun Explanation(q: io.github.arthurw31.citations.Quote) {
+    if (q.explanation == null && q.example == null) return
+    var open by rememberSaveable(q.id) { mutableStateOf(false) }
+    TextButton(onClick = { open = !open }, contentPadding = PaddingValues(horizontal = 0.dp)) {
+        Icon(if (open) Icons.Outlined.ExpandLess else Icons.Outlined.Lightbulb, null)
+        Spacer(Modifier.width(6.dp))
+        Text(if (open) "Masquer l'explication" else "Comprendre cette citation")
+    }
+    AnimatedVisibility(open) { ExplanationText(q) }
+}
+
+@Composable
+private fun ExplanationText(q: io.github.arthurw31.citations.Quote) {
+    Column(
+        Modifier.fillMaxWidth().padding(vertical = 6.dp)
+            .background(MaterialTheme.colorScheme.surfaceContainerHighest, RoundedCornerShape(12.dp))
+            .padding(12.dp)
+    ) {
+        q.explanation?.let {
+            Text("Ce que ça veut dire", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
+            Spacer(Modifier.height(2.dp))
+            Text(QuoteRenderer.frenchTypography(it), style = MaterialTheme.typography.bodyMedium)
+        }
+        q.example?.let {
+            Spacer(Modifier.height(10.dp))
+            Text("Exemple", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
+            Spacer(Modifier.height(2.dp))
+            Text(QuoteRenderer.frenchTypography(it), style = MaterialTheme.typography.bodyMedium)
         }
     }
 }

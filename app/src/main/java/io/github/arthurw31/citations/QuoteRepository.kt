@@ -17,7 +17,10 @@ data class Quote(
     val text: String,
     val author: String,
     val source: String?,
-    val theme: String?
+    val theme: String?,
+    /** Explication facultative de la citation, et exemple concret. */
+    val explanation: String? = null,
+    val example: String? = null
 )
 
 data class HistoryEntry(
@@ -55,7 +58,13 @@ object QuoteParser {
             if (text.isEmpty() || author.isEmpty()) continue
             val id = o.str("id").ifEmpty { "q" + text.hashCode().toUInt().toString(16) }
             if (!ids.add(id)) continue
-            out += Quote(id, text, author, o.str("source").ifEmpty { null }, o.str("theme").ifEmpty { null })
+            out += Quote(
+                id, text, author,
+                source = o.str("source").ifEmpty { null },
+                theme = o.str("theme").ifEmpty { null },
+                explanation = o.str("explanation").ifEmpty { null },
+                example = o.str("example").ifEmpty { null }
+            )
         }
         return out
     }

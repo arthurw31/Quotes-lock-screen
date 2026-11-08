@@ -51,6 +51,7 @@ class QuoteRendererTest {
         val list = QuoteParser.parse(text)
         assertTrue(list.size >= 30)
         assertEquals(list.size, list.map { it.id }.toSet().size)
+        assertTrue(list.all { it.explanation != null && it.example != null })
     }
 
     @Test

@@ -35,6 +35,8 @@ data class UiState(
     val current: Quote? = null,
     val info: QuotesInfo? = null,
     val history: List<HistoryEntry> = emptyList(),
+    /** Toutes les citations de la liste, pour retrouver l'explication d'une entrée de l'historique. */
+    val quotesById: Map<String, Quote> = emptyMap(),
     val ratings: Map<String, Int> = emptyMap(),
     val quotesUrl: String = "",
     val batteryUnrestricted: Boolean = false,
@@ -90,6 +92,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
                 current = repo.current(),
                 info = repo.info(),
                 history = repo.history(),
+                quotesById = repo.quotes().associateBy { it.id },
                 ratings = repo.ratings(),
                 quotesUrl = settings.quotesUrl,
                 batteryUnrestricted = pm.isIgnoringBatteryOptimizations(ctx.packageName),

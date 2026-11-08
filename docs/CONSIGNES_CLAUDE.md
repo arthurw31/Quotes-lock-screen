@@ -16,7 +16,8 @@ Règles :
 6. N'ajoute pas les guillemets « » autour du texte : l'appli les ajoute elle-même.
 7. Tu peux garder les citations que j'ai aimées. Retire celles que je n'ai pas aimées.
 8. Chaque citation a un identifiant unique (`id`) en minuscules, sans espaces ni accents, par exemple `auteur-mot-cle`. Une citation conservée garde le même identifiant (sinon mon avis sur elle est perdu).
-9. Réponds avec le fichier JSON complet, dans un seul bloc de code, et rien d'autre dans le bloc.
+9. Pour chaque citation, ajoute une explication simple (1 à 3 phrases, en tutoyant) dans `explanation`, et un exemple concret de la vie quotidienne dans `example`. Maximum 250 caractères chacun.
+10. Réponds avec le fichier JSON complet, dans un seul bloc de code, et rien d'autre dans le bloc.
 
 Format exact attendu :
 
@@ -30,10 +31,12 @@ Format exact attendu :
       "text": "Ce n'est pas que nous ayons peu de temps, c'est que nous en perdons beaucoup.",
       "author": "Sénèque",
       "source": "De la brièveté de la vie, I",
-      "theme": "stoïcisme"
+      "theme": "stoïcisme",
+      "explanation": "La vie n'est pas trop courte en soi : c'est nous qui en gaspillons une grande partie en distractions et en attente.",
+      "example": "Fais le compte des heures passées chaque semaine à faire défiler des contenus qui ne t'apportent rien."
     }
   ]
 }
 ```
 
-Champs obligatoires : `id`, `text`, `author`. Champs conseillés : `source`, `theme`.
+Champs obligatoires : `id`, `text`, `author`. Champs conseillés : `source`, `theme`, `explanation`, `example`.
