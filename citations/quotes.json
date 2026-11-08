@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 5,
   "updated": "2026-11-08",
   "description": "Citations affichées sur l'écran de verrouillage. Voir docs/CONSIGNES_CLAUDE.md pour le format.",
   "quotes": [
@@ -1080,6 +1080,216 @@
       "author": "Le Bouddha",
       "source": "Dhammapada, 5",
       "theme": "sagesses orientales"
+    },
+    {
+      "id": "kahneman-important",
+      "text": "Rien dans la vie n'est aussi important que vous le pensez au moment où vous y pensez.",
+      "author": "Daniel Kahneman",
+      "source": "Système 1 / Système 2, 2011",
+      "theme": "psychologie"
+    },
+    {
+      "id": "kahneman-aveuglement",
+      "text": "Nous pouvons être aveugles à l'évidence, et nous sommes aussi aveugles à notre propre aveuglement.",
+      "author": "Daniel Kahneman",
+      "source": "Système 1 / Système 2, 2011",
+      "theme": "psychologie"
+    },
+    {
+      "id": "kahneman-repetition",
+      "text": "Un moyen sûr de faire croire un mensonge est de le répéter souvent, car on distingue mal ce qui est familier de ce qui est vrai.",
+      "author": "Daniel Kahneman",
+      "source": "Système 1 / Système 2, 2011",
+      "theme": "psychologie"
+    },
+    {
+      "id": "rogers-paradoxe",
+      "text": "Le curieux paradoxe, c'est que lorsque je m'accepte tel que je suis, alors je peux changer.",
+      "author": "Carl Rogers",
+      "source": "Le Développement de la personne, 1961",
+      "theme": "psychologie"
+    },
+    {
+      "id": "rogers-direction",
+      "text": "La bonne vie est un processus, non un état. C'est une direction, non une destination.",
+      "author": "Carl Rogers",
+      "source": "Le Développement de la personne, 1961",
+      "theme": "psychologie"
+    },
+    {
+      "id": "jung-interieur",
+      "text": "Celui qui regarde à l'extérieur rêve ; celui qui regarde à l'intérieur s'éveille.",
+      "author": "Carl Gustav Jung",
+      "source": "Lettre à Fanny Bowditch, 1916",
+      "theme": "psychologie"
+    },
+    {
+      "id": "jung-irrite",
+      "text": "Tout ce qui nous irrite chez les autres peut nous conduire à mieux nous comprendre nous-mêmes.",
+      "author": "Carl Gustav Jung",
+      "source": "Ma vie, souvenirs, rêves et pensées",
+      "theme": "psychologie"
+    },
+    {
+      "id": "freud-maitre",
+      "text": "Le moi n'est pas maître dans sa propre maison.",
+      "author": "Sigmund Freud",
+      "source": "Une difficulté de la psychanalyse, 1917",
+      "theme": "psychologie"
+    },
+    {
+      "id": "james-negliger",
+      "text": "L'art d'être sage est l'art de savoir ce qu'il faut négliger.",
+      "author": "William James",
+      "source": "Principes de psychologie, 1890",
+      "theme": "psychologie"
+    },
+    {
+      "id": "james-croyez",
+      "text": "N'ayez pas peur de la vie. Croyez que la vie vaut la peine d'être vécue, et votre croyance aidera à en faire une réalité.",
+      "author": "William James",
+      "source": "La vie vaut-elle la peine d'être vécue ?, 1895",
+      "theme": "psychologie"
+    },
+    {
+      "id": "csikszentmihalyi-flow",
+      "text": "Les meilleurs moments de notre vie surviennent quand le corps ou l'esprit est poussé à ses limites, dans un effort volontaire pour accomplir quelque chose de difficile et qui en vaut la peine.",
+      "author": "Mihaly Csikszentmihalyi",
+      "source": "Vivre (Flow), 1990",
+      "theme": "psychologie"
+    },
+    {
+      "id": "frankl-se-changer",
+      "text": "Lorsque nous ne pouvons plus changer une situation, nous sommes mis au défi de nous changer nous-mêmes.",
+      "author": "Viktor Frankl",
+      "source": "Découvrir un sens à sa vie",
+      "theme": "psychologie"
+    },
+    {
+      "id": "frankl-vie-attend",
+      "text": "Ce qui compte, ce n'est pas ce que nous attendons de la vie, mais ce que la vie attend de nous.",
+      "author": "Viktor Frankl",
+      "source": "Découvrir un sens à sa vie",
+      "theme": "psychologie"
+    },
+    {
+      "id": "maslow-marteau",
+      "text": "Si le seul outil que vous avez est un marteau, vous aurez tendance à voir chaque problème comme un clou.",
+      "author": "Abraham Maslow",
+      "source": "The Psychology of Science, 1966",
+      "theme": "psychologie"
+    },
+    {
+      "id": "maslow-doit-etre",
+      "text": "Ce qu'un homme peut être, il doit l'être.",
+      "author": "Abraham Maslow",
+      "source": "Motivation and Personality, 1954",
+      "theme": "psychologie"
+    },
+    {
+      "id": "fromm-amour",
+      "text": "L'amour immature dit : « Je t'aime parce que j'ai besoin de toi. » L'amour mûr dit : « J'ai besoin de toi parce que je t'aime. »",
+      "author": "Erich Fromm",
+      "source": "L'Art d'aimer, 1956",
+      "theme": "psychologie"
+    },
+    {
+      "id": "dweck-devenir",
+      "text": "Devenir vaut mieux qu'être.",
+      "author": "Carol Dweck",
+      "source": "Changer d'état d'esprit, 2006",
+      "theme": "psychologie"
+    },
+    {
+      "id": "kabat-zinn-vagues",
+      "text": "Tu ne peux pas arrêter les vagues, mais tu peux apprendre à surfer.",
+      "author": "Jon Kabat-Zinn",
+      "source": "Où tu vas, tu es, 1994",
+      "theme": "psychologie"
+    },
+    {
+      "id": "kabat-zinn-ou-tu-vas",
+      "text": "Où que tu ailles, tu y es.",
+      "author": "Jon Kabat-Zinn",
+      "source": "Où tu vas, tu es, 1994",
+      "theme": "psychologie"
+    },
+    {
+      "id": "watzlawick-communiquer",
+      "text": "On ne peut pas ne pas communiquer.",
+      "author": "Paul Watzlawick",
+      "source": "Une logique de la communication, 1967",
+      "theme": "psychologie"
+    },
+    {
+      "id": "lewin-theorie",
+      "text": "Il n'y a rien de plus pratique qu'une bonne théorie.",
+      "author": "Kurt Lewin",
+      "source": "Field Theory in Social Science, 1951",
+      "theme": "psychologie"
+    },
+    {
+      "id": "simon-attention",
+      "text": "Une abondance d'informations crée une pauvreté d'attention.",
+      "author": "Herbert Simon",
+      "source": "Designing Organizations for an Information-Rich World, 1971",
+      "theme": "sciences"
+    },
+    {
+      "id": "korzybski-carte",
+      "text": "La carte n'est pas le territoire.",
+      "author": "Alfred Korzybski",
+      "source": "Science and Sanity, 1933",
+      "theme": "sciences"
+    },
+    {
+      "id": "darwin-ignorance",
+      "text": "L'ignorance engendre plus souvent la confiance que ne le fait la connaissance.",
+      "author": "Charles Darwin",
+      "source": "La Filiation de l'homme, introduction, 1871",
+      "theme": "sciences"
+    },
+    {
+      "id": "poincare-douter",
+      "text": "Douter de tout ou tout croire, ce sont deux solutions également commodes, qui l'une et l'autre nous dispensent de réfléchir.",
+      "author": "Henri Poincaré",
+      "source": "La Science et l'Hypothèse, 1902",
+      "theme": "sciences"
+    },
+    {
+      "id": "bernard-connaitre",
+      "text": "C'est ce que nous pensons déjà connaître qui nous empêche souvent d'apprendre.",
+      "author": "Claude Bernard",
+      "source": "Introduction à l'étude de la médecine expérimentale, 1865",
+      "theme": "sciences"
+    },
+    {
+      "id": "pasteur-hasard",
+      "text": "Le hasard ne favorise que les esprits préparés.",
+      "author": "Louis Pasteur",
+      "source": "Discours à l'université de Lille, 1854",
+      "theme": "sciences"
+    },
+    {
+      "id": "feynman-tromper",
+      "text": "Le premier principe est de ne pas se tromper soi-même, et on est la personne la plus facile à tromper.",
+      "author": "Richard Feynman",
+      "source": "Discours au Caltech, « Cargo Cult Science », 1974",
+      "theme": "sciences"
+    },
+    {
+      "id": "sagan-univers",
+      "text": "Nous sommes une façon pour l'univers de se connaître lui-même.",
+      "author": "Carl Sagan",
+      "source": "Cosmos, 1980",
+      "theme": "sciences"
+    },
+    {
+      "id": "sagan-preuves",
+      "text": "Des affirmations extraordinaires exigent des preuves extraordinaires.",
+      "author": "Carl Sagan",
+      "source": "Cosmos, 1980",
+      "theme": "sciences"
     }
   ]
 }
