@@ -53,7 +53,11 @@ object QuoteRenderer {
         val center = h * a.position.coerceIn(0.08f, 0.94f)
         val top = (center - block.height / 2f).coerceIn(h * 0.04f, max(h * 0.04f, h * 0.96f - block.height))
 
-        val backgroundLum = averageLuminance(out, margin, top, w - margin, top + block.height)
+        // Position horizontale choisie au doigt, sans sortir de l'écran.
+        val edge = w * 0.03f
+        val left = (w * a.hPosition - textWidth / 2f).coerceIn(edge, max(edge, w - edge - textWidth))
+
+        val backgroundLum = averageLuminance(out, left, top, left + textWidth, top + block.height)
         val textColor = a.color.argb ?: if (backgroundLum > 0.58f) DARK_TEXT else LIGHT_TEXT
         val lightText = luminance(textColor) > 0.5f
 
@@ -75,7 +79,7 @@ object QuoteRenderer {
         }
 
         canvas.save()
-        canvas.translate(margin, top)
+        canvas.translate(left, top)
         block.quote.draw(canvas)
         block.author?.let {
             canvas.translate(0f, block.quote.height + block.gap)

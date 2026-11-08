@@ -20,8 +20,6 @@ import io.github.arthurw31.citations.Screen
 import io.github.arthurw31.citations.SettingsStore
 import io.github.arthurw31.citations.SyncResult
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharedFlow
@@ -59,10 +57,14 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     private val _messages = MutableSharedFlow<String>(extraBufferCapacity = 4)
     val messages: SharedFlow<String> = _messages
 
-    private var previewPhoto: Bitmap? = null
-    private var previewJob: Job? = null
+    @Volatile private var previewPhoto: Bitmap? = null
+
+    // Les demandes d'aperçu sont fusionnées : pendant un glissement, on dessine toujours
+    // l'état le plus récent sans interrompre le dessin en cours (rendu fluide).
+    private val previewRequests = MutableStateFlow(0)
 
     init {
+        startPreviewLoop()
         viewModelScope.launch(Dispatchers.IO) {
             if (repo.current() == null) {
                 repo.next()
@@ -104,17 +106,38 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
     }
 
     private fun requestPreview() {
-        previewJob?.cancel()
-        previewJob = viewModelScope.launch(Dispatchers.Default) {
-            delay(30)
-            val state = _ui.value
-            val quote = state.current ?: return@launch
-            val size = Screen.size(ctx)
-            val w = 600
-            val h = w * size.height / size.width
-            val photo = previewPhoto ?: (Photo.load(ctx, 4) ?: QuoteRenderer.placeholder(w, h)).also { previewPhoto = it }
-            _preview.value = QuoteRenderer.render(photo, quote, state.appearance, w, h)
+        previewRequests.update { it + 1 }
+    }
+
+    private fun startPreviewLoop() {
+        viewModelScope.launch(Dispatchers.Default) {
+            previewRequests.collect {
+                val state = _ui.value
+                val quote = state.current ?: return@collect
+                val size = Screen.size(ctx)
+                val w = 600
+                val h = w * size.height / size.width
+                val photo = previewPhoto ?: (Photo.load(ctx, 4) ?: QuoteRenderer.placeholder(w, h)).also { previewPhoto = it }
+                _preview.value = QuoteRenderer.render(photo, quote, state.appearance, w, h)
+            }
         }
+    }
+
+    /** Déplacement au doigt : dx et dy en fraction de la taille de l'aperçu. */
+    fun moveQuote(dx: Float, dy: Float) {
+        val a = _ui.value.appearance
+        _ui.update {
+            it.copy(appearance = a.copy(
+                hPosition = (a.hPosition + dx).coerceIn(0f, 1f),
+                position = (a.position + dy).coerceIn(0.08f, 0.94f)
+            ))
+        }
+        requestPreview()
+    }
+
+    /** Enregistre la position à la fin du glissement. */
+    fun endMove() {
+        settings.saveAppearance(_ui.value.appearance)
     }
 
     fun pickPhoto(uri: Uri) = work {

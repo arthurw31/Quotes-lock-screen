@@ -39,6 +39,8 @@ enum class Frequency(val label: String, val hours: Int) {
 /** Réglages d'apparence. Les valeurs numériques vont de 0 à 1. */
 data class Appearance(
     val position: Float = 0.68f,
+    /** Centre horizontal du texte (0 = bord gauche, 1 = bord droit). */
+    val hPosition: Float = 0.5f,
     val size: Float = 0.45f,
     val width: Float = 0.5f,
     val align: TextAlignChoice = TextAlignChoice.CENTER,
@@ -56,6 +58,7 @@ class SettingsStore(context: Context) {
         val d = Appearance()
         return Appearance(
             position = p.getFloat("position", d.position),
+            hPosition = p.getFloat("hPosition", d.hPosition),
             size = p.getFloat("size", d.size),
             width = p.getFloat("width", d.width),
             align = enumOr(p.getString("align", null), d.align),
@@ -70,6 +73,7 @@ class SettingsStore(context: Context) {
     fun saveAppearance(a: Appearance) {
         p.edit()
             .putFloat("position", a.position)
+            .putFloat("hPosition", a.hPosition)
             .putFloat("size", a.size)
             .putFloat("width", a.width)
             .putString("align", a.align.name)

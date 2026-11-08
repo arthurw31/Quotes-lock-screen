@@ -4,6 +4,7 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -55,6 +56,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
@@ -123,7 +125,7 @@ private fun AppearanceScreen(vm: MainViewModel, state: UiState, preview: android
         Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 16.dp, vertical = 8.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        PreviewCard(preview, state.screenRatio, showClock)
+        PreviewCard(preview, state.screenRatio, showClock, vm::moveQuote, vm::endMove)
         Spacer(Modifier.height(16.dp))
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             OutlinedButton(onClick = {
@@ -137,6 +139,7 @@ private fun AppearanceScreen(vm: MainViewModel, state: UiState, preview: android
                 Text("Appliquer")
             }
         }
+        Hint("Fais glisser ton doigt sur l'aperçu pour déplacer la citation là où elle est la plus lisible.")
         if (!state.hasPhoto) {
             Hint("Commence par choisir la photo que tu utilises comme fond d'écran. L'écran d'accueil ne sera pas modifié.")
         } else {
@@ -145,6 +148,7 @@ private fun AppearanceScreen(vm: MainViewModel, state: UiState, preview: android
 
         Section("Texte")
         LabeledSlider("Position verticale", a.position, 0.08f..0.94f, "Haut", "Bas") { v -> set { copy(position = v) } }
+        LabeledSlider("Position horizontale", a.hPosition, 0f..1f, "Gauche", "Droite") { v -> set { copy(hPosition = v) } }
         LabeledSlider("Taille", a.size, 0f..1f, "Petit", "Grand") { v -> set { copy(size = v) } }
         LabeledSlider("Largeur", a.width, 0f..1f, "Étroit", "Large") { v -> set { copy(width = v) } }
         Choices("Alignement", TextAlignChoice.entries, a.align, { it.label }) { v -> set { copy(align = v) } }
@@ -163,9 +167,22 @@ private fun AppearanceScreen(vm: MainViewModel, state: UiState, preview: android
 }
 
 @Composable
-private fun PreviewCard(preview: android.graphics.Bitmap?, ratio: Float, showClock: Boolean) {
+private fun PreviewCard(
+    preview: android.graphics.Bitmap?, ratio: Float, showClock: Boolean,
+    onMove: (Float, Float) -> Unit, onMoveEnd: () -> Unit
+) {
     BoxWithConstraints(
         Modifier.fillMaxWidth(0.66f).aspectRatio(ratio).clip(RoundedCornerShape(28.dp))
+            .pointerInput(Unit) {
+                // Glisser n'importe où dans l'aperçu déplace la citation.
+                detectDragGestures(
+                    onDragEnd = onMoveEnd,
+                    onDragCancel = onMoveEnd
+                ) { change, drag ->
+                    change.consume()
+                    onMove(drag.x / size.width, drag.y / size.height)
+                }
+            }
     ) {
         if (preview != null) {
             Image(preview.asImageBitmap(), null, Modifier.fillMaxSize(), contentScale = ContentScale.FillBounds)
