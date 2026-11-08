@@ -14,7 +14,7 @@ Android ne permet pas à une appli d'écrire directement sur l'écran de verroui
 
 ## 1. Installer l'appli (une seule fois)
 
-Avant la toute première installation, fais l'étape « Clé de signature » plus bas (une seule fois).
+Avant la toute première installation, fais la « Mise en route sur GitHub » plus bas (une seule fois).
 
 1. Sur ton Pixel, ouvre ce lien dans Chrome :
    **https://github.com/arthurw31/Quotes-lock-screen/releases/latest/download/citations.apk**
@@ -60,7 +60,18 @@ Modifier seulement les citations ne crée pas de nouvelle version de l'appli : c
 * **Changer de fond d'écran** : si tu changes de photo dans les réglages du Pixel, l'écran de verrouillage sera écrasé jusqu'au prochain changement de citation. Change plutôt la photo dans l'appli Citations.
 * **Vérification des développeurs** : Google déploie progressivement l'obligation de vérifier l'identité des développeurs pour les applis installées hors Play Store. En France, rien ne bloque pour l'instant. Si un jour l'installation est refusée, il restera l'installation par câble (adb) ou un compte développeur gratuit « amateur ».
 
-## Clé de signature (à faire une seule fois)
+## Mise en route sur GitHub (à faire une seule fois)
+
+### a. Activer la compilation automatique
+
+Claude n'a pas le droit de créer les fichiers d'automatisation (« workflows ») dans ton dépôt. Il les a rangés dans `docs/workflows/`. Il suffit de les déplacer :
+
+1. Sur github.com, ouvre le fichier `docs/workflows/build.yml` et touche le **crayon** (Edit).
+2. En haut, dans le champ du nom de fichier, efface `docs/workflows/` et remplace-le par `.github/workflows/` (le nom devient `.github/workflows/build.yml`).
+3. Touche **Commit changes**.
+4. Fais pareil pour `docs/workflows/citations.yml`.
+
+### b. Ajouter la clé de signature
 
 Pour que chaque nouvelle version s'installe par-dessus l'ancienne, toutes les versions doivent être signées avec la même clé. Comme le dépôt est public, cette clé n'y est pas : elle est rangée dans les **Secrets** du dépôt, que personne d'autre ne peut lire.
 
@@ -68,7 +79,7 @@ Pour que chaque nouvelle version s'installe par-dessus l'ancienne, toutes les ve
 2. Touche **New repository secret** et crée ces deux secrets (les valeurs sont dans le fichier `secrets-github.txt` que Claude t'a envoyé) :
    * `SIGNING_PASSWORD`
    * `SIGNING_KEYSTORE_BASE64`
-3. Onglet **Actions**, choisis **Construire l'appli**, puis **Run workflow**. Au bout de quelques minutes, l'APK apparaît dans **Releases**.
+3. Onglet **Actions**, choisis **Construire l'appli**, puis **Run workflow** (choisis la branche par défaut). Au bout de quelques minutes, l'APK apparaît dans **Releases**.
 
 Garde une copie de `secrets-github.txt` en lieu sûr (gestionnaire de mots de passe, par exemple). Si la clé était perdue, il faudrait désinstaller l'appli une fois pour installer une version signée avec une nouvelle clé.
 
@@ -79,4 +90,4 @@ Garde une copie de `secrets-github.txt` en lieu sûr (gestionnaire de mots de pa
 | `citations/quotes.json` | La liste de citations (le seul fichier à modifier chaque mois) |
 | `docs/CONSIGNES_CLAUDE.md` | Les consignes à donner à Claude pour préparer une nouvelle liste |
 | `app/` | Le code de l'appli Android (Kotlin) |
-| `.github/workflows/` | Compilation automatique de l'APK et vérification des citations |
+| `.github/workflows/` | Compilation automatique de l'APK et vérification des citations (copies d'origine dans `docs/workflows/`) |

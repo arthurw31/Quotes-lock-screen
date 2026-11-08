@@ -1,0 +1,18 @@
+name: Vérifier les citations
+
+on:
+  push:
+    paths:
+      - "citations/**"
+  pull_request:
+    paths:
+      - "citations/**"
+  workflow_dispatch:
+
+jobs:
+  verifier:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Vérifier le fichier de citations
+        run: python3 .github/scripts/validate_quotes.py citations/quotes.json

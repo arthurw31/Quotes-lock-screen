@@ -1,0 +1,69 @@
+name: Construire l'appli
+
+on:
+  push:
+    paths-ignore:
+      - "citations/**"
+      - "docs/**"
+      - "**/*.md"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Vérifier les citations
+        run: python3 .github/scripts/validate_quotes.py citations/quotes.json
+
+      - name: Vérifier l'absence de tirets longs et moyens
+        run: python3 .github/scripts/check_dashes.py
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Récupérer la clé de signature
+        env:
+          KEYSTORE_BASE64: ${{ secrets.SIGNING_KEYSTORE_BASE64 }}
+          SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+        run: |
+          if [ -z "$KEYSTORE_BASE64" ] || [ -z "$SIGNING_PASSWORD" ]; then
+            echo "::error::Secrets SIGNING_KEYSTORE_BASE64 et SIGNING_PASSWORD manquants. Voir la section Clé de signature du README."
+            exit 1
+          fi
+          echo "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/citations.jks"
+          echo "SIGNING_KEYSTORE_PATH=$RUNNER_TEMP/citations.jks" >> "$GITHUB_ENV"
+
+      - name: Compiler l'APK signé
+        env:
+          VERSION_CODE: ${{ github.run_number }}
+          SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
+        run: ./gradlew --no-daemon assembleRelease
+
+      - name: Préparer le fichier
+        run: cp app/build/outputs/apk/release/app-release.apk citations.apk
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: citations-apk
+          path: citations.apk
+
+      - name: Publier la version
+        if: github.ref_name == github.event.repository.default_branch
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v1.0.${{ github.run_number }}
+          name: Citations 1.0.${{ github.run_number }}
+          body: |
+            Pour installer ou mettre à jour : télécharge citations.apk ci-dessous depuis ton téléphone et ouvre-le.
+            Tes réglages et ta photo sont conservés lors d'une mise à jour.
+          files: citations.apk
+          make_latest: true
