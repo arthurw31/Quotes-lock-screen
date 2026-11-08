@@ -10,12 +10,13 @@ Règles :
 
 1. Environ 30 citations, en français, de nature philosophique (stoïcisme, existentialisme, moralistes, Antiquité, etc.).
 2. Uniquement des citations vérifiées, avec l'auteur réel et la source précise (œuvre, et livre, chapitre ou paragraphe quand c'est possible). Pas de citations apocryphes ou attribuées à tort. Pour un auteur étranger, utilise une traduction française reconnue.
-3. Chaque texte fait au maximum 220 caractères, pour rester lisible sur l'écran de verrouillage.
-4. N'utilise jamais de tiret long ni de tiret moyen (ni dans le texte, ni dans l'auteur, ni dans la source). Le trait d'union des mots composés est autorisé.
-5. N'ajoute pas les guillemets « » autour du texte : l'appli les ajoute elle-même.
-6. Tu peux garder les citations que j'ai aimées. Retire celles que je n'ai pas aimées.
-7. Chaque citation a un identifiant unique (`id`) en minuscules, sans espaces ni accents, par exemple `auteur-mot-cle`. Une citation conservée garde le même identifiant (sinon mon avis sur elle est perdu).
-8. Réponds avec le fichier JSON complet, dans un seul bloc de code, et rien d'autre dans le bloc.
+3. Chaque citation doit se comprendre seule, sans connaître le livre, le personnage ou la situation d'origine. Elle doit faire réfléchir et changer un peu la façon de voir la vie (le temps, la liberté, le bonheur, les autres, les épreuves...). Évite les phrases qui n'ont de sens que dans leur contexte, les références obscures et les tournures trop anciennes.
+4. Chaque texte fait au maximum 220 caractères, pour rester lisible sur l'écran de verrouillage.
+5. N'utilise jamais de tiret long ni de tiret moyen (ni dans le texte, ni dans l'auteur, ni dans la source). Le trait d'union des mots composés est autorisé.
+6. N'ajoute pas les guillemets « » autour du texte : l'appli les ajoute elle-même.
+7. Tu peux garder les citations que j'ai aimées. Retire celles que je n'ai pas aimées.
+8. Chaque citation a un identifiant unique (`id`) en minuscules, sans espaces ni accents, par exemple `auteur-mot-cle`. Une citation conservée garde le même identifiant (sinon mon avis sur elle est perdu).
+9. Réponds avec le fichier JSON complet, dans un seul bloc de code, et rien d'autre dans le bloc.
 
 Format exact attendu :
 

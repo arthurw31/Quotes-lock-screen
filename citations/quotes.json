@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "updated": "2026-11-08",
   "description": "Citations affichées sur l'écran de verrouillage. Voir docs/CONSIGNES_CLAUDE.md pour le format.",
   "quotes": [
@@ -32,13 +32,6 @@
       "theme": "stoïcisme"
     },
     {
-      "id": "seneque-revendique",
-      "text": "Revendique-toi pour toi-même.",
-      "author": "Sénèque",
-      "source": "Lettres à Lucilius, I, 1",
-      "theme": "stoïcisme"
-    },
-    {
       "id": "seneque-temps",
       "text": "Ce n'est pas que nous ayons peu de temps, c'est que nous en perdons beaucoup.",
       "author": "Sénèque",
@@ -57,13 +50,6 @@
       "text": "Il n'y a pas de vent favorable pour celui qui ne sait pas vers quel port il se dirige.",
       "author": "Sénèque",
       "source": "Lettres à Lucilius, LXXI, 3",
-      "theme": "stoïcisme"
-    },
-    {
-      "id": "marc-aurele-opinion",
-      "text": "Le monde est changement, la vie est opinion.",
-      "author": "Marc Aurèle",
-      "source": "Pensées pour moi-même, IV, 3",
       "theme": "stoïcisme"
     },
     {
@@ -102,13 +88,6 @@
       "theme": "stoïcisme"
     },
     {
-      "id": "epicure-mort",
-      "text": "Habitue-toi à penser que la mort n'est rien pour nous, car tout bien et tout mal résident dans la sensation.",
-      "author": "Épicure",
-      "source": "Lettre à Ménécée",
-      "theme": "épicurisme"
-    },
-    {
       "id": "heraclite-fleuve",
       "text": "On ne peut pas entrer deux fois dans le même fleuve.",
       "author": "Héraclite",
@@ -123,36 +102,8 @@
       "theme": "Antiquité"
     },
     {
-      "id": "montaigne-mourir",
-      "text": "Qui a appris à mourir, il a désappris à servir.",
-      "author": "Montaigne",
-      "source": "Essais, I, 20",
-      "theme": "humanisme"
-    },
-    {
       "id": "montaigne-danse",
       "text": "Quand je danse, je danse ; quand je dors, je dors.",
-      "author": "Montaigne",
-      "source": "Essais, III, 13",
-      "theme": "humanisme"
-    },
-    {
-      "id": "montaigne-amitie",
-      "text": "Parce que c'était lui, parce que c'était moi.",
-      "author": "Montaigne",
-      "source": "Essais, I, 28",
-      "theme": "humanisme"
-    },
-    {
-      "id": "montaigne-condition",
-      "text": "Chaque homme porte la forme entière de l'humaine condition.",
-      "author": "Montaigne",
-      "source": "Essais, III, 2",
-      "theme": "humanisme"
-    },
-    {
-      "id": "montaigne-jouir",
-      "text": "C'est une absolue perfection, et comme divine, de savoir jouir loyalement de son être.",
       "author": "Montaigne",
       "source": "Essais, III, 13",
       "theme": "humanisme"
@@ -179,13 +130,6 @@
       "theme": "moralistes"
     },
     {
-      "id": "spinoza-comprendre",
-      "text": "Je me suis soigneusement appliqué à ne pas tourner en dérision les actions des hommes, à ne pas les déplorer, à ne pas les détester, mais à les comprendre.",
-      "author": "Spinoza",
-      "source": "Traité politique, I, 4",
-      "theme": "rationalisme"
-    },
-    {
       "id": "alain-optimisme",
       "text": "Le pessimisme est d'humeur ; l'optimisme est de volonté.",
       "author": "Alain",
@@ -197,20 +141,6 @@
       "text": "La vie ne peut être comprise qu'en regardant en arrière, mais elle ne peut être vécue qu'en regardant en avant.",
       "author": "Kierkegaard",
       "source": "Journal, 1843",
-      "theme": "existentialisme"
-    },
-    {
-      "id": "nietzsche-amor-fati",
-      "text": "Je veux apprendre de plus en plus à voir dans la nécessité des choses la beauté : ainsi je serai de ceux qui embellissent les choses. Amor fati : que ce soit désormais mon amour.",
-      "author": "Nietzsche",
-      "source": "Le Gai Savoir, IV, 276",
-      "theme": "existentialisme"
-    },
-    {
-      "id": "sartre-condamne",
-      "text": "L'homme est condamné à être libre.",
-      "author": "Jean-Paul Sartre",
-      "source": "L'existentialisme est un humanisme",
       "theme": "existentialisme"
     },
     {
@@ -228,24 +158,10 @@
       "theme": "existentialisme"
     },
     {
-      "id": "camus-sisyphe",
-      "text": "La lutte elle-même vers les sommets suffit à remplir un cœur d'homme. Il faut imaginer Sisyphe heureux.",
-      "author": "Albert Camus",
-      "source": "Le Mythe de Sisyphe",
-      "theme": "absurde"
-    },
-    {
       "id": "camus-ete-invincible",
       "text": "Au milieu de l'hiver, j'apprenais enfin qu'il y avait en moi un été invincible.",
       "author": "Albert Camus",
       "source": "L'Été, « Retour à Tipasa »",
-      "theme": "absurde"
-    },
-    {
-      "id": "camus-revolte",
-      "text": "Je me révolte, donc nous sommes.",
-      "author": "Albert Camus",
-      "source": "L'Homme révolté",
       "theme": "absurde"
     },
     {
@@ -261,6 +177,125 @@
       "author": "Simone Weil",
       "source": "Lettre à Joë Bousquet, 13 avril 1942",
       "theme": "philosophie morale"
+    },
+    {
+      "id": "seneque-oser",
+      "text": "Ce n'est pas parce que les choses sont difficiles que nous n'osons pas, c'est parce que nous n'osons pas qu'elles sont difficiles.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, CIV, 26",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-colere",
+      "text": "Le plus grand remède à la colère, c'est le délai.",
+      "author": "Sénèque",
+      "source": "De la colère, II, 29",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-enseigner",
+      "text": "En enseignant, on apprend.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, VII, 8",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "epicure-biens-presents",
+      "text": "Il ne faut pas gâcher les biens présents par le désir de ceux qui nous manquent.",
+      "author": "Épicure",
+      "source": "Sentences vaticanes, 35",
+      "theme": "épicurisme"
+    },
+    {
+      "id": "montaigne-vivre-a-propos",
+      "text": "Notre grand et glorieux chef-d'œuvre, c'est de vivre à propos.",
+      "author": "Montaigne",
+      "source": "Essais, III, 13",
+      "theme": "humanisme"
+    },
+    {
+      "id": "la-rochefoucauld-motifs",
+      "text": "Nous aurions souvent honte de nos plus belles actions si le monde voyait tous les motifs qui les produisent.",
+      "author": "La Rochefoucauld",
+      "source": "Maximes, 409",
+      "theme": "moralistes"
+    },
+    {
+      "id": "chamfort-rire",
+      "text": "La plus perdue de toutes les journées est celle où l'on n'a pas ri.",
+      "author": "Chamfort",
+      "source": "Maximes et pensées",
+      "theme": "moralistes"
+    },
+    {
+      "id": "spinoza-rare",
+      "text": "Tout ce qui est précieux est aussi difficile que rare.",
+      "author": "Spinoza",
+      "source": "Éthique, V, scolie de la proposition 42",
+      "theme": "rationalisme"
+    },
+    {
+      "id": "nietzsche-pourquoi",
+      "text": "Si l'on a son propre pourquoi de la vie, on s'accommode de presque n'importe quel comment.",
+      "author": "Nietzsche",
+      "source": "Crépuscule des idoles, Maximes et traits, 12",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "alain-vouloir-heureux",
+      "text": "Il est impossible que l'on soit heureux si l'on ne veut pas l'être.",
+      "author": "Alain",
+      "source": "Propos sur le bonheur",
+      "theme": "moralistes"
+    },
+    {
+      "id": "camus-present",
+      "text": "La vraie générosité envers l'avenir consiste à tout donner au présent.",
+      "author": "Albert Camus",
+      "source": "L'Homme révolté",
+      "theme": "absurde"
+    },
+    {
+      "id": "frankl-attitude",
+      "text": "Tout peut être enlevé à un homme, sauf une chose : la dernière des libertés humaines, choisir son attitude face aux circonstances.",
+      "author": "Viktor Frankl",
+      "source": "Découvrir un sens à sa vie",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "saint-exupery-coeur",
+      "text": "On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux.",
+      "author": "Antoine de Saint-Exupéry",
+      "source": "Le Petit Prince, XXI",
+      "theme": "littérature"
+    },
+    {
+      "id": "rilke-questions",
+      "text": "Soyez patient envers tout ce qui n'est pas résolu dans votre cœur, et essayez d'aimer les questions elles-mêmes.",
+      "author": "Rainer Maria Rilke",
+      "source": "Lettres à un jeune poète, IV",
+      "theme": "littérature"
+    },
+    {
+      "id": "lao-tseu-premier-pas",
+      "text": "Un voyage de mille lieues commence par un premier pas.",
+      "author": "Lao-tseu",
+      "source": "Tao-tö-king, 64",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "lao-tseu-se-connaitre",
+      "text": "Celui qui connaît les autres est sage. Celui qui se connaît lui-même est éclairé.",
+      "author": "Lao-tseu",
+      "source": "Tao-tö-king, 33",
+      "theme": "sagesses orientales"
+    },
+    {
+      "id": "confucius-faute",
+      "text": "Commettre une faute et ne pas s'en corriger, voilà la vraie faute.",
+      "author": "Confucius",
+      "source": "Entretiens, XV, 29",
+      "theme": "sagesses orientales"
     }
   ]
 }
