@@ -1,0 +1,266 @@
+{
+  "version": 1,
+  "updated": "2026-11-08",
+  "description": "Citations affichées sur l'écran de verrouillage. Voir docs/CONSIGNES_CLAUDE.md pour le format.",
+  "quotes": [
+    {
+      "id": "epictete-jugements",
+      "text": "Ce qui trouble les hommes, ce ne sont pas les choses, mais les jugements qu'ils portent sur les choses.",
+      "author": "Épictète",
+      "source": "Manuel, V",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "epictete-dependent",
+      "text": "Il y a des choses qui dépendent de nous, et d'autres qui ne dépendent pas de nous.",
+      "author": "Épictète",
+      "source": "Manuel, I",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "epictete-veuille",
+      "text": "N'exige pas que les événements arrivent comme tu le veux, mais veuille qu'ils arrivent comme ils arrivent, et tu seras heureux.",
+      "author": "Épictète",
+      "source": "Manuel, VIII",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-differe",
+      "text": "Pendant qu'on la remet à plus tard, la vie passe.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, I, 1",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-revendique",
+      "text": "Revendique-toi pour toi-même.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, I, 1",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-temps",
+      "text": "Ce n'est pas que nous ayons peu de temps, c'est que nous en perdons beaucoup.",
+      "author": "Sénèque",
+      "source": "De la brièveté de la vie, I",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-imagination",
+      "text": "Nous souffrons plus souvent en imagination que dans la réalité.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, XIII, 4",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "seneque-vent",
+      "text": "Il n'y a pas de vent favorable pour celui qui ne sait pas vers quel port il se dirige.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, LXXI, 3",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-opinion",
+      "text": "Le monde est changement, la vie est opinion.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, IV, 3",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-vengeance",
+      "text": "La meilleure façon de se venger, c'est de ne pas ressembler à celui qui t'a fait du tort.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, VI, 6",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-dix-mille",
+      "text": "Ne vis pas comme si tu devais vivre dix mille ans. Tant que tu vis, tant que cela t'est possible, deviens homme de bien.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, IV, 17",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-creuse",
+      "text": "Creuse au-dedans de toi. Au-dedans est la source du bien, et elle peut toujours jaillir, si tu creuses toujours.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, VII, 59",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-sois-le",
+      "text": "Il ne s'agit plus de discuter de ce que doit être l'homme de bien, mais de l'être.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, X, 16",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "marc-aurele-jugement",
+      "text": "Si une chose extérieure te chagrine, ce n'est pas elle qui te trouble, c'est le jugement que tu portes sur elle. Et ce jugement, il ne tient qu'à toi de l'effacer.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, VIII, 47",
+      "theme": "stoïcisme"
+    },
+    {
+      "id": "epicure-mort",
+      "text": "Habitue-toi à penser que la mort n'est rien pour nous, car tout bien et tout mal résident dans la sensation.",
+      "author": "Épicure",
+      "source": "Lettre à Ménécée",
+      "theme": "épicurisme"
+    },
+    {
+      "id": "heraclite-fleuve",
+      "text": "On ne peut pas entrer deux fois dans le même fleuve.",
+      "author": "Héraclite",
+      "source": "Fragment 91 (Diels-Kranz)",
+      "theme": "présocratiques"
+    },
+    {
+      "id": "socrate-examen",
+      "text": "Une vie sans examen ne vaut pas la peine d'être vécue.",
+      "author": "Socrate",
+      "source": "Platon, Apologie de Socrate, 38a",
+      "theme": "Antiquité"
+    },
+    {
+      "id": "montaigne-mourir",
+      "text": "Qui a appris à mourir, il a désappris à servir.",
+      "author": "Montaigne",
+      "source": "Essais, I, 20",
+      "theme": "humanisme"
+    },
+    {
+      "id": "montaigne-danse",
+      "text": "Quand je danse, je danse ; quand je dors, je dors.",
+      "author": "Montaigne",
+      "source": "Essais, III, 13",
+      "theme": "humanisme"
+    },
+    {
+      "id": "montaigne-amitie",
+      "text": "Parce que c'était lui, parce que c'était moi.",
+      "author": "Montaigne",
+      "source": "Essais, I, 28",
+      "theme": "humanisme"
+    },
+    {
+      "id": "montaigne-condition",
+      "text": "Chaque homme porte la forme entière de l'humaine condition.",
+      "author": "Montaigne",
+      "source": "Essais, III, 2",
+      "theme": "humanisme"
+    },
+    {
+      "id": "montaigne-jouir",
+      "text": "C'est une absolue perfection, et comme divine, de savoir jouir loyalement de son être.",
+      "author": "Montaigne",
+      "source": "Essais, III, 13",
+      "theme": "humanisme"
+    },
+    {
+      "id": "pascal-coeur",
+      "text": "Le cœur a ses raisons que la raison ne connaît point.",
+      "author": "Pascal",
+      "source": "Pensées (Brunschvicg 277)",
+      "theme": "moralistes"
+    },
+    {
+      "id": "pascal-chambre",
+      "text": "Tout le malheur des hommes vient d'une seule chose, qui est de ne savoir pas demeurer en repos dans une chambre.",
+      "author": "Pascal",
+      "source": "Pensées (Brunschvicg 139)",
+      "theme": "moralistes"
+    },
+    {
+      "id": "pascal-roseau",
+      "text": "L'homme n'est qu'un roseau, le plus faible de la nature ; mais c'est un roseau pensant.",
+      "author": "Pascal",
+      "source": "Pensées (Brunschvicg 347)",
+      "theme": "moralistes"
+    },
+    {
+      "id": "spinoza-comprendre",
+      "text": "Je me suis soigneusement appliqué à ne pas tourner en dérision les actions des hommes, à ne pas les déplorer, à ne pas les détester, mais à les comprendre.",
+      "author": "Spinoza",
+      "source": "Traité politique, I, 4",
+      "theme": "rationalisme"
+    },
+    {
+      "id": "alain-optimisme",
+      "text": "Le pessimisme est d'humeur ; l'optimisme est de volonté.",
+      "author": "Alain",
+      "source": "Propos sur le bonheur",
+      "theme": "moralistes"
+    },
+    {
+      "id": "kierkegaard-arriere",
+      "text": "La vie ne peut être comprise qu'en regardant en arrière, mais elle ne peut être vécue qu'en regardant en avant.",
+      "author": "Kierkegaard",
+      "source": "Journal, 1843",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "nietzsche-amor-fati",
+      "text": "Je veux apprendre de plus en plus à voir dans la nécessité des choses la beauté : ainsi je serai de ceux qui embellissent les choses. Amor fati : que ce soit désormais mon amour.",
+      "author": "Nietzsche",
+      "source": "Le Gai Savoir, IV, 276",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "sartre-condamne",
+      "text": "L'homme est condamné à être libre.",
+      "author": "Jean-Paul Sartre",
+      "source": "L'existentialisme est un humanisme",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "sartre-se-fait",
+      "text": "L'homme n'est rien d'autre que ce qu'il se fait.",
+      "author": "Jean-Paul Sartre",
+      "source": "L'existentialisme est un humanisme",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "sartre-ce-qu-on-a-fait",
+      "text": "L'important n'est pas ce qu'on fait de nous, mais ce que nous faisons nous-mêmes de ce qu'on a fait de nous.",
+      "author": "Jean-Paul Sartre",
+      "source": "Saint Genet, comédien et martyr",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "camus-sisyphe",
+      "text": "La lutte elle-même vers les sommets suffit à remplir un cœur d'homme. Il faut imaginer Sisyphe heureux.",
+      "author": "Albert Camus",
+      "source": "Le Mythe de Sisyphe",
+      "theme": "absurde"
+    },
+    {
+      "id": "camus-ete-invincible",
+      "text": "Au milieu de l'hiver, j'apprenais enfin qu'il y avait en moi un été invincible.",
+      "author": "Albert Camus",
+      "source": "L'Été, « Retour à Tipasa »",
+      "theme": "absurde"
+    },
+    {
+      "id": "camus-revolte",
+      "text": "Je me révolte, donc nous sommes.",
+      "author": "Albert Camus",
+      "source": "L'Homme révolté",
+      "theme": "absurde"
+    },
+    {
+      "id": "beauvoir-libres",
+      "text": "Vouloir être libre, c'est aussi vouloir les autres libres.",
+      "author": "Simone de Beauvoir",
+      "source": "Pour une morale de l'ambiguïté",
+      "theme": "existentialisme"
+    },
+    {
+      "id": "weil-attention",
+      "text": "L'attention est la forme la plus rare et la plus pure de la générosité.",
+      "author": "Simone Weil",
+      "source": "Lettre à Joë Bousquet, 13 avril 1942",
+      "theme": "philosophie morale"
+    }
+  ]
+}
