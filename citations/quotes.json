@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "updated": "2026-11-08",
   "description": "Citations affichées sur l'écran de verrouillage. Voir docs/CONSIGNES_CLAUDE.md pour le format.",
   "quotes": [
@@ -296,6 +296,104 @@
       "author": "Confucius",
       "source": "Entretiens, XV, 29",
       "theme": "sagesses orientales"
+    },
+    {
+      "id": "jobs-temps-limite",
+      "text": "Votre temps est limité, alors ne le gâchez pas à vivre la vie de quelqu'un d'autre.",
+      "author": "Steve Jobs",
+      "source": "Discours à l'université Stanford, 2005",
+      "theme": "entrepreneurs"
+    },
+    {
+      "id": "jobs-relier-points",
+      "text": "On ne peut pas relier les points en regardant vers l'avant ; on ne peut les relier qu'en regardant en arrière. Il faut donc faire confiance au fait qu'ils se relieront un jour.",
+      "author": "Steve Jobs",
+      "source": "Discours à l'université Stanford, 2005",
+      "theme": "entrepreneurs"
+    },
+    {
+      "id": "bezos-gentil",
+      "text": "Il est plus difficile d'être gentil que d'être intelligent.",
+      "author": "Jeff Bezos",
+      "source": "Discours à l'université de Princeton, 2010",
+      "theme": "entrepreneurs"
+    },
+    {
+      "id": "bezos-choix",
+      "text": "Au bout du compte, nous sommes nos choix.",
+      "author": "Jeff Bezos",
+      "source": "Discours à l'université de Princeton, 2010",
+      "theme": "entrepreneurs"
+    },
+    {
+      "id": "gates-succes",
+      "text": "Le succès est un piètre professeur. Il pousse les gens intelligents à croire qu'ils ne peuvent pas perdre.",
+      "author": "Bill Gates",
+      "source": "La Route du futur, 1995",
+      "theme": "entrepreneurs"
+    },
+    {
+      "id": "munger-plus-sage",
+      "text": "Passez chaque journée à essayer d'être un peu plus sage qu'au moment où vous vous êtes réveillé.",
+      "author": "Charlie Munger",
+      "source": "Discours à l'université de Californie du Sud, 2007",
+      "theme": "entrepreneurs"
+    },
+    {
+      "id": "musk-important",
+      "text": "Quand quelque chose est suffisamment important, on le fait même si les chances ne sont pas en notre faveur.",
+      "author": "Elon Musk",
+      "source": "Interview à l'émission 60 Minutes, 2014",
+      "theme": "entrepreneurs"
+    },
+    {
+      "id": "naval-long-terme",
+      "text": "Jouez à des jeux sur le long terme, avec des gens qui pensent sur le long terme.",
+      "author": "Naval Ravikant",
+      "source": "« How to Get Rich », 2018",
+      "theme": "entrepreneurs"
+    },
+    {
+      "id": "dalio-progres",
+      "text": "Douleur + réflexion = progrès.",
+      "author": "Ray Dalio",
+      "source": "Principes, 2017",
+      "theme": "entrepreneurs"
+    },
+    {
+      "id": "clear-systemes",
+      "text": "On ne s'élève pas au niveau de ses objectifs. On retombe au niveau de ses systèmes.",
+      "author": "James Clear",
+      "source": "Un rien peut tout changer (Atomic Habits), 2018",
+      "theme": "développement personnel"
+    },
+    {
+      "id": "jordan-echecs",
+      "text": "J'ai raté plus de 9 000 tirs dans ma carrière. J'ai échoué encore et encore dans ma vie. Et c'est pour ça que je réussis.",
+      "author": "Michael Jordan",
+      "source": "Publicité Nike, 1997",
+      "theme": "sport"
+    },
+    {
+      "id": "pausch-murs",
+      "text": "Les murs de briques sont là pour une raison : ils nous laissent montrer à quel point nous voulons quelque chose.",
+      "author": "Randy Pausch",
+      "source": "La Dernière Leçon, 2007",
+      "theme": "contemporains"
+    },
+    {
+      "id": "mandela-courage",
+      "text": "J'ai appris que le courage n'est pas l'absence de peur, mais la capacité de la vaincre.",
+      "author": "Nelson Mandela",
+      "source": "Un long chemin vers la liberté, 1994",
+      "theme": "contemporains"
+    },
+    {
+      "id": "feynman-tromper",
+      "text": "Le premier principe est de ne pas se tromper soi-même, et on est la personne la plus facile à tromper.",
+      "author": "Richard Feynman",
+      "source": "Discours au Caltech, « Cargo Cult Science », 1974",
+      "theme": "science"
     }
   ]
 }
