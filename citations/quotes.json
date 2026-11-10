@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "updated": "2026-11-08",
   "description": "Citations affichées sur l'écran de verrouillage. Voir docs/CONSIGNES_CLAUDE.md pour le format.",
   "quotes": [
@@ -38,15 +38,6 @@
       "theme": "stoïcisme",
       "explanation": "On croit avoir le temps, alors on remet à plus tard ce qui compte vraiment. Mais pendant qu'on attend le bon moment, la vie, elle, continue d'avancer.",
       "example": "Appeler ce grand-parent, commencer ce projet, voyager : « plus tard » devient vite « jamais ». Le bon moment est souvent celui où on décide de s'y mettre."
-    },
-    {
-      "id": "seneque-temps",
-      "text": "Ce n'est pas que nous ayons peu de temps, c'est que nous en perdons beaucoup.",
-      "author": "Sénèque",
-      "source": "De la brièveté de la vie, I",
-      "theme": "stoïcisme",
-      "explanation": "La vie n'est pas trop courte en soi : c'est nous qui en gaspillons une grande partie en distractions, en attente et en choses qui ne nous importent pas.",
-      "example": "Fais le compte des heures passées chaque semaine à faire défiler des contenus qui ne t'apportent rien. Mises bout à bout sur une année, cela représente des semaines entières de vie."
     },
     {
       "id": "seneque-imagination",
@@ -247,15 +238,6 @@
       "example": "Tu reçois un message qui t'énerve. Attendre une heure avant de répondre t'évitera souvent d'envoyer quelque chose que tu regretterais."
     },
     {
-      "id": "seneque-enseigner",
-      "text": "En enseignant, on apprend.",
-      "author": "Sénèque",
-      "source": "Lettres à Lucilius, VII, 8",
-      "theme": "stoïcisme",
-      "explanation": "Expliquer une chose à quelqu'un oblige à la comprendre vraiment. Transmettre est l'une des meilleures façons d'apprendre.",
-      "example": "Aider un ami à réviser un sujet te révèle les points que tu croyais maîtriser et que tu ne sais en fait pas expliquer."
-    },
-    {
       "id": "epicure-biens-presents",
       "text": "Il ne faut pas gâcher les biens présents par le désir de ceux qui nous manquent.",
       "author": "Épicure",
@@ -283,15 +265,6 @@
       "example": "Tu aides un collègue et tu espères secrètement que le chef le remarque. L'aide reste utile, mais il est sain de reconnaître ce petit calcul."
     },
     {
-      "id": "chamfort-rire",
-      "text": "La plus perdue de toutes les journées est celle où l'on n'a pas ri.",
-      "author": "Chamfort",
-      "source": "Maximes et pensées",
-      "theme": "moralistes",
-      "explanation": "Le rire n'est pas une futilité : une journée sans rire est une journée où l'on a manqué quelque chose d'essentiel.",
-      "example": "Même une journée chargée peut être sauvée par cinq minutes de franche rigolade avec quelqu'un. Ne les considère pas comme du temps perdu."
-    },
-    {
       "id": "spinoza-rare",
       "text": "Tout ce qui est précieux est aussi difficile que rare.",
       "author": "Spinoza",
@@ -308,15 +281,6 @@
       "theme": "existentialisme",
       "explanation": "Quand on a une raison profonde de vivre ou d'agir, on peut supporter presque toutes les difficultés pour y arriver. Le sens donne la force.",
       "example": "Un étudiant qui sait pourquoi il veut devenir médecin supportera des années d'études éprouvantes. Sans ce pourquoi, la moindre difficulté devient insupportable."
-    },
-    {
-      "id": "alain-vouloir-heureux",
-      "text": "Il est impossible que l'on soit heureux si l'on ne veut pas l'être.",
-      "author": "Alain",
-      "source": "Propos sur le bonheur",
-      "theme": "moralistes",
-      "explanation": "Le bonheur n'est pas qu'une question de chance : c'est aussi une décision et un effort. Celui qui attend passivement d'être heureux risque d'attendre longtemps.",
-      "example": "Deux personnes vivent le même week-end pluvieux. L'une se plaint, l'autre organise un après-midi jeux de société. La pluie est la même."
     },
     {
       "id": "camus-present",
@@ -337,15 +301,6 @@
       "example": "Bloqué dans les embouteillages, tu ne choisis pas le trafic. Mais tu choisis entre t'énerver ou en profiter pour écouter un podcast ou appeler quelqu'un."
     },
     {
-      "id": "saint-exupery-coeur",
-      "text": "On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux.",
-      "author": "Antoine de Saint-Exupéry",
-      "source": "Le Petit Prince, XXI",
-      "theme": "littérature",
-      "explanation": "Les choses les plus importantes (l'amour, l'amitié, la confiance) ne se voient pas. On les perçoit par l'attachement et l'attention, pas par l'apparence.",
-      "example": "Une vieille montre sans valeur marchande peut être ton objet le plus précieux parce qu'elle appartenait à ton grand-père."
-    },
-    {
       "id": "rilke-questions",
       "text": "Soyez patient envers tout ce qui n'est pas résolu dans votre cœur, et essayez d'aimer les questions elles-mêmes.",
       "author": "Rainer Maria Rilke",
@@ -355,15 +310,6 @@
       "example": "Tu ne sais pas encore quel métier te correspond. Plutôt que de paniquer, explore, essaie, et laisse la réponse se former peu à peu."
     },
     {
-      "id": "lao-tseu-premier-pas",
-      "text": "Un voyage de mille lieues commence par un premier pas.",
-      "author": "Lao-tseu",
-      "source": "Tao-tö-king, 64",
-      "theme": "sagesses orientales",
-      "explanation": "Les grands projets paraissent écrasants vus de loin. Mais ils commencent tous par une petite action simple, ici et maintenant.",
-      "example": "Écrire un livre semble impossible. Écrire une page aujourd'hui, c'est faisable. Et c'est déjà avoir commencé le livre."
-    },
-    {
       "id": "lao-tseu-se-connaitre",
       "text": "Celui qui connaît les autres est sage. Celui qui se connaît lui-même est éclairé.",
       "author": "Lao-tseu",
@@ -371,15 +317,6 @@
       "theme": "sagesses orientales",
       "explanation": "Comprendre les autres est une forme d'intelligence. Se comprendre soi-même, ses peurs, ses motivations et ses limites, est plus difficile et plus précieux.",
       "example": "Tu peux très bien analyser les défauts de ton entourage. Savoir pourquoi toi tu réagis toujours mal à la critique demande un regard bien plus honnête."
-    },
-    {
-      "id": "confucius-faute",
-      "text": "Commettre une faute et ne pas s'en corriger, voilà la vraie faute.",
-      "author": "Confucius",
-      "source": "Entretiens, XV, 29",
-      "theme": "sagesses orientales",
-      "explanation": "Se tromper est humain et inévitable. La vraie erreur, c'est de refuser de reconnaître la faute et de ne rien en apprendre.",
-      "example": "Tu arrives en retard et tu blesses quelqu'un qui t'attendait. L'erreur est pardonnable ; recommencer la semaine suivante sans t'en soucier ne l'est plus."
     },
     {
       "id": "epictete-progresser",
@@ -425,15 +362,6 @@
       "theme": "stoïcisme",
       "explanation": "Une insulte ne te blesse que si tu acceptes de la prendre à cœur. Ta réaction t'appartient, même quand le geste de l'autre ne t'appartient pas.",
       "example": "Un inconnu t'insulte au volant. Il ne te connaît pas. Tu peux décider que ses mots en disent plus sur son état que sur toi."
-    },
-    {
-      "id": "epictete-habitude",
-      "text": "Tout ce que tu veux rendre habituel, pratique-le.",
-      "author": "Épictète",
-      "source": "Entretiens, II, 18",
-      "theme": "stoïcisme",
-      "explanation": "On devient ce qu'on répète. Pour acquérir une qualité ou une habitude, il ne suffit pas de le vouloir : il faut la pratiquer, encore et encore.",
-      "example": "Tu veux devenir quelqu'un de calme ? Entraîne-toi à respirer avant de répondre, à chaque petite contrariété. Au bout de quelques semaines, ça devient naturel."
     },
     {
       "id": "seneque-temps-a-nous",
@@ -517,15 +445,6 @@
       "example": "Tu t'inquiètes trois semaines à l'avance pour une réunion, puis tu y repenses trois jours après. La réunion, elle, n'a duré qu'une heure."
     },
     {
-      "id": "seneque-courte-folie",
-      "text": "La colère est une courte folie.",
-      "author": "Sénèque",
-      "source": "De la colère, I, 1",
-      "theme": "stoïcisme",
-      "explanation": "Sous l'effet de la colère, on perd temporairement la raison : on dit et fait des choses qu'on ne ferait jamais à tête reposée.",
-      "example": "Pense à la dernière fois où tu t'es énervé. Avec du recul, aurais-tu dit les mêmes mots ? Probablement pas."
-    },
-    {
       "id": "seneque-esperer-craindre",
       "text": "Tu cesseras de craindre si tu cesses d'espérer.",
       "author": "Sénèque",
@@ -551,15 +470,6 @@
       "theme": "stoïcisme",
       "explanation": "Vivre bien n'est pas un savoir qu'on acquiert une fois pour toutes. C'est un apprentissage qui continue jusqu'au dernier jour.",
       "example": "À chaque âge, on découvre de nouvelles leçons : l'indépendance à vingt ans, la patience à quarante, l'acceptation plus tard. Il n'y a jamais de diplôme final."
-    },
-    {
-      "id": "seneque-aime",
-      "text": "Si tu veux être aimé, aime.",
-      "author": "Sénèque",
-      "source": "Lettres à Lucilius, IX, 6",
-      "theme": "stoïcisme",
-      "explanation": "L'amour ne se réclame pas, il se donne. La meilleure façon d'être aimé, c'est d'aimer sincèrement les autres.",
-      "example": "Quelqu'un qui se plaint d'être seul mais ne prend jamais de nouvelles des autres attend un retour qui ne vient pas, faute d'avoir donné."
     },
     {
       "id": "seneque-comment-endurer",
@@ -652,15 +562,6 @@
       "example": "Une liste de vingt tâches pour la journée épuise et frustre. Trois tâches importantes bien faites laissent un sentiment de calme."
     },
     {
-      "id": "marc-aurele-essaim",
-      "text": "Ce qui n'est pas utile à l'essaim n'est pas utile à l'abeille.",
-      "author": "Marc Aurèle",
-      "source": "Pensées pour moi-même, VI, 54",
-      "theme": "stoïcisme",
-      "explanation": "Ce qui nuit au groupe finit par nuire à l'individu. Notre intérêt personnel est lié à celui des autres.",
-      "example": "Tricher pour gagner une compétition entre amis peut te faire gagner la partie, mais tu perds la confiance du groupe, et donc beaucoup plus."
-    },
-    {
       "id": "marc-aurele-supporter",
       "text": "Rien n'arrive à personne qu'il ne soit capable de supporter.",
       "author": "Marc Aurèle",
@@ -677,15 +578,6 @@
       "theme": "stoïcisme",
       "explanation": "Accueillir les bonnes choses sans s'en vanter, et les laisser partir sans s'y accrocher. Une façon d'être en paix avec ce qui vient et ce qui s'en va.",
       "example": "Tu reçois une prime : profite-en sans te croire supérieur. Si un jour ton poste change, accepte-le sans t'accrocher au passé."
-    },
-    {
-      "id": "epicure-philosopher",
-      "text": "Qu'on ne tarde pas à philosopher quand on est jeune, ni qu'on ne se lasse de philosopher quand on est vieux.",
-      "author": "Épicure",
-      "source": "Lettre à Ménécée",
-      "theme": "épicurisme",
-      "explanation": "Il n'y a pas d'âge pour réfléchir à la façon de bien vivre. Trop jeune ou trop vieux ne sont jamais de bonnes excuses.",
-      "example": "À vingt ans comme à quatre-vingts, se demander ce qui nous rend vraiment heureux reste utile et peut tout changer."
     },
     {
       "id": "epicure-suffit",
@@ -724,15 +616,6 @@
       "example": "Quelqu'un d'impatient et de colérique aura souvent des conflits, quel que soit l'endroit où il travaille. Changer de caractère change le destin."
     },
     {
-      "id": "heraclite-inespere",
-      "text": "Si l'on n'espère pas l'inespéré, on ne le trouvera pas.",
-      "author": "Héraclite",
-      "source": "Fragment 18 (Diels-Kranz)",
-      "theme": "Antiquité",
-      "explanation": "Si l'on ne croit pas possible ce qui semble improbable, on ne le cherche pas, et on ne le trouve donc jamais. L'espoir ouvre des portes.",
-      "example": "Postuler pour un poste qui semble hors de portée : la réponse sera peut-être non, mais sans candidature, elle est non à coup sûr."
-    },
-    {
       "id": "platon-injustice",
       "text": "Il vaut mieux subir l'injustice que la commettre.",
       "author": "Platon",
@@ -749,51 +632,6 @@
       "theme": "Antiquité",
       "explanation": "On ne naît pas courageux ou juste : on le devient en agissant ainsi, encore et encore. Les qualités morales s'acquièrent par la pratique.",
       "example": "On ne devient pas généreux en y pensant, mais en donnant régulièrement un peu de son temps ou de son aide."
-    },
-    {
-      "id": "aristote-hirondelle",
-      "text": "Une hirondelle ne fait pas le printemps, ni un seul jour : de même, le bonheur n'est pas l'affaire d'une seule journée.",
-      "author": "Aristote",
-      "source": "Éthique à Nicomaque, I, 6",
-      "theme": "Antiquité",
-      "explanation": "Un bon moment isolé ne fait pas une vie heureuse. Le bonheur se construit dans la durée, par une manière de vivre.",
-      "example": "Un voyage extraordinaire ne compense pas une vie quotidienne qu'on déteste. Mieux vaut améliorer chaque jour un peu."
-    },
-    {
-      "id": "aristote-ami",
-      "text": "L'ami est un autre soi-même.",
-      "author": "Aristote",
-      "source": "Éthique à Nicomaque, IX, 4",
-      "theme": "Antiquité",
-      "explanation": "Un véritable ami partage nos valeurs, et l'on veut son bien comme on veut le sien. L'amitié est un prolongement de soi.",
-      "example": "Ton meilleur ami se réjouit sincèrement de ta réussite comme si c'était la sienne, et tu ressens la même chose pour lui."
-    },
-    {
-      "id": "horace-cueille",
-      "text": "Cueille le jour présent, en te fiant le moins possible au lendemain.",
-      "author": "Horace",
-      "source": "Odes, I, 11",
-      "theme": "Antiquité",
-      "explanation": "C'est le fameux « carpe diem » : profiter du jour présent plutôt que de tout miser sur un lendemain incertain.",
-      "example": "Ce dîner avec tes amis ce soir vaut plus que tous les projets que tu feras peut-être un jour avec eux."
-    },
-    {
-      "id": "horace-ose",
-      "text": "Qui a commencé a fait la moitié du travail : ose être sage.",
-      "author": "Horace",
-      "source": "Épîtres, I, 2",
-      "theme": "Antiquité",
-      "explanation": "Le plus dur est souvent de commencer. Une fois lancé, la moitié du chemin est faite. Horace invite à oser penser par soi-même.",
-      "example": "Mettre ses chaussures pour aller courir est souvent l'étape la plus difficile. Une fois dehors, le reste suit."
-    },
-    {
-      "id": "plutarque-feu",
-      "text": "L'esprit n'est pas un vase qu'il faut remplir, mais un feu qu'il faut allumer.",
-      "author": "Plutarque",
-      "source": "Comment écouter, 18",
-      "theme": "Antiquité",
-      "explanation": "Apprendre, ce n'est pas accumuler des connaissances, c'est éveiller la curiosité et l'envie de comprendre.",
-      "example": "Un bon professeur ne fait pas réciter des dates ; il te donne envie d'aller chercher par toi-même pourquoi les choses se sont passées ainsi."
     },
     {
       "id": "montaigne-joie",
@@ -868,15 +706,6 @@
       "example": "Regarder les étoiles en pleine campagne peut donner ce même vertige. C'est souvent dans ces moments qu'on se pose les grandes questions."
     },
     {
-      "id": "pascal-plus-courte",
-      "text": "Je n'ai fait celle-ci plus longue que parce que je n'ai pas eu le loisir de la faire plus courte.",
-      "author": "Pascal",
-      "source": "Les Provinciales, XVI",
-      "theme": "moralistes",
-      "explanation": "Faire court et clair demande plus de travail que faire long. La concision est un effort, pas une paresse.",
-      "example": "Résumer ton idée en deux phrases dans un mail te prendra plus de temps que d'écrire trois paragraphes. Mais ton lecteur te remerciera."
-    },
-    {
       "id": "descartes-me-vaincre",
       "text": "Tâcher toujours plutôt à me vaincre que la fortune, et à changer mes désirs que l'ordre du monde.",
       "author": "Descartes",
@@ -884,15 +713,6 @@
       "theme": "philosophie moderne",
       "explanation": "On ne peut pas toujours changer le monde ni la chance, mais on peut toujours travailler sur ses propres désirs et réactions.",
       "example": "Tu voulais une maison avec jardin, mais tu ne peux pas te l'offrir. Apprendre à apprécier ton appartement est plus en ton pouvoir que changer le marché immobilier."
-    },
-    {
-      "id": "descartes-appliquer",
-      "text": "Ce n'est pas assez d'avoir l'esprit bon, mais le principal est de l'appliquer bien.",
-      "author": "Descartes",
-      "source": "Discours de la méthode, I",
-      "theme": "philosophie moderne",
-      "explanation": "Être intelligent ne suffit pas : ce qui compte, c'est de bien utiliser son intelligence, avec méthode et rigueur.",
-      "example": "Un élève brillant qui ne travaille pas obtient souvent de moins bons résultats qu'un élève moyen, mais méthodique et régulier."
     },
     {
       "id": "spinoza-homme-libre",
@@ -931,15 +751,6 @@
       "example": "On conseille facilement à un ami « ce n'est pas grave, ça passera », mais quand la même chose nous arrive, on la vit comme un drame."
     },
     {
-      "id": "la-rochefoucauld-amis",
-      "text": "Il est plus honteux de se défier de ses amis que d'en être trompé.",
-      "author": "La Rochefoucauld",
-      "source": "Maximes, 84",
-      "theme": "moralistes",
-      "explanation": "Soupçonner ses amis sans raison est plus indigne que de se faire parfois tromper par eux. La confiance a un prix, mais la méfiance aussi.",
-      "example": "Fouiller le téléphone d'un proche par méfiance abîme la relation, même si tu ne trouves rien."
-    },
-    {
       "id": "la-rochefoucauld-heureux",
       "text": "On n'est jamais si heureux ni si malheureux qu'on s'imagine.",
       "author": "La Rochefoucauld",
@@ -956,24 +767,6 @@
       "theme": "moralistes",
       "explanation": "Quand on promet, on est porté par l'enthousiasme ; quand vient le moment de tenir, la peur et la paresse reprennent le dessus.",
       "example": "Le 1er janvier, tu promets d'aller à la salle cinq fois par semaine. Fin janvier, la fatigue et le froid décident à ta place."
-    },
-    {
-      "id": "la-rochefoucauld-plus-fin",
-      "text": "Le vrai moyen d'être trompé, c'est de se croire plus fin que les autres.",
-      "author": "La Rochefoucauld",
-      "source": "Maximes, 127",
-      "theme": "moralistes",
-      "explanation": "Se croire plus malin que les autres rend imprudent et aveugle. C'est souvent le meilleur moyen de se faire avoir.",
-      "example": "Les personnes qui pensent être trop intelligentes pour tomber dans une arnaque sont souvent celles qui baissent leur garde."
-    },
-    {
-      "id": "la-bruyere-rire",
-      "text": "Il faut rire avant que d'être heureux, de peur de mourir sans avoir ri.",
-      "author": "La Bruyère",
-      "source": "Les Caractères, Du cœur, 63",
-      "theme": "moralistes",
-      "explanation": "N'attends pas d'avoir une vie parfaite pour t'autoriser à rire. Le rire n'est pas la récompense du bonheur, il y contribue.",
-      "example": "Même pendant une période difficile, regarder un film drôle ou rire avec un ami fait du bien et aide à tenir."
     },
     {
       "id": "la-bruyere-misérable",
@@ -994,60 +787,6 @@
       "example": "Changer de travail, de ville ou de partenaire peut aider, mais si l'on ne travaille pas son rapport à soi, l'insatisfaction revient."
     },
     {
-      "id": "vauvenargues-coeur",
-      "text": "Les grandes pensées viennent du cœur.",
-      "author": "Vauvenargues",
-      "source": "Réflexions et maximes, 127",
-      "theme": "moralistes",
-      "explanation": "Les idées les plus fortes ne viennent pas seulement de l'intelligence, mais de ce qui nous touche, nous indigne ou nous émeut.",
-      "example": "Beaucoup de grandes causes sont nées d'une émotion : la colère devant une injustice, la tendresse pour un proche malade."
-    },
-    {
-      "id": "montesquieu-lecture",
-      "text": "Je n'ai jamais eu de chagrin qu'une heure de lecture ne m'ait ôté.",
-      "author": "Montesquieu",
-      "source": "Mes pensées",
-      "theme": "moralistes",
-      "explanation": "La lecture peut apaiser et consoler : elle nous emmène ailleurs et nous aide à prendre du recul sur nos soucis.",
-      "example": "Un soir où tout va mal, plonger une heure dans un bon livre peut suffire à changer d'humeur et à relativiser."
-    },
-    {
-      "id": "voltaire-jardin",
-      "text": "Il faut cultiver notre jardin.",
-      "author": "Voltaire",
-      "source": "Candide, XXX",
-      "theme": "Lumières",
-      "explanation": "À la fin de Candide, après mille malheurs, la conclusion est simple : plutôt que de philosopher sans fin sur le monde, il faut s'occuper concrètement de sa propre vie.",
-      "example": "Plutôt que de passer des heures à te désoler des actualités, consacre ton énergie à ce que tu peux améliorer autour de toi."
-    },
-    {
-      "id": "voltaire-mieux",
-      "text": "Le mieux est l'ennemi du bien.",
-      "author": "Voltaire",
-      "source": "La Bégueule",
-      "theme": "Lumières",
-      "explanation": "À force de vouloir la perfection, on finit par gâcher ce qui était déjà bon, ou par ne rien faire du tout.",
-      "example": "Tu retouches ta présentation pour la dixième fois au lieu de l'envoyer. Elle était bonne depuis longtemps, et tu as perdu une soirée."
-    },
-    {
-      "id": "rousseau-agir",
-      "text": "Vivre, ce n'est pas respirer, c'est agir.",
-      "author": "Jean-Jacques Rousseau",
-      "source": "Émile, I",
-      "theme": "Lumières",
-      "explanation": "Vivre vraiment, ce n'est pas simplement exister, c'est s'engager, sentir et faire des choses.",
-      "example": "Une journée passée à agir sur un projet qui te tient à cœur te fait te sentir plus vivant qu'une journée entière devant des écrans."
-    },
-    {
-      "id": "rousseau-fers",
-      "text": "L'homme est né libre, et partout il est dans les fers.",
-      "author": "Jean-Jacques Rousseau",
-      "source": "Du contrat social, I, 1",
-      "theme": "Lumières",
-      "explanation": "Chaque humain naît libre, mais la société, les institutions et les conventions finissent par l'enchaîner. Rousseau cherche comment retrouver une liberté juste.",
-      "example": "On se sent parfois enfermé par des règles qu'on n'a jamais choisies : ce qu'il « faut » faire à son âge, dans son métier ou dans son milieu."
-    },
-    {
       "id": "kant-entendement",
       "text": "Aie le courage de te servir de ton propre entendement.",
       "author": "Kant",
@@ -1055,15 +794,6 @@
       "theme": "Lumières",
       "explanation": "La devise des Lumières : ose penser par toi-même, plutôt que de laisser les autres (autorités, foule, habitudes) penser à ta place.",
       "example": "Avant de partager une information choquante, prends le temps de la vérifier toi-même au lieu de la croire parce que tout le monde la relaie."
-    },
-    {
-      "id": "kant-fin",
-      "text": "Agis de telle sorte que tu traites l'humanité, en toi comme en autrui, toujours aussi comme une fin, et jamais simplement comme un moyen.",
-      "author": "Kant",
-      "source": "Fondements de la métaphysique des mœurs",
-      "theme": "Lumières",
-      "explanation": "Il ne faut jamais utiliser les autres uniquement comme des outils pour obtenir ce qu'on veut. Chaque personne mérite d'être respectée pour elle-même.",
-      "example": "Être gentil avec quelqu'un seulement parce qu'il peut t'être utile, c'est le traiter comme un moyen. Le respecter, c'est l'être même s'il ne t'apporte rien."
     },
     {
       "id": "kant-ciel-etoile",
@@ -1075,24 +805,6 @@
       "example": "Une nuit étoilée te fait sentir petit, mais le fait de savoir instinctivement qu'une injustice est mal te rappelle ta grandeur."
     },
     {
-      "id": "goethe-agir",
-      "text": "Il ne suffit pas de savoir, il faut aussi appliquer ; il ne suffit pas de vouloir, il faut aussi agir.",
-      "author": "Goethe",
-      "source": "Maximes et réflexions",
-      "theme": "Lumières",
-      "explanation": "Savoir et vouloir ne suffisent pas : sans passage à l'action, les connaissances et les bonnes intentions restent stériles.",
-      "example": "Tu sais tout sur la nutrition et tu veux mieux manger. Tant que tu n'as pas changé ta liste de courses, rien ne change."
-    },
-    {
-      "id": "hegel-passion",
-      "text": "Rien de grand ne s'est accompli dans le monde sans passion.",
-      "author": "Hegel",
-      "source": "Leçons sur la philosophie de l'histoire, introduction",
-      "theme": "philosophie moderne",
-      "explanation": "Les grandes réalisations de l'histoire ont toutes été portées par des passions. Sans élan ni engagement, rien de grand ne naît.",
-      "example": "Les projets qui aboutissent sont souvent ceux auxquels quelqu'un a cru avec force, malgré les obstacles et le scepticisme."
-    },
-    {
       "id": "schopenhauer-manque",
       "text": "Nous pensons rarement à ce que nous avons, mais toujours à ce qui nous manque.",
       "author": "Schopenhauer",
@@ -1100,15 +812,6 @@
       "theme": "philosophie moderne",
       "explanation": "Notre esprit se concentre naturellement sur ce qui manque, et oublie ce qu'il a. C'est une source majeure d'insatisfaction.",
       "example": "Tu ne penses jamais à ta bonne santé, jusqu'au jour où tu as mal au dos. Remarquer ce qu'on a avant de le perdre est un art."
-    },
-    {
-      "id": "schopenhauer-genie",
-      "text": "Le talent atteint une cible que personne d'autre ne peut atteindre ; le génie atteint une cible que personne d'autre ne peut voir.",
-      "author": "Schopenhauer",
-      "source": "Le Monde comme volonté et comme représentation, suppléments",
-      "theme": "philosophie moderne",
-      "explanation": "Le talent fait mieux que les autres ce que tout le monde voit. Le génie voit ce que personne n'avait vu.",
-      "example": "Avant le smartphone, personne ne réclamait un téléphone sans clavier. Il fallait imaginer une cible que personne ne voyait."
     },
     {
       "id": "nietzsche-plus-fort",
@@ -1127,15 +830,6 @@
       "theme": "existentialisme",
       "explanation": "Il faut accepter une part de désordre, de tourments et de contradictions en soi pour pouvoir créer quelque chose de beau et d'original.",
       "example": "Beaucoup d'artistes ont créé leurs plus belles œuvres pendant des périodes troublées. Le chaos intérieur peut être une matière première."
-    },
-    {
-      "id": "nietzsche-musique",
-      "text": "Sans la musique, la vie serait une erreur.",
-      "author": "Nietzsche",
-      "source": "Crépuscule des idoles, Maximes et traits, 33",
-      "theme": "existentialisme",
-      "explanation": "La musique donne à la vie une intensité et une beauté que rien d'autre ne remplace. Sans elle, l'existence serait appauvrie.",
-      "example": "Une chanson peut te redonner de l'énergie, te faire pleurer ou te rappeler un souvenir précis en quelques secondes."
     },
     {
       "id": "nietzsche-deviens",
@@ -1183,24 +877,6 @@
       "example": "Ton ami quitte un poste stable pour devenir artisan. Ce n'est pas de la folie, il entend un autre tambour."
     },
     {
-      "id": "emerson-paix",
-      "text": "Rien ne peut t'apporter la paix, sinon toi-même.",
-      "author": "Ralph Waldo Emerson",
-      "source": "La Confiance en soi",
-      "theme": "philosophie moderne",
-      "explanation": "La paix intérieure ne peut venir que de soi. Ni les circonstances ni les autres ne peuvent la donner à notre place.",
-      "example": "Attendre que tout soit réglé dans ta vie pour te sentir bien, c'est attendre indéfiniment. La paix se construit de l'intérieur."
-    },
-    {
-      "id": "bergson-action",
-      "text": "Il faut agir en homme de pensée et penser en homme d'action.",
-      "author": "Henri Bergson",
-      "source": "Message au Congrès Descartes, 1937",
-      "theme": "philosophie moderne",
-      "explanation": "Il faut réfléchir avant d'agir, et agir après avoir réfléchi. L'action sans pensée est aveugle, la pensée sans action est vaine.",
-      "example": "Avant de te lancer dans un projet, prends le temps d'y réfléchir. Mais ne réfléchis pas éternellement : il faut aussi passer à l'acte."
-    },
-    {
       "id": "alain-penser",
       "text": "Penser, c'est dire non.",
       "author": "Alain",
@@ -1237,15 +913,6 @@
       "example": "Dans un débat, la personne la plus affirmative n'est pas toujours la mieux informée. Celle qui dit « c'est plus compliqué que ça » l'est souvent davantage."
     },
     {
-      "id": "russell-bonne-vie",
-      "text": "La bonne vie est une vie inspirée par l'amour et guidée par la connaissance.",
-      "author": "Bertrand Russell",
-      "source": "Ce que je crois, 1925",
-      "theme": "philosophie moderne",
-      "explanation": "Une vie réussie combine deux choses : l'amour, qui donne la direction, et la connaissance, qui permet d'agir avec justesse.",
-      "example": "Vouloir aider un proche malade (amour) ne suffit pas ; il faut aussi comprendre sa maladie (connaissance) pour l'aider vraiment."
-    },
-    {
       "id": "wittgenstein-langage",
       "text": "Les limites de mon langage signifient les limites de mon monde.",
       "author": "Wittgenstein",
@@ -1271,33 +938,6 @@
       "theme": "absurde",
       "explanation": "Utiliser des mots flous ou faux aggrave les problèmes, car on ne peut pas régler ce qu'on ne nomme pas correctement.",
       "example": "Appeler « humour » une moquerie blessante empêche d'en parler sérieusement. Nommer clairement les choses aide à les régler."
-    },
-    {
-      "id": "sartre-enfer",
-      "text": "L'enfer, c'est les autres.",
-      "author": "Jean-Paul Sartre",
-      "source": "Huis clos",
-      "theme": "existentialisme",
-      "explanation": "Dans la pièce Huis clos, les autres deviennent un enfer quand on dépend entièrement de leur regard pour savoir qui on est.",
-      "example": "Si tu définis ta valeur uniquement par les « j'aime » sur tes publications, le regard des autres finit par devenir une prison."
-    },
-    {
-      "id": "beauvoir-devient",
-      "text": "On ne naît pas femme : on le devient.",
-      "author": "Simone de Beauvoir",
-      "source": "Le Deuxième Sexe",
-      "theme": "existentialisme",
-      "explanation": "Pour Beauvoir, les rôles attribués aux femmes ne viennent pas de la nature, mais de l'éducation et de la société.",
-      "example": "Offrir systématiquement des poupées aux filles et des voitures aux garçons, c'est déjà les orienter vers des rôles qu'ils n'ont pas choisis."
-    },
-    {
-      "id": "weil-enracinement",
-      "text": "L'enracinement est peut-être le besoin le plus important et le plus méconnu de l'âme humaine.",
-      "author": "Simone Weil",
-      "source": "L'Enracinement",
-      "theme": "philosophie morale",
-      "explanation": "L'être humain a besoin de racines : appartenir à un lieu, à une communauté, à une histoire. Sans elles, il se sent perdu.",
-      "example": "Garder des traditions familiales, connaître ses voisins ou s'investir dans une association donne un sentiment d'appartenance qui protège."
     },
     {
       "id": "lao-tseu-contente",
@@ -1352,15 +992,6 @@
       "theme": "sagesses orientales",
       "explanation": "Accumuler des connaissances sans y réfléchir ne mène à rien ; réfléchir sans s'informer mène à des erreurs. Il faut les deux.",
       "example": "Lire beaucoup sans jamais te demander ce que tu en penses, ou avoir des opinions tranchées sans jamais te renseigner : deux pièges opposés."
-    },
-    {
-      "id": "confucius-ne-fais-pas",
-      "text": "Ce que tu ne voudrais pas que l'on te fasse, ne le fais pas aux autres.",
-      "author": "Confucius",
-      "source": "Entretiens, XV, 23",
-      "theme": "sagesses orientales",
-      "explanation": "La règle d'or : ne fais pas aux autres ce que tu n'aimerais pas qu'on te fasse.",
-      "example": "Avant de critiquer quelqu'un derrière son dos, demande-toi ce que tu ressentirais si tu l'apprenais à son sujet."
     },
     {
       "id": "confucius-savoir",
@@ -1424,15 +1055,6 @@
       "theme": "psychologie",
       "explanation": "On croit qu'il faut se juger sévèrement pour changer. En réalité, s'accepter tel qu'on est crée la sécurité nécessaire au changement.",
       "example": "Se répéter « je suis nul, je dois changer » paralyse. Se dire « je suis comme ça pour l'instant, et je peux évoluer » ouvre la porte au progrès."
-    },
-    {
-      "id": "rogers-direction",
-      "text": "La bonne vie est un processus, non un état. C'est une direction, non une destination.",
-      "author": "Carl Rogers",
-      "source": "Le Développement de la personne, 1961",
-      "theme": "psychologie",
-      "explanation": "La bonne vie n'est pas un état final qu'on atteint une fois pour toutes, mais un chemin qu'on parcourt en continuant d'évoluer.",
-      "example": "Plutôt que de te dire « je serai bien quand j'aurai tout réglé », vois-toi comme en mouvement : chaque jour où tu progresses compte."
     },
     {
       "id": "jung-interieur",
@@ -1507,24 +1129,6 @@
       "example": "Dans une période sans motivation, se demander « qui a besoin de moi ? » ou « quelle tâche m'attend ? » redonne souvent une direction."
     },
     {
-      "id": "maslow-marteau",
-      "text": "Si le seul outil que vous avez est un marteau, vous aurez tendance à voir chaque problème comme un clou.",
-      "author": "Abraham Maslow",
-      "source": "The Psychology of Science, 1966",
-      "theme": "psychologie",
-      "explanation": "On a tendance à résoudre tous les problèmes avec les mêmes outils qu'on connaît, même quand ils ne sont pas adaptés.",
-      "example": "Quelqu'un qui règle tout par la confrontation verra des conflits partout, même là où une simple discussion suffirait."
-    },
-    {
-      "id": "maslow-doit-etre",
-      "text": "Ce qu'un homme peut être, il doit l'être.",
-      "author": "Abraham Maslow",
-      "source": "Motivation and Personality, 1954",
-      "theme": "psychologie",
-      "explanation": "Chacun a en soi un potentiel. Pour être pleinement épanoui, il faut chercher à le réaliser.",
-      "example": "Si tu as un vrai talent pour dessiner, l'ignorer toute ta vie peut laisser un sentiment de manque, même si tout le reste va bien."
-    },
-    {
       "id": "fromm-amour",
       "text": "L'amour immature dit : « Je t'aime parce que j'ai besoin de toi. » L'amour mûr dit : « J'ai besoin de toi parce que je t'aime. »",
       "author": "Erich Fromm",
@@ -1534,51 +1138,6 @@
       "example": "Rester avec quelqu'un par peur d'être seul, ce n'est pas la même chose que de vouloir partager sa vie avec cette personne parce qu'on l'aime."
     },
     {
-      "id": "dweck-devenir",
-      "text": "Devenir vaut mieux qu'être.",
-      "author": "Carol Dweck",
-      "source": "Changer d'état d'esprit, 2006",
-      "theme": "psychologie",
-      "explanation": "Dans « l'état d'esprit de croissance », on valorise la progression plutôt que de prouver qu'on est déjà bon. Les capacités se développent.",
-      "example": "Un élève qui se dit « je ne suis pas encore bon en maths » progresse plus que celui qui se dit « je suis nul en maths »."
-    },
-    {
-      "id": "kabat-zinn-vagues",
-      "text": "Tu ne peux pas arrêter les vagues, mais tu peux apprendre à surfer.",
-      "author": "Jon Kabat-Zinn",
-      "source": "Où tu vas, tu es, 1994",
-      "theme": "psychologie",
-      "explanation": "On ne contrôle pas les difficultés et les émotions qui arrivent, mais on peut apprendre à les traverser avec plus d'aisance.",
-      "example": "Le stress au travail ne disparaîtra pas. Mais apprendre à respirer et à prendre du recul peut t'aider à le traverser sans te noyer."
-    },
-    {
-      "id": "kabat-zinn-ou-tu-vas",
-      "text": "Où que tu ailles, tu y es.",
-      "author": "Jon Kabat-Zinn",
-      "source": "Où tu vas, tu es, 1994",
-      "theme": "psychologie",
-      "explanation": "Où que tu ailles, tu emportes ton esprit avec toi. Changer de lieu ne change pas ce qui se passe à l'intérieur.",
-      "example": "Partir en vacances ne fait pas disparaître tes soucis si tu passes ton séjour à les ruminer."
-    },
-    {
-      "id": "watzlawick-communiquer",
-      "text": "On ne peut pas ne pas communiquer.",
-      "author": "Paul Watzlawick",
-      "source": "Une logique de la communication, 1967",
-      "theme": "psychologie",
-      "explanation": "Tout comportement est un message : même le silence, l'absence de réponse ou une attitude communiquent quelque chose.",
-      "example": "Ne pas répondre à un message pendant trois jours en dit beaucoup à la personne, même si tu n'as rien écrit."
-    },
-    {
-      "id": "lewin-theorie",
-      "text": "Il n'y a rien de plus pratique qu'une bonne théorie.",
-      "author": "Kurt Lewin",
-      "source": "Field Theory in Social Science, 1951",
-      "theme": "psychologie",
-      "explanation": "Une bonne compréhension de fond permet de résoudre des problèmes concrets. Théorie et pratique ne s'opposent pas.",
-      "example": "Comprendre comment fonctionne la motivation t'aide bien plus concrètement à tenir tes bonnes résolutions que de compter sur ta seule volonté."
-    },
-    {
       "id": "simon-attention",
       "text": "Une abondance d'informations crée une pauvreté d'attention.",
       "author": "Herbert Simon",
@@ -1586,15 +1145,6 @@
       "theme": "sciences",
       "explanation": "Plus il y a d'informations disponibles, plus notre attention devient rare et précieuse. Elle est la ressource la plus convoitée aujourd'hui.",
       "example": "Les réseaux sociaux te proposent une infinité de contenus ; le vrai prix que tu paies, c'est ton attention."
-    },
-    {
-      "id": "korzybski-carte",
-      "text": "La carte n'est pas le territoire.",
-      "author": "Alfred Korzybski",
-      "source": "Science and Sanity, 1933",
-      "theme": "sciences",
-      "explanation": "Nos représentations du monde (mots, idées, opinions) ne sont pas le monde lui-même. Elles en sont des simplifications.",
-      "example": "Lire les avis sur un restaurant n'est pas la même chose que d'y manger. L'avis est une carte ; le repas est le territoire."
     },
     {
       "id": "darwin-ignorance",
@@ -1624,15 +1174,6 @@
       "example": "Un joueur qui pense tout savoir sur son sport n'écoute plus les conseils de son entraîneur, et finit par stagner."
     },
     {
-      "id": "pasteur-hasard",
-      "text": "Le hasard ne favorise que les esprits préparés.",
-      "author": "Louis Pasteur",
-      "source": "Discours à l'université de Lille, 1854",
-      "theme": "sciences",
-      "explanation": "Les découvertes dites « par hasard » arrivent à ceux qui sont préparés à les reconnaître.",
-      "example": "Une opportunité professionnelle inattendue ne profite qu'à celui qui a déjà les compétences pour la saisir."
-    },
-    {
       "id": "feynman-tromper",
       "text": "Le premier principe est de ne pas se tromper soi-même, et on est la personne la plus facile à tromper.",
       "author": "Richard Feynman",
@@ -1642,22 +1183,328 @@
       "example": "Tu te dis que tu vas reprendre le sport « la semaine prochaine » depuis trois mois. La seule personne que tu trompes, c'est toi."
     },
     {
-      "id": "sagan-univers",
-      "text": "Nous sommes une façon pour l'univers de se connaître lui-même.",
-      "author": "Carl Sagan",
-      "source": "Cosmos, 1980",
-      "theme": "sciences",
-      "explanation": "Nous sommes faits des mêmes atomes que les étoiles. À travers nous, l'univers prend conscience de lui-même.",
-      "example": "Le calcium de tes os et le fer de ton sang ont été fabriqués dans des étoiles il y a des milliards d'années."
+      "id": "seneque-mal-faire",
+      "text": "La plus grande partie de la vie se passe à mal faire, une grande partie à ne rien faire, et toute la vie à faire autre chose que ce qu'il faudrait.",
+      "author": "Sénèque",
+      "source": "Lettres à Lucilius, I, 1",
+      "theme": "stoïcisme",
+      "explanation": "Sénèque ne parle pas seulement des erreurs : même quand on est occupé, on l'est souvent à des choses qui ne comptent pas vraiment. Le vrai gâchis est silencieux.",
+      "example": "Une journée entière remplie de mails, de courses et de notifications peut te laisser épuisé sans que tu aies touché à une seule chose qui t'importe."
     },
     {
-      "id": "sagan-preuves",
-      "text": "Des affirmations extraordinaires exigent des preuves extraordinaires.",
-      "author": "Carl Sagan",
-      "source": "Cosmos, 1980",
-      "theme": "sciences",
-      "explanation": "Plus une affirmation est surprenante, plus elle doit être appuyée par des preuves solides avant qu'on y croie.",
-      "example": "Si quelqu'un prétend qu'un produit fait perdre dix kilos en une semaine sans effort, il faut des preuves bien plus solides qu'un témoignage."
+      "id": "seneque-mortels-immortels",
+      "text": "Vous craignez tout comme des mortels, et vous désirez tout comme des immortels.",
+      "author": "Sénèque",
+      "source": "De la brièveté de la vie, III, 4",
+      "theme": "stoïcisme",
+      "explanation": "Nous vivons une contradiction : la peur nous rend prudents comme si tout pouvait s'arrêter demain, mais nos désirs s'étalent comme si nous avions l'éternité devant nous.",
+      "example": "Tu n'oses pas changer de vie de peur de tout perdre, tout en te disant que tu feras enfin ce qui te tient à cœur « un jour »."
+    },
+    {
+      "id": "seneque-vie-courte",
+      "text": "Nous n'avons pas reçu une vie courte : c'est nous qui la rendons courte.",
+      "author": "Sénèque",
+      "source": "De la brièveté de la vie, I, 4",
+      "theme": "stoïcisme",
+      "explanation": "La brièveté de la vie n'est pas un fait, c'est un usage. La même durée peut sembler interminable ou fulgurante selon ce qu'on y met.",
+      "example": "Une semaine de vacances pleine de découvertes semble durer un mois ; un mois de routine sans relief disparaît de la mémoire en un instant."
+    },
+    {
+      "id": "marc-aurele-tort",
+      "text": "Supprime l'opinion, et tu supprimes le « on m'a fait du tort » ; supprime le « on m'a fait du tort », et tu supprimes le tort lui-même.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, IV, 7",
+      "theme": "stoïcisme",
+      "explanation": "La blessure ne vient pas seulement du geste de l'autre, mais de l'histoire qu'on se raconte ensuite. Sans le récit « on m'a fait du tort », il ne reste qu'un fait.",
+      "example": "Quelqu'un passe devant toi dans la file. Tant que tu te dis « il m'a manqué de respect », tu bouillonnes. Si tu vois juste quelqu'un pressé, l'offense disparaît."
+    },
+    {
+      "id": "marc-aurele-vie-perdue",
+      "text": "Nul ne perd d'autre vie que celle qu'il vit, et nul ne vit d'autre vie que celle qu'il perd.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, II, 14",
+      "theme": "stoïcisme",
+      "explanation": "Seul le présent existe vraiment. Vivre et perdre sa vie sont donc le même mouvement : chaque instant vécu est un instant qui s'en va. Long ou court, on ne possède que l'instant.",
+      "example": "Celui qui meurt à quatre-vingts ans et celui qui meurt à trente perdent la même chose : le moment présent. Le reste n'était déjà plus à eux."
+    },
+    {
+      "id": "marc-aurele-ecoulement",
+      "text": "Pense souvent à la rapidité avec laquelle passe et disparaît tout ce qui est et tout ce qui arrive.",
+      "author": "Marc Aurèle",
+      "source": "Pensées pour moi-même, V, 23",
+      "theme": "stoïcisme",
+      "explanation": "Tout s'écoule : nos soucis, nos joies, les gens que l'on croise. Le méditer ne rend pas triste, cela remet chaque chose à sa juste taille.",
+      "example": "Le problème qui t'obsède aujourd'hui t'aurait paru impensable il y a un an, et tu l'auras sans doute oublié dans un an."
+    },
+    {
+      "id": "platon-apprendre-mourir",
+      "text": "Ceux qui philosophent vraiment s'exercent à mourir.",
+      "author": "Platon",
+      "source": "Phédon, 67e",
+      "theme": "Antiquité",
+      "explanation": "Pour Socrate, réfléchir à la mort n'est pas morbide : c'est apprendre à se détacher de ce qui est superficiel pour se concentrer sur l'essentiel.",
+      "example": "Se demander « est-ce que ça comptera encore à la fin de ma vie ? » suffit souvent à faire fondre une rancune ou une ambition vaine."
+    },
+    {
+      "id": "pascal-precipice",
+      "text": "Nous courons sans souci dans le précipice, après avoir mis quelque chose devant nous pour nous empêcher de le voir.",
+      "author": "Pascal",
+      "source": "Pensées (Brunschvicg 183)",
+      "theme": "moralistes",
+      "explanation": "Nous savons que la vie est fragile et qu'elle finira, mais nous plaçons sans cesse des distractions devant nos yeux pour ne pas y penser.",
+      "example": "Remplir chaque minute d'écrans et de bruit, c'est parfois une façon de ne jamais se retrouver face aux vraies questions."
+    },
+    {
+      "id": "pascal-divertissement",
+      "text": "La seule chose qui nous console de nos misères est le divertissement, et cependant c'est la plus grande de nos misères.",
+      "author": "Pascal",
+      "source": "Pensées (Brunschvicg 171)",
+      "theme": "moralistes",
+      "explanation": "Le divertissement nous soulage, mais il nous empêche aussi de réfléchir à notre vie et donc de la changer. Le remède entretient le mal.",
+      "example": "Une série regardée pour oublier une journée difficile apaise, mais si ça devient chaque soir, la journée difficile ne change jamais."
+    },
+    {
+      "id": "la-rochefoucauld-deguiser",
+      "text": "Nous sommes si accoutumés à nous déguiser aux autres qu'enfin nous nous déguisons à nous-mêmes.",
+      "author": "La Rochefoucauld",
+      "source": "Maximes, 119",
+      "theme": "moralistes",
+      "explanation": "À force de jouer un rôle pour plaire, on finit par oublier qui l'on est vraiment. Le masque devient un visage.",
+      "example": "Tu fais semblant d'aimer ton travail en société depuis des années. Un jour, tu ne sais même plus si tu l'aimes ou non."
+    },
+    {
+      "id": "la-rochefoucauld-volonte",
+      "text": "Nous avons plus de force que de volonté, et c'est souvent pour nous excuser à nous-mêmes que nous imaginons que les choses sont impossibles.",
+      "author": "La Rochefoucauld",
+      "source": "Maximes, 30",
+      "theme": "moralistes",
+      "explanation": "Ce n'est pas la capacité qui nous manque le plus souvent, c'est la volonté. Dire « c'est impossible » est une excuse confortable.",
+      "example": "« Je n'ai pas le temps de faire du sport » : pourtant, la même personne trouve une heure par jour pour son téléphone."
+    },
+    {
+      "id": "montaigne-nous-a-nous",
+      "text": "Il se trouve autant de différence de nous à nous-mêmes que de nous à autrui.",
+      "author": "Montaigne",
+      "source": "Essais, II, 1 (français modernisé)",
+      "theme": "humanisme",
+      "explanation": "Nous ne sommes pas une personne fixe et cohérente : selon les jours, les humeurs, les situations, nous sommes presque différents de nous-mêmes.",
+      "example": "Le toi calme du dimanche et le toi irritable du lundi matin ne prendraient sans doute pas les mêmes décisions. Mieux vaut le savoir avant de décider."
+    },
+    {
+      "id": "montaigne-pieces",
+      "text": "Nous sommes faits de morceaux, d'une texture si informe et si diverse que chaque pièce, à chaque instant, joue son propre jeu.",
+      "author": "Montaigne",
+      "source": "Essais, II, 1 (français modernisé)",
+      "theme": "humanisme",
+      "explanation": "L'identité n'est pas un bloc : elle est faite de désirs, de peurs et d'habitudes qui tirent parfois dans des directions opposées.",
+      "example": "Une part de toi veut économiser, une autre veut partir en voyage. Ce n'est pas de l'incohérence, c'est le fonctionnement normal d'un être humain."
+    },
+    {
+      "id": "spinoza-desir-bon",
+      "text": "Nous ne désirons pas une chose parce que nous la jugeons bonne ; au contraire, nous la jugeons bonne parce que nous la désirons.",
+      "author": "Spinoza",
+      "source": "Éthique, III, scolie de la proposition 9",
+      "theme": "philosophie moderne",
+      "explanation": "Nous croyons choisir rationnellement ce que nous voulons. Spinoza montre l'inverse : le désir vient d'abord, et la raison invente ensuite les justifications.",
+      "example": "Tu trouves mille bonnes raisons d'acheter ce nouveau téléphone. Mais l'envie était là avant les raisons."
+    },
+    {
+      "id": "spinoza-affect",
+      "text": "Un affect ne peut être contrarié ou supprimé que par un affect contraire et plus fort.",
+      "author": "Spinoza",
+      "source": "Éthique, IV, proposition 7",
+      "theme": "philosophie moderne",
+      "explanation": "On ne vainc pas une émotion par la seule raison. Seule une émotion plus forte peut la remplacer.",
+      "example": "Se répéter « arrête d'avoir peur » ne marche pas. En revanche, l'envie forte de vivre un projet peut l'emporter sur la peur de se lancer."
+    },
+    {
+      "id": "schopenhauer-pendule",
+      "text": "La vie oscille, comme un pendule, de droite à gauche, de la souffrance à l'ennui.",
+      "author": "Schopenhauer",
+      "source": "Le Monde comme volonté et comme représentation, § 57",
+      "theme": "philosophie moderne",
+      "explanation": "Quand on désire quelque chose sans l'avoir, on souffre ; quand on l'obtient, on finit par s'ennuyer. Comprendre ce mécanisme aide à ne pas tout attendre de la prochaine chose désirée.",
+      "example": "Tu attends des mois une console ou une voiture neuve. Une fois là, la joie retombe vite, et un nouveau désir prend sa place."
+    },
+    {
+      "id": "schopenhauer-vouloir",
+      "text": "L'homme peut faire ce qu'il veut, mais il ne peut pas vouloir ce qu'il veut.",
+      "author": "Schopenhauer",
+      "source": "Essai sur le libre arbitre",
+      "theme": "philosophie moderne",
+      "explanation": "Nous sommes libres d'agir selon nos désirs, mais nous ne choisissons pas nos désirs eux-mêmes. Ils viennent de notre nature, de notre histoire, de notre corps.",
+      "example": "Tu peux décider de ne pas manger ce gâteau, mais tu ne peux pas décider de ne pas en avoir envie."
+    },
+    {
+      "id": "nietzsche-eternel-retour",
+      "text": "Et si un démon te disait : « Cette vie, telle que tu la vis maintenant, tu devras la vivre encore une fois, et d'innombrables fois » ?",
+      "author": "Nietzsche",
+      "source": "Le Gai Savoir, IV, 341",
+      "theme": "existentialisme",
+      "explanation": "C'est l'épreuve de l'éternel retour : si tu devais revivre ta vie à l'identique pour toujours, en serais-tu heureux ou désespéré ? La réponse dit beaucoup sur la façon dont tu vis.",
+      "example": "Imagine revivre éternellement cette journée exacte. Si l'idée te paraît insupportable, qu'est-ce que tu pourrais changer dès demain ?"
+    },
+    {
+      "id": "nietzsche-convictions",
+      "text": "Les convictions sont des ennemies de la vérité plus dangereuses que les mensonges.",
+      "author": "Nietzsche",
+      "source": "Humain, trop humain, I, 483",
+      "theme": "existentialisme",
+      "explanation": "Un mensonge peut être démasqué. Une conviction, elle, empêche même de chercher : on est certain d'avoir raison, donc on n'examine plus rien.",
+      "example": "Celui qui est sûr que « les gens ne changent jamais » ne remarquera pas quand quelqu'un change vraiment."
+    },
+    {
+      "id": "nietzsche-folie-amour",
+      "text": "Il y a toujours un peu de folie dans l'amour. Mais il y a toujours aussi un peu de raison dans la folie.",
+      "author": "Nietzsche",
+      "source": "Ainsi parlait Zarathoustra, I, « Lire et écrire »",
+      "theme": "existentialisme",
+      "explanation": "L'amour n'est jamais totalement raisonnable, mais ses élans apparemment fous obéissent souvent à une logique profonde que la raison ignore.",
+      "example": "Tout plaquer pour suivre quelqu'un à l'autre bout du monde paraît fou. Mais c'est parfois la décision la plus juste d'une vie."
+    },
+    {
+      "id": "kierkegaard-desespoir",
+      "text": "Le désespoir le plus commun, c'est de ne pas vouloir être soi-même.",
+      "author": "Kierkegaard",
+      "source": "La Maladie à la mort",
+      "theme": "existentialisme",
+      "explanation": "Pour Kierkegaard, le vrai désespoir n'est pas toujours spectaculaire : il est souvent silencieux, dans le refus de devenir qui l'on est vraiment.",
+      "example": "Vivre en essayant de correspondre à ce que les autres attendent, sans jamais te demander ce que toi tu veux, c'est cette forme discrète de désespoir."
+    },
+    {
+      "id": "camus-soleil-ombre",
+      "text": "Il n'y a pas de soleil sans ombre, et il faut connaître la nuit.",
+      "author": "Albert Camus",
+      "source": "Le Mythe de Sisyphe",
+      "theme": "absurde",
+      "explanation": "La joie et la souffrance ne s'opposent pas : elles font partie du même monde. Refuser toute ombre, c'est refuser la vie elle-même.",
+      "example": "On apprécie vraiment la santé après une maladie, ou la paix après une crise. L'ombre donne sa valeur à la lumière."
+    },
+    {
+      "id": "camus-bonheur-absurde",
+      "text": "Le bonheur et l'absurde sont deux fils de la même terre. Ils sont inséparables.",
+      "author": "Albert Camus",
+      "source": "Le Mythe de Sisyphe",
+      "theme": "absurde",
+      "explanation": "Le monde n'a pas de sens donné d'avance. Pour Camus, c'est justement ce qui rend le bonheur possible : il n'est pas une récompense, il se vit ici, sans garantie.",
+      "example": "Prendre plaisir à un café en terrasse au soleil, sans chercher à quoi ça sert : c'est le bonheur lucide dont parle Camus."
+    },
+    {
+      "id": "camus-peche-vie",
+      "text": "S'il y a un péché contre la vie, ce n'est peut-être pas tant d'en désespérer que d'espérer une autre vie, et se dérober à l'implacable grandeur de celle-ci.",
+      "author": "Albert Camus",
+      "source": "Noces, « L'été à Alger »",
+      "theme": "absurde",
+      "explanation": "Pour Camus, attendre toujours une vie meilleure ailleurs ou plus tard, c'est trahir la seule vie qu'on a vraiment, avec toute sa beauté et sa dureté.",
+      "example": "Passer ses années à rêver d'une autre vie sans jamais regarder la sienne, c'est rater ce qui est déjà là."
+    },
+    {
+      "id": "sartre-sans-excuses",
+      "text": "Nous sommes seuls, sans excuses.",
+      "author": "Jean-Paul Sartre",
+      "source": "L'existentialisme est un humanisme",
+      "theme": "existentialisme",
+      "explanation": "Pour Sartre, rien ne choisit à notre place : ni Dieu, ni la nature, ni notre passé. Nous sommes entièrement responsables de ce que nous faisons de notre vie.",
+      "example": "« J'ai grandi comme ça », « c'est mon caractère » : ce sont des excuses. Sartre dirait que tu continues à choisir chaque jour de rester ainsi."
+    },
+    {
+      "id": "weil-futur",
+      "text": "Le futur ne nous apporte rien, ne nous donne rien ; c'est nous qui, pour le construire, devons tout lui donner, lui donner notre vie elle-même.",
+      "author": "Simone Weil",
+      "source": "L'Enracinement",
+      "theme": "philosophie morale",
+      "explanation": "On attend souvent que l'avenir nous apporte quelque chose. Simone Weil renverse : l'avenir n'est rien d'autre que ce que nous y mettons aujourd'hui.",
+      "example": "Attendre que « ça aille mieux plus tard » ne construit rien. Chaque effort d'aujourd'hui est la seule matière de ton futur."
+    },
+    {
+      "id": "lao-tseu-triomphe",
+      "text": "Celui qui triomphe des autres est fort. Celui qui triomphe de lui-même est puissant.",
+      "author": "Lao-tseu",
+      "source": "Tao-tö-king, 33",
+      "theme": "sagesses orientales",
+      "explanation": "Battre les autres demande de la force. Se maîtriser soi-même (ses peurs, ses colères, ses dépendances) demande une puissance plus profonde.",
+      "example": "Gagner une dispute est facile. S'arrêter au milieu, alors qu'on a raison, pour préserver la relation, est bien plus difficile."
+    },
+    {
+      "id": "zhuangzi-papillon",
+      "text": "Zhuangzi rêva qu'il était un papillon. À son réveil, il ne savait plus s'il était Zhuangzi qui avait rêvé être un papillon, ou un papillon qui rêvait être Zhuangzi.",
+      "author": "Zhuangzi",
+      "source": "Zhuangzi, II",
+      "theme": "sagesses orientales",
+      "explanation": "Ce que nous prenons pour la réalité et pour notre identité est peut-être moins solide que nous le croyons. Une invitation à tenir nos certitudes avec légèreté.",
+      "example": "Tu es persuadé d'être « quelqu'un de timide » ou « quelqu'un de nul en maths ». Et si ce n'était qu'un rêve que tu fais sur toi-même ?"
+    },
+    {
+      "id": "dhammapada-se-vaincre",
+      "text": "Mieux vaut se vaincre soi-même que de vaincre mille fois mille hommes au combat.",
+      "author": "Le Bouddha",
+      "source": "Dhammapada, 103",
+      "theme": "sagesses orientales",
+      "explanation": "La victoire la plus difficile et la plus précieuse n'est pas sur les autres, mais sur ses propres impulsions.",
+      "example": "Ne pas répondre à une provocation sur les réseaux, alors que tu as la réplique parfaite en tête, est une vraie victoire."
+    },
+    {
+      "id": "kafka-hache",
+      "text": "Un livre doit être la hache qui brise la mer gelée en nous.",
+      "author": "Franz Kafka",
+      "source": "Lettre à Oskar Pollak, 1904",
+      "theme": "littérature",
+      "explanation": "Les œuvres qui comptent vraiment ne nous divertissent pas seulement : elles brisent ce qui s'est figé en nous et nous font ressentir à nouveau.",
+      "example": "Ce livre ou ce film qui t'a bouleversé au point de changer ta façon de voir quelque chose, c'est cette hache."
+    },
+    {
+      "id": "kafka-point-retour",
+      "text": "À partir d'un certain point, il n'y a plus de retour. C'est ce point qu'il faut atteindre.",
+      "author": "Franz Kafka",
+      "source": "Aphorismes de Zürau, 5",
+      "theme": "littérature",
+      "explanation": "Tant qu'on garde une porte de sortie, on ne s'engage jamais complètement. Certaines choses ne réussissent que quand on a brûlé les ponts.",
+      "example": "Tant que tu gardes ton ancien projet « au cas où », le nouveau ne recevra jamais toute ton énergie."
+    },
+    {
+      "id": "dostoievski-aimer",
+      "text": "L'enfer, c'est la souffrance de ne plus pouvoir aimer.",
+      "author": "Fiodor Dostoïevski",
+      "source": "Les Frères Karamazov",
+      "theme": "littérature",
+      "explanation": "Pour Dostoïevski, le pire n'est pas d'être puni, mais de devenir incapable d'aimer : un cœur fermé est sa propre prison.",
+      "example": "Quelqu'un d'aigri, qui n'arrive plus à se réjouir pour personne, souffre souvent plus que ceux qu'il critique."
+    },
+    {
+      "id": "rilke-dragons",
+      "text": "Peut-être que tous les dragons de notre vie sont des princesses qui n'attendent que de nous voir un jour beaux et courageux.",
+      "author": "Rainer Maria Rilke",
+      "source": "Lettres à un jeune poète, VIII",
+      "theme": "littérature",
+      "explanation": "Ce qui nous effraie le plus cache souvent ce dont nous avons le plus besoin. Affronter nos peurs révèle ce qu'elles protégeaient.",
+      "example": "La conversation que tu redoutes avec un proche est peut-être celle qui vous rapprochera le plus."
+    },
+    {
+      "id": "yourcenar-naissance",
+      "text": "Le véritable lieu de naissance est celui où l'on a porté pour la première fois un coup d'œil intelligent sur soi-même.",
+      "author": "Marguerite Yourcenar",
+      "source": "Mémoires d'Hadrien",
+      "theme": "littérature",
+      "explanation": "On naît vraiment quand on commence à se regarder avec lucidité, à comprendre qui l'on est, et non pas seulement là où l'on est né.",
+      "example": "Ce voyage, cette rupture ou ce livre qui t'a fait voir ta vie autrement : c'est peut-être là ton vrai lieu de naissance."
+    },
+    {
+      "id": "saint-exupery-direction",
+      "text": "Aimer, ce n'est point nous regarder l'un l'autre, c'est regarder ensemble dans la même direction.",
+      "author": "Antoine de Saint-Exupéry",
+      "source": "Terre des hommes",
+      "theme": "littérature",
+      "explanation": "Un amour ou une amitié durable ne se nourrit pas seulement de l'admiration mutuelle, mais d'un projet, de valeurs et d'un horizon partagés.",
+      "example": "Un couple qui construit quelque chose ensemble (un voyage, une maison, une famille) tient souvent mieux qu'un couple qui se contente de se contempler."
+    },
+    {
+      "id": "jung-destin",
+      "text": "Quand une situation intérieure n'est pas rendue consciente, elle arrive à l'extérieur comme un destin.",
+      "author": "Carl Gustav Jung",
+      "source": "Aion",
+      "theme": "psychologie",
+      "explanation": "Ce qu'on refuse de voir en soi finit par se manifester dans notre vie, sous forme d'événements répétés qu'on prend pour de la malchance.",
+      "example": "Si tu tombes toujours sur des partenaires qui te rabaissent, ce n'est peut-être pas le hasard : quelque chose en toi, non regardé, choisit ce schéma."
     }
   ]
 }
