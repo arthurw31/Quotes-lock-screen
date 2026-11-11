@@ -40,3 +40,22 @@ Format exact attendu :
 ```
 
 Champs obligatoires : `id`, `text`, `author`. Champs conseillés : `source`, `theme`, `explanation`, `example`.
+
+## Mots anglais
+
+La liste contient aussi des mots anglais (environ 100), mélangés aux citations. Pour en ajouter ou en remplacer :
+
+* Des mots ou expressions de la vie courante, mais un peu plus rares : ceux qu'on entend dans les séries, les conversations ou les articles, sans les apprendre en cours. Pas de mots basiques, ni de mots presque identiques en français.
+* Champs : `id` (commence par `en-`), `kind` égal à `"word"`, `text` (le mot, avec « to » pour un verbe), `translation` (traduction française courte), `definition` (facultative, une phrase courte quand la traduction ne suffit pas), `example` (une phrase en anglais suivie de sa traduction entre parenthèses), `theme` égal à `"anglais"`.
+
+```json
+{
+  "id": "en-linger",
+  "kind": "word",
+  "text": "to linger",
+  "translation": "s'attarder",
+  "definition": "Rester plus longtemps que prévu, avoir du mal à partir.",
+  "example": "We lingered over coffee long after the meal was finished. (On s'est attardés autour d'un café bien après la fin du repas.)",
+  "theme": "anglais"
+}
+```

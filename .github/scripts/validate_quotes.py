@@ -38,11 +38,15 @@ for n, q in enumerate(quotes, start=1):
         errors.append(f"{where} : champ \"id\" manquant")
     if not text:
         errors.append(f"{where} : champ \"text\" vide")
-    if not author:
+    is_word = q.get("kind") == "word"
+    if is_word:
+        if not str(q.get("translation", "")).strip():
+            errors.append(f"{where} : champ \"translation\" vide (mot anglais)")
+    elif not author:
         errors.append(f"{where} : champ \"author\" vide")
     if len(text) > MAX_LEN:
         errors.append(f"{where} : texte trop long ({len(text)} caractères, maximum {MAX_LEN})")
-    for field in ("text", "author", "source", "theme", "explanation", "example"):
+    for field in ("text", "author", "source", "theme", "explanation", "example", "translation", "definition"):
         value = str(q.get(field) or "")
         for ch, name in FORBIDDEN.items():
             if ch in value:
@@ -54,4 +58,5 @@ if errors:
         print(" * " + e)
     sys.exit(1)
 
-print(f"OK : {len(quotes)} citations valides.")
+words = sum(1 for q in quotes if isinstance(q, dict) and q.get("kind") == "word")
+print(f"OK : {len(quotes) - words} citations et {words} mots valides.")

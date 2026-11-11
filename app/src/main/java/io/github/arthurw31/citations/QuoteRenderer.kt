@@ -26,13 +26,11 @@ object QuoteRenderer {
     private const val LIGHT_TEXT = 0xFFFAF8F4.toInt()
     private const val DARK_TEXT = 0xFF1C1B1A.toInt()
 
-    private class Block(
-        val quote: StaticLayout,
-        val author: StaticLayout?,
-        val gap: Float,
-        val textSize: Float
-    ) {
-        val height: Float get() = quote.height + (author?.let { gap + it.height } ?: 0f)
+    /** Un bloc de texte : plusieurs lignes empilées (citation puis auteur, ou mot, traduction, définition). */
+    private class Line(val layout: StaticLayout, val alpha: Int, val gapBefore: Float)
+
+    private class Block(val lines: List<Line>, val textSize: Float) {
+        val height: Float get() = lines.sumOf { (it.gapBefore + it.layout.height).toDouble() }.toFloat()
     }
 
     fun render(photo: Bitmap, quote: Quote, a: Appearance, w: Int, h: Int): Bitmap {
@@ -43,7 +41,7 @@ object QuoteRenderer {
         val margin = w * lerp(0.16f, 0.06f, a.width)
         val textWidth = (w - 2 * margin).toInt()
 
-        // Si la citation est très longue, on réduit la taille pour qu'elle reste discrète.
+        // Si le texte est très long, on réduit la taille pour qu'il reste discret.
         var size = w * lerp(0.032f, 0.072f, a.size)
         var block = layout(quote, a, size, textWidth)
         while (block.height > h * 0.40f && size > w * 0.022f) {
@@ -65,27 +63,22 @@ object QuoteRenderer {
         if (a.scrim > 0.01f) drawScrim(canvas, w, top, block.height, block.textSize, lightText, a.scrim)
         if (a.halo > 0.01f) drawHalo(canvas, block, left, top, lightText, a.halo)
 
-        val quotePaint = block.quote.paint
-        quotePaint.color = textColor
-        val authorPaint = block.author?.paint
-        authorPaint?.color = (textColor and 0x00FFFFFF) or (0xD9 shl 24)
-        if (a.shadow) {
-            val s = block.textSize
-            if (lightText) {
-                quotePaint.setShadowLayer(s * 0.22f, 0f, s * 0.05f, 0x80000000.toInt())
-                authorPaint?.setShadowLayer(s * 0.18f, 0f, s * 0.04f, 0x80000000.toInt())
-            } else {
-                quotePaint.setShadowLayer(s * 0.25f, 0f, 0f, 0x66FFFFFF)
-                authorPaint?.setShadowLayer(s * 0.2f, 0f, 0f, 0x66FFFFFF)
+        val s = block.textSize
+        for (line in block.lines) {
+            val paint = line.layout.paint
+            paint.color = (textColor and 0x00FFFFFF) or (line.alpha shl 24)
+            if (a.shadow) {
+                if (lightText) paint.setShadowLayer(s * 0.22f, 0f, s * 0.05f, 0x80000000.toInt())
+                else paint.setShadowLayer(s * 0.25f, 0f, 0f, 0x66FFFFFF)
             }
         }
 
         canvas.save()
         canvas.translate(left, top)
-        block.quote.draw(canvas)
-        block.author?.let {
-            canvas.translate(0f, block.quote.height + block.gap)
-            it.draw(canvas)
+        for (line in block.lines) {
+            canvas.translate(0f, line.gapBefore)
+            line.layout.draw(canvas)
+            canvas.translate(0f, line.layout.height.toFloat())
         }
         canvas.restore()
         return out
@@ -109,26 +102,36 @@ object QuoteRenderer {
             TextAlignChoice.RIGHT -> Layout.Alignment.ALIGN_OPPOSITE
         }
         val serif = a.font == FontChoice.SERIF || a.font == FontChoice.SERIF_ITALIC
-        val quotePaint = TextPaint(Paint.ANTI_ALIAS_FLAG or Paint.SUBPIXEL_TEXT_FLAG).apply {
-            textSize = size
-            typeface = a.font.typeface()
-            textLocale = Locale.FRENCH
-            letterSpacing = if (serif) 0.005f else 0f
-        }
-        val text = withGuillemets(frenchTypography(quote.text))
-        val quoteLayout = build(text, quotePaint, width, alignment, size * 0.14f)
-
-        val authorLayout = if (a.showAuthor) {
-            val authorPaint = TextPaint(Paint.ANTI_ALIAS_FLAG or Paint.SUBPIXEL_TEXT_FLAG).apply {
-                textSize = size * 0.5f
-                typeface = Typeface.create("sans-serif-medium", Typeface.NORMAL)
-                textLocale = Locale.FRENCH
-                letterSpacing = 0.14f
+        fun paint(sizePx: Float, face: Typeface, locale: Locale, spacing: Float) =
+            TextPaint(Paint.ANTI_ALIAS_FLAG or Paint.SUBPIXEL_TEXT_FLAG).apply {
+                textSize = sizePx
+                typeface = face
+                textLocale = locale
+                letterSpacing = spacing
             }
-            build(quote.author.uppercase(Locale.FRENCH), authorPaint, width, alignment, 0f)
-        } else null
 
-        return Block(quoteLayout, authorLayout, size * 0.8f, size)
+        if (quote.isWord) {
+            // Carte « mot anglais » : le mot, sa traduction, puis la définition courte.
+            val lines = ArrayList<Line>()
+            val wordPaint = paint(size * 1.25f, a.font.typeface(), Locale.ENGLISH, if (serif) 0.01f else 0f)
+            lines += Line(build(quote.text, wordPaint, width, alignment, 0f), 0xFF, 0f)
+            val trPaint = paint(size * 0.72f, Typeface.create("serif", Typeface.ITALIC), Locale.FRENCH, 0f)
+            lines += Line(build(frenchTypography(quote.author), trPaint, width, alignment, 0f), 0xE6, size * 0.35f)
+            quote.definition?.let {
+                val defPaint = paint(size * 0.5f, Typeface.create("sans-serif", Typeface.NORMAL), Locale.FRENCH, 0.02f)
+                lines += Line(build(frenchTypography(it), defPaint, width, alignment, size * 0.08f), 0xC8, size * 0.55f)
+            }
+            return Block(lines, size)
+        }
+
+        val quotePaint = paint(size, a.font.typeface(), Locale.FRENCH, if (serif) 0.005f else 0f)
+        val text = withGuillemets(frenchTypography(quote.text))
+        val lines = arrayListOf(Line(build(text, quotePaint, width, alignment, size * 0.14f), 0xFF, 0f))
+        if (a.showAuthor) {
+            val authorPaint = paint(size * 0.5f, Typeface.create("sans-serif-medium", Typeface.NORMAL), Locale.FRENCH, 0.14f)
+            lines += Line(build(quote.author.uppercase(Locale.FRENCH), authorPaint, width, alignment, 0f), 0xD9, size * 0.8f)
+        }
+        return Block(lines, size)
     }
 
     private fun build(text: String, paint: TextPaint, width: Int, alignment: Layout.Alignment, extra: Float) =
@@ -188,8 +191,7 @@ object QuoteRenderer {
                 maxX = max(maxX, layout.getLineRight(i))
             }
         }
-        scan(block.quote)
-        block.author?.let { scan(it) }
+        block.lines.forEach { scan(it.layout) }
         if (minX > maxX) return
 
         val s = block.textSize

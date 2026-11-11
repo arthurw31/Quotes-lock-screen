@@ -86,7 +86,7 @@ object Engine {
     /** Dessine la citation actuelle sur la photo et l'installe sur l'écran de verrouillage uniquement. */
     fun apply(ctx: Context): ApplyResult {
         val repo = QuoteRepository(ctx)
-        val quote = repo.current() ?: repo.next() ?: return ApplyResult.NoQuote
+        val quote = repo.current() ?: repo.next(SettingsStore(ctx).contentMode) ?: return ApplyResult.NoQuote
         val photo = Photo.load(ctx) ?: return ApplyResult.NoPhoto
         return try {
             val size = Screen.size(ctx)
@@ -109,7 +109,7 @@ object Engine {
 
     /** Passe à la citation suivante puis l'installe. */
     fun next(ctx: Context): ApplyResult {
-        QuoteRepository(ctx).next() ?: return ApplyResult.NoQuote
+        QuoteRepository(ctx).next(SettingsStore(ctx).contentMode) ?: return ApplyResult.NoQuote
         markCurrentSlot(ctx)
         return apply(ctx)
     }
@@ -118,9 +118,10 @@ object Engine {
     fun tick(ctx: Context) {
         if (!Photo.exists(ctx)) return
         val repo = QuoteRepository(ctx)
-        val key = slotKey(SettingsStore(ctx).frequency)
+        val settings = SettingsStore(ctx)
+        val key = slotKey(settings.frequency)
         if (repo.slotKey == key) return
-        repo.next() ?: return
+        repo.next(settings.contentMode) ?: return
         repo.slotKey = key
         apply(ctx)
     }

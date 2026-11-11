@@ -7,6 +7,7 @@ import android.os.PowerManager
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import io.github.arthurw31.citations.Appearance
+import io.github.arthurw31.citations.ContentMode
 import io.github.arthurw31.citations.ApplyResult
 import io.github.arthurw31.citations.Engine
 import io.github.arthurw31.citations.Frequency
@@ -31,6 +32,7 @@ import kotlinx.coroutines.withContext
 data class UiState(
     val appearance: Appearance = Appearance(),
     val frequency: Frequency = Frequency.DAILY,
+    val contentMode: ContentMode = ContentMode.QUOTES,
     val hasPhoto: Boolean = false,
     val current: Quote? = null,
     val info: QuotesInfo? = null,
@@ -69,7 +71,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         startPreviewLoop()
         viewModelScope.launch(Dispatchers.IO) {
             if (repo.current() == null) {
-                repo.next()
+                repo.next(settings.contentMode)
                 Engine.markCurrentSlot(ctx)
             }
             refreshNow()
@@ -88,6 +90,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
             it.copy(
                 appearance = settings.appearance(),
                 frequency = settings.frequency,
+                contentMode = settings.contentMode,
                 hasPhoto = Photo.exists(ctx),
                 current = repo.current(),
                 info = repo.info(),
@@ -162,7 +165,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         if (Photo.exists(ctx)) {
             report(Engine.next(ctx))
         } else {
-            repo.next()
+            repo.next(settings.contentMode)
             Engine.markCurrentSlot(ctx)
         }
         refreshNow()
@@ -188,6 +191,13 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         settings.frequency = f
         Engine.markCurrentSlot(ctx)
         refreshNow()
+    }
+
+    /** Change le type de contenu et passe tout de suite à un élément de ce type. */
+    fun setContentMode(m: ContentMode) {
+        settings.contentMode = m
+        _ui.update { it.copy(contentMode = m) }
+        nextQuote()
     }
 
     fun setUrl(url: String) = work {

@@ -51,7 +51,10 @@ class QuoteRendererTest {
         val list = QuoteParser.parse(text)
         assertTrue(list.size >= 30)
         assertEquals(list.size, list.map { it.id }.toSet().size)
-        assertTrue(list.all { it.explanation != null && it.example != null })
+        assertTrue(list.filter { !it.isWord }.all { it.explanation != null && it.example != null })
+        val words = list.filter { it.isWord }
+        assertTrue(words.size >= 100)
+        assertTrue(words.all { it.author.isNotEmpty() && it.example != null })
     }
 
     @Test
@@ -71,6 +74,15 @@ class QuoteRendererTest {
             "clair_ombrage_fort" to (true to Appearance(color = ColorChoice.WHITE, scrim = 0f, halo = 0.9f, hPosition = 0.4f)),
             "clair_moderne_grand" to (true to Appearance(font = FontChoice.SANS_LIGHT, size = 0.8f, color = ColorChoice.BLACK, scrim = 0.6f))
         )
+        val word = Quote("en-linger", "to linger", "s'attarder", null, null,
+            kind = Quote.KIND_WORD, definition = "Rester plus longtemps que prévu, avoir du mal à partir.")
+        File(dir, "mot_sombre.png").outputStream().use {
+            QuoteRenderer.render(photo(false), word, Appearance(), 640, 1428).compress(Bitmap.CompressFormat.PNG, 100, it)
+        }
+        File(dir, "mot_clair_ombrage.png").outputStream().use {
+            QuoteRenderer.render(photo(true), word, Appearance(color = ColorChoice.WHITE, scrim = 0f, halo = 0.5f), 640, 1428)
+                .compress(Bitmap.CompressFormat.PNG, 100, it)
+        }
         for ((name, c) in cases) {
             val out = QuoteRenderer.render(photo(c.first), quote, c.second, 640, 1428)
             File(dir, "$name.png").outputStream().use { out.compress(Bitmap.CompressFormat.PNG, 100, it) }

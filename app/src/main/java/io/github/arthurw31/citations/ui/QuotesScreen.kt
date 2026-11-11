@@ -53,6 +53,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
+import io.github.arthurw31.citations.ContentMode
 import io.github.arthurw31.citations.Frequency
 import io.github.arthurw31.citations.QuoteRenderer
 import kotlinx.coroutines.launch
@@ -76,10 +77,20 @@ fun QuotesScreen(vm: MainViewModel, state: UiState) {
         item {
             val q = state.current
             CardBlock {
-                Text("Citation du moment", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                Text(if (q?.isWord == true) "Mot du moment" else "Citation du moment",
+                    style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
                 Spacer(Modifier.height(8.dp))
                 if (q == null) {
                     Text("Aucune citation pour l'instant.")
+                } else if (q.isWord) {
+                    Text(q.text, style = MaterialTheme.typography.headlineSmall.copy(fontFamily = FontFamily.Serif))
+                    Text(QuoteRenderer.frenchTypography(q.author),
+                        style = MaterialTheme.typography.titleMedium.copy(fontFamily = FontFamily.Serif, fontStyle = FontStyle.Italic))
+                    q.definition?.let {
+                        Spacer(Modifier.height(4.dp))
+                        Text(QuoteRenderer.frenchTypography(it), style = MaterialTheme.typography.bodyMedium,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
                 } else {
                     Text(
                         "« " + QuoteRenderer.frenchTypography(q.text) + " »",
@@ -91,6 +102,8 @@ fun QuotesScreen(vm: MainViewModel, state: UiState) {
                         Text(it, style = MaterialTheme.typography.bodySmall.copy(fontStyle = FontStyle.Italic),
                             color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
+                }
+                if (q != null) {
                     Explanation(q)
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         RatingButtons(state.ratings[q.id] ?: 0) { vm.rate(q.id, it) }
@@ -111,7 +124,7 @@ fun QuotesScreen(vm: MainViewModel, state: UiState) {
                 Text("Liste de citations", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
                 Spacer(Modifier.height(8.dp))
                 if (info != null) {
-                    Text("${info.count} citations")
+                    Text(if (info.words > 0) "${info.count} citations et ${info.words} mots anglais" else "${info.count} citations")
                     Text(
                         if (info.fromGithub) "Source : GitHub, téléchargée le ${fmt(info.lastUpdate)}"
                         else "Source : liste intégrée à l'appli",
@@ -135,7 +148,9 @@ fun QuotesScreen(vm: MainViewModel, state: UiState) {
 
         item {
             CardBlock {
-                Text("Changement de citation", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                Text("Contenu et fréquence", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
+                Choices("Afficher", ContentMode.entries, state.contentMode, { it.label }) { vm.setContentMode(it) }
+                Hint("« Les deux » alterne une citation et un mot anglais à chaque changement.")
                 Choices("Fréquence", Frequency.entries, state.frequency, { it.label }) { vm.setFrequency(it) }
                 Hint("Le changement se fait après minuit (ou midi), dans l'heure qui suit en général. Android peut le retarder un peu pour économiser la batterie.")
             }
@@ -205,11 +220,12 @@ fun QuotesScreen(vm: MainViewModel, state: UiState) {
         items(state.history.take(80), key = { it.id + it.shownAt }) { e ->
             var open by rememberSaveable(e.id + e.shownAt) { mutableStateOf(false) }
             val full = state.quotesById[e.id]
-            Column(Modifier.clickable(enabled = full?.explanation != null) { open = !open }) {
-                Text("« " + QuoteRenderer.frenchTypography(e.text) + " »",
+            Column(Modifier.clickable(enabled = full?.explanation != null || full?.example != null) { open = !open }) {
+                Text(if (e.isWord) e.text + " : " + QuoteRenderer.frenchTypography(e.author)
+                    else "« " + QuoteRenderer.frenchTypography(e.text) + " »",
                     style = MaterialTheme.typography.bodyMedium.copy(fontFamily = FontFamily.Serif))
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text("${e.author}, ${fmt(e.shownAt)}", style = MaterialTheme.typography.bodySmall,
+                    Text(if (e.isWord) "Mot anglais, ${fmt(e.shownAt)}" else "${e.author}, ${fmt(e.shownAt)}", style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.weight(1f))
                     RatingButtons(state.ratings[e.id] ?: 0) { vm.rate(e.id, it) }
                 }
@@ -251,7 +267,11 @@ private fun Explanation(q: io.github.arthurw31.citations.Quote) {
     TextButton(onClick = { open = !open }, contentPadding = PaddingValues(horizontal = 0.dp)) {
         Icon(if (open) Icons.Outlined.ExpandLess else Icons.Outlined.Lightbulb, null)
         Spacer(Modifier.width(6.dp))
-        Text(if (open) "Masquer l'explication" else "Comprendre cette citation")
+        Text(when {
+            open -> "Masquer"
+            q.isWord -> "Voir un exemple"
+            else -> "Comprendre cette citation"
+        })
     }
     AnimatedVisibility(open) { ExplanationText(q) }
 }
@@ -269,8 +289,8 @@ private fun ExplanationText(q: io.github.arthurw31.citations.Quote) {
             Text(QuoteRenderer.frenchTypography(it), style = MaterialTheme.typography.bodyMedium)
         }
         q.example?.let {
-            Spacer(Modifier.height(10.dp))
-            Text("Exemple", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
+            if (q.explanation != null) Spacer(Modifier.height(10.dp))
+            Text(if (q.isWord) "Exemple d'utilisation" else "Exemple", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
             Spacer(Modifier.height(2.dp))
             Text(QuoteRenderer.frenchTypography(it), style = MaterialTheme.typography.bodyMedium)
         }

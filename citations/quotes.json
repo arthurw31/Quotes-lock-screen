@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "updated": "2026-11-08",
   "description": "Citations affichées sur l'écran de verrouillage. Voir docs/CONSIGNES_CLAUDE.md pour le format.",
   "quotes": [
@@ -1505,6 +1505,932 @@
       "theme": "psychologie",
       "explanation": "Ce qu'on refuse de voir en soi finit par se manifester dans notre vie, sous forme d'événements répétés qu'on prend pour de la malchance.",
       "example": "Si tu tombes toujours sur des partenaires qui te rabaissent, ce n'est peut-être pas le hasard : quelque chose en toi, non regardé, choisit ce schéma."
+    },
+    {
+      "id": "en-linger",
+      "kind": "word",
+      "text": "to linger",
+      "translation": "s'attarder",
+      "theme": "anglais",
+      "example": "We lingered over coffee long after the meal was finished. (On s'est attardés autour d'un café bien après la fin du repas.)",
+      "definition": "Rester plus longtemps que prévu, avoir du mal à partir."
+    },
+    {
+      "id": "en-hindsight",
+      "kind": "word",
+      "text": "hindsight",
+      "translation": "le recul (après coup)",
+      "theme": "anglais",
+      "example": "In hindsight, quitting that job was the best decision I ever made. (Avec le recul, quitter ce boulot a été ma meilleure décision.)",
+      "definition": "Ce qu'on comprend une fois que tout est passé."
+    },
+    {
+      "id": "en-dwell-on",
+      "kind": "word",
+      "text": "to dwell on",
+      "translation": "ressasser",
+      "theme": "anglais",
+      "example": "Don't dwell on your mistakes, learn from them and move on. (Ne ressasse pas tes erreurs, tires-en une leçon et avance.)",
+      "definition": "Penser longtemps à quelque chose de négatif."
+    },
+    {
+      "id": "en-pet-peeve",
+      "kind": "word",
+      "text": "a pet peeve",
+      "translation": "une bête noire",
+      "theme": "anglais",
+      "example": "People who chew loudly are my biggest pet peeve. (Les gens qui mâchent bruyamment, c'est ma plus grande bête noire.)",
+      "definition": "Petite chose qui t'agace particulièrement."
+    },
+    {
+      "id": "en-cringe",
+      "kind": "word",
+      "text": "to cringe",
+      "translation": "grimacer de gêne",
+      "theme": "anglais",
+      "example": "I still cringe when I think about my first date. (Je grimace encore de gêne en repensant à mon premier rendez-vous.)",
+      "definition": "Ressentir une gêne physique face à quelque chose de ridicule ou embarrassant."
+    },
+    {
+      "id": "en-awkward",
+      "kind": "word",
+      "text": "awkward",
+      "translation": "gênant, malaisant",
+      "theme": "anglais",
+      "example": "There was an awkward silence after his joke. (Il y a eu un silence gênant après sa blague.)",
+      "definition": "Se dit d'une situation inconfortable ou d'une personne maladroite."
+    },
+    {
+      "id": "en-fathom",
+      "kind": "word",
+      "text": "to fathom",
+      "translation": "concevoir, saisir",
+      "theme": "anglais",
+      "example": "I can't fathom why she said that. (Je n'arrive pas à concevoir pourquoi elle a dit ça.)",
+      "definition": "Arriver à comprendre quelque chose de difficile. Souvent à la forme négative."
+    },
+    {
+      "id": "en-reluctant",
+      "kind": "word",
+      "text": "reluctant",
+      "translation": "réticent",
+      "theme": "anglais",
+      "example": "He was reluctant to admit he was wrong. (Il était réticent à admettre qu'il avait tort.)",
+      "definition": "Qui fait quelque chose sans en avoir envie."
+    },
+    {
+      "id": "en-overwhelmed",
+      "kind": "word",
+      "text": "overwhelmed",
+      "translation": "débordé, submergé",
+      "theme": "anglais",
+      "example": "I feel completely overwhelmed by work this week. (Je me sens complètement débordé par le travail cette semaine.)",
+      "definition": "Quand il y a trop de choses ou d'émotions à gérer."
+    },
+    {
+      "id": "en-thrive",
+      "kind": "word",
+      "text": "to thrive",
+      "translation": "s'épanouir, prospérer",
+      "theme": "anglais",
+      "example": "Some people thrive under pressure. (Certaines personnes s'épanouissent sous la pression.)",
+      "definition": "Se développer très bien, être en pleine forme."
+    },
+    {
+      "id": "en-stumble-upon",
+      "kind": "word",
+      "text": "to stumble upon",
+      "translation": "tomber par hasard sur",
+      "theme": "anglais",
+      "example": "I stumbled upon this little café while walking around the city. (Je suis tombé par hasard sur ce petit café en me baladant en ville.)"
+    },
+    {
+      "id": "en-grumpy",
+      "kind": "word",
+      "text": "grumpy",
+      "translation": "grincheux, de mauvais poil",
+      "theme": "anglais",
+      "example": "I'm always grumpy before my morning coffee. (Je suis toujours de mauvais poil avant mon café du matin.)"
+    },
+    {
+      "id": "en-nag",
+      "kind": "word",
+      "text": "to nag",
+      "translation": "harceler, rabâcher",
+      "theme": "anglais",
+      "example": "My mom keeps nagging me about cleaning my room. (Ma mère n'arrête pas de me rabâcher de ranger ma chambre.)",
+      "definition": "Répéter sans cesse les mêmes reproches ou demandes."
+    },
+    {
+      "id": "en-cope-with",
+      "kind": "word",
+      "text": "to cope with",
+      "translation": "faire face à, gérer",
+      "theme": "anglais",
+      "example": "How do you cope with stress at work? (Comment tu gères le stress au travail ?)",
+      "definition": "Réussir à supporter une situation difficile."
+    },
+    {
+      "id": "en-resent",
+      "kind": "word",
+      "text": "to resent",
+      "translation": "en vouloir à",
+      "theme": "anglais",
+      "example": "She resents her brother for leaving without saying goodbye. (Elle en veut à son frère d'être parti sans dire au revoir.)",
+      "definition": "Garder de la rancune envers quelqu'un ou quelque chose."
+    },
+    {
+      "id": "en-sulk",
+      "kind": "word",
+      "text": "to sulk",
+      "translation": "bouder",
+      "theme": "anglais",
+      "example": "He's been sulking in his room since he lost the game. (Il boude dans sa chambre depuis qu'il a perdu la partie.)"
+    },
+    {
+      "id": "en-blurt-out",
+      "kind": "word",
+      "text": "to blurt out",
+      "translation": "lâcher (sans réfléchir)",
+      "theme": "anglais",
+      "example": "She blurted out the secret before anyone could stop her. (Elle a lâché le secret avant que quiconque puisse l'arrêter.)",
+      "definition": "Dire quelque chose brusquement, sans avoir eu l'intention de le dire."
+    },
+    {
+      "id": "en-mumble",
+      "kind": "word",
+      "text": "to mumble",
+      "translation": "marmonner",
+      "theme": "anglais",
+      "example": "He mumbled an apology and left the room. (Il a marmonné une excuse et a quitté la pièce.)"
+    },
+    {
+      "id": "en-bump-into",
+      "kind": "word",
+      "text": "to bump into",
+      "translation": "croiser par hasard",
+      "theme": "anglais",
+      "example": "I bumped into my old teacher at the supermarket. (J'ai croisé mon ancien prof par hasard au supermarché.)"
+    },
+    {
+      "id": "en-figure-out",
+      "kind": "word",
+      "text": "to figure out",
+      "translation": "trouver, comprendre",
+      "theme": "anglais",
+      "example": "I finally figured out how to fix the bug. (J'ai enfin trouvé comment corriger le bug.)",
+      "definition": "Réussir à comprendre ou à résoudre quelque chose en y réfléchissant."
+    },
+    {
+      "id": "en-come-up-with",
+      "kind": "word",
+      "text": "to come up with",
+      "translation": "trouver, imaginer (une idée)",
+      "theme": "anglais",
+      "example": "She came up with a brilliant plan in five minutes. (Elle a imaginé un plan génial en cinq minutes.)"
+    },
+    {
+      "id": "en-take-for-granted",
+      "kind": "word",
+      "text": "to take for granted",
+      "translation": "tenir pour acquis",
+      "theme": "anglais",
+      "example": "We often take our health for granted until we get sick. (On tient souvent sa santé pour acquise jusqu'à ce qu'on tombe malade.)",
+      "definition": "Ne plus apprécier quelque chose parce qu'on y est habitué."
+    },
+    {
+      "id": "en-put-off",
+      "kind": "word",
+      "text": "to put off",
+      "translation": "repousser, remettre à plus tard",
+      "theme": "anglais",
+      "example": "Stop putting off your dentist appointment. (Arrête de repousser ton rendez-vous chez le dentiste.)"
+    },
+    {
+      "id": "en-run-out-of",
+      "kind": "word",
+      "text": "to run out of",
+      "translation": "être à court de",
+      "theme": "anglais",
+      "example": "We ran out of milk, can you buy some? (On n'a plus de lait, tu peux en acheter ?)"
+    },
+    {
+      "id": "en-keep-up-with",
+      "kind": "word",
+      "text": "to keep up with",
+      "translation": "suivre le rythme de",
+      "theme": "anglais",
+      "example": "It's hard to keep up with all the news these days. (C'est difficile de suivre toute l'actualité en ce moment.)"
+    },
+    {
+      "id": "en-fall-out-with",
+      "kind": "word",
+      "text": "to fall out with",
+      "translation": "se brouiller avec",
+      "theme": "anglais",
+      "example": "He fell out with his best friend over money. (Il s'est brouillé avec son meilleur ami pour une histoire d'argent.)"
+    },
+    {
+      "id": "en-settle-for",
+      "kind": "word",
+      "text": "to settle for",
+      "translation": "se contenter de",
+      "theme": "anglais",
+      "example": "Don't settle for a job you hate. (Ne te contente pas d'un boulot que tu détestes.)",
+      "definition": "Accepter moins que ce qu'on voulait."
+    },
+    {
+      "id": "en-brag",
+      "kind": "word",
+      "text": "to brag",
+      "translation": "se vanter",
+      "theme": "anglais",
+      "example": "He's always bragging about his new car. (Il se vante tout le temps de sa nouvelle voiture.)"
+    },
+    {
+      "id": "en-whine",
+      "kind": "word",
+      "text": "to whine",
+      "translation": "pleurnicher, se plaindre",
+      "theme": "anglais",
+      "example": "Stop whining and do your homework. (Arrête de pleurnicher et fais tes devoirs.)",
+      "definition": "Se plaindre de façon agaçante, souvent pour rien."
+    },
+    {
+      "id": "en-yearn-for",
+      "kind": "word",
+      "text": "to yearn for",
+      "translation": "aspirer à, désirer ardemment",
+      "theme": "anglais",
+      "example": "After years in the city, he yearned for a quiet life in the countryside. (Après des années en ville, il aspirait à une vie tranquille à la campagne.)",
+      "definition": "Ressentir un désir profond, souvent mêlé de nostalgie."
+    },
+    {
+      "id": "en-strive",
+      "kind": "word",
+      "text": "to strive",
+      "translation": "s'efforcer",
+      "theme": "anglais",
+      "example": "We should always strive to improve. (On devrait toujours s'efforcer de progresser.)",
+      "definition": "Faire de gros efforts pour atteindre un but."
+    },
+    {
+      "id": "en-daydream",
+      "kind": "word",
+      "text": "to daydream",
+      "translation": "rêvasser",
+      "theme": "anglais",
+      "example": "I spent the whole meeting daydreaming about my holidays. (J'ai passé toute la réunion à rêvasser à mes vacances.)"
+    },
+    {
+      "id": "en-doze-off",
+      "kind": "word",
+      "text": "to doze off",
+      "translation": "s'assoupir",
+      "theme": "anglais",
+      "example": "I dozed off on the couch while watching the film. (Je me suis assoupi sur le canapé en regardant le film.)"
+    },
+    {
+      "id": "en-oversleep",
+      "kind": "word",
+      "text": "to oversleep",
+      "translation": "ne pas se réveiller à temps",
+      "theme": "anglais",
+      "example": "I overslept and missed my train. (Je ne me suis pas réveillé à temps et j'ai raté mon train.)",
+      "definition": "Dormir plus longtemps que prévu, rater son réveil."
+    },
+    {
+      "id": "en-binge-watch",
+      "kind": "word",
+      "text": "to binge-watch",
+      "translation": "enchaîner les épisodes",
+      "theme": "anglais",
+      "example": "We binge-watched the whole season in one weekend. (On a enchaîné toute la saison en un week-end.)"
+    },
+    {
+      "id": "en-fidget",
+      "kind": "word",
+      "text": "to fidget",
+      "translation": "gigoter, ne pas tenir en place",
+      "theme": "anglais",
+      "example": "Stop fidgeting, you're making me nervous. (Arrête de gigoter, tu me rends nerveux.)"
+    },
+    {
+      "id": "en-shrug",
+      "kind": "word",
+      "text": "to shrug",
+      "translation": "hausser les épaules",
+      "theme": "anglais",
+      "example": "When I asked him why, he just shrugged. (Quand je lui ai demandé pourquoi, il a juste haussé les épaules.)"
+    },
+    {
+      "id": "en-frown",
+      "kind": "word",
+      "text": "to frown",
+      "translation": "froncer les sourcils",
+      "theme": "anglais",
+      "example": "She frowned when she saw the bill. (Elle a froncé les sourcils en voyant l'addition.)"
+    },
+    {
+      "id": "en-stare",
+      "kind": "word",
+      "text": "to stare",
+      "translation": "fixer du regard",
+      "theme": "anglais",
+      "example": "It's rude to stare at people. (C'est impoli de fixer les gens.)"
+    },
+    {
+      "id": "en-glance",
+      "kind": "word",
+      "text": "to glance",
+      "translation": "jeter un coup d'œil",
+      "theme": "anglais",
+      "example": "He glanced at his watch and sighed. (Il a jeté un coup d'œil à sa montre et a soupiré.)"
+    },
+    {
+      "id": "en-squint",
+      "kind": "word",
+      "text": "to squint",
+      "translation": "plisser les yeux",
+      "theme": "anglais",
+      "example": "I had to squint to read the sign in the sun. (J'ai dû plisser les yeux pour lire le panneau au soleil.)"
+    },
+    {
+      "id": "en-sneak",
+      "kind": "word",
+      "text": "to sneak",
+      "translation": "se faufiler, faire en douce",
+      "theme": "anglais",
+      "example": "He snuck out of the house after midnight. (Il est sorti en douce de la maison après minuit.)"
+    },
+    {
+      "id": "en-tiptoe",
+      "kind": "word",
+      "text": "to tiptoe",
+      "translation": "marcher sur la pointe des pieds",
+      "theme": "anglais",
+      "example": "I tiptoed into the room so I wouldn't wake the baby. (Je suis entré sur la pointe des pieds pour ne pas réveiller le bébé.)"
+    },
+    {
+      "id": "en-stroll",
+      "kind": "word",
+      "text": "to stroll",
+      "translation": "flâner, se balader",
+      "theme": "anglais",
+      "example": "We strolled along the beach at sunset. (On a flâné le long de la plage au coucher du soleil.)"
+    },
+    {
+      "id": "en-bland",
+      "kind": "word",
+      "text": "bland",
+      "translation": "fade",
+      "theme": "anglais",
+      "example": "The soup was a bit bland, it needed more salt. (La soupe était un peu fade, il manquait du sel.)",
+      "definition": "Sans goût, ou sans intérêt."
+    },
+    {
+      "id": "en-stale",
+      "kind": "word",
+      "text": "stale",
+      "translation": "rassis, éventé",
+      "theme": "anglais",
+      "example": "This bread is stale, don't eat it. (Ce pain est rassis, ne le mange pas.)",
+      "definition": "Se dit du pain sec ou d'une boisson qui a perdu son goût."
+    },
+    {
+      "id": "en-soggy",
+      "kind": "word",
+      "text": "soggy",
+      "translation": "détrempé, ramolli",
+      "theme": "anglais",
+      "example": "My cereal went soggy because I left it too long. (Mes céréales sont toutes ramollies parce que je les ai laissées trop longtemps.)"
+    },
+    {
+      "id": "en-leftovers",
+      "kind": "word",
+      "text": "leftovers",
+      "translation": "les restes (d'un repas)",
+      "theme": "anglais",
+      "example": "We had leftovers from last night for lunch. (On a mangé les restes d'hier soir à midi.)"
+    },
+    {
+      "id": "en-chores",
+      "kind": "word",
+      "text": "chores",
+      "translation": "les tâches ménagères",
+      "theme": "anglais",
+      "example": "I hate doing chores on Sunday. (Je déteste faire les tâches ménagères le dimanche.)"
+    },
+    {
+      "id": "en-errand",
+      "kind": "word",
+      "text": "an errand",
+      "translation": "une course, une commission",
+      "theme": "anglais",
+      "example": "I need to run a few errands this afternoon. (Je dois faire quelques courses cet après-midi.)",
+      "definition": "Petite course à faire, comme aller à la poste ou à la pharmacie."
+    },
+    {
+      "id": "en-clutter",
+      "kind": "word",
+      "text": "clutter",
+      "translation": "le fouillis, le bazar",
+      "theme": "anglais",
+      "example": "My desk is full of clutter, I can't find anything. (Mon bureau est plein de bazar, je ne trouve rien.)"
+    },
+    {
+      "id": "en-hassle",
+      "kind": "word",
+      "text": "a hassle",
+      "translation": "une galère, un tracas",
+      "theme": "anglais",
+      "example": "Renewing my passport was such a hassle. (Renouveler mon passeport a été une vraie galère.)"
+    },
+    {
+      "id": "en-glitch",
+      "kind": "word",
+      "text": "a glitch",
+      "translation": "un bug, un pépin",
+      "theme": "anglais",
+      "example": "There was a glitch in the app and I lost my progress. (Il y a eu un bug dans l'appli et j'ai perdu ma progression.)",
+      "definition": "Petit problème technique, souvent temporaire."
+    },
+    {
+      "id": "en-mishap",
+      "kind": "word",
+      "text": "a mishap",
+      "translation": "une mésaventure",
+      "theme": "anglais",
+      "example": "Apart from a few mishaps, the trip went well. (À part quelques mésaventures, le voyage s'est bien passé.)",
+      "definition": "Petit accident sans gravité."
+    },
+    {
+      "id": "en-gist",
+      "kind": "word",
+      "text": "the gist",
+      "translation": "l'essentiel, les grandes lignes",
+      "theme": "anglais",
+      "example": "I didn't understand every word, but I got the gist. (Je n'ai pas compris chaque mot, mais j'ai saisi l'essentiel.)"
+    },
+    {
+      "id": "en-fluke",
+      "kind": "word",
+      "text": "a fluke",
+      "translation": "un coup de chance",
+      "theme": "anglais",
+      "example": "Was that goal skill or just a fluke? (Ce but, c'était du talent ou juste un coup de chance ?)",
+      "definition": "Réussite due au hasard plutôt qu'au talent."
+    },
+    {
+      "id": "en-pitfall",
+      "kind": "word",
+      "text": "a pitfall",
+      "translation": "un piège, un écueil",
+      "theme": "anglais",
+      "example": "One of the pitfalls of working from home is never switching off. (L'un des pièges du télétravail, c'est de ne jamais déconnecter.)",
+      "definition": "Danger ou difficulté cachée."
+    },
+    {
+      "id": "en-loophole",
+      "kind": "word",
+      "text": "a loophole",
+      "translation": "une faille (dans une règle)",
+      "theme": "anglais",
+      "example": "They found a loophole in the contract. (Ils ont trouvé une faille dans le contrat.)",
+      "definition": "Moyen de contourner une loi ou une règle sans l'enfreindre."
+    },
+    {
+      "id": "en-backlash",
+      "kind": "word",
+      "text": "a backlash",
+      "translation": "une levée de boucliers",
+      "theme": "anglais",
+      "example": "The brand faced a huge backlash after the ad. (La marque a fait face à une énorme levée de boucliers après la pub.)",
+      "definition": "Réaction négative et violente d'un grand nombre de gens."
+    },
+    {
+      "id": "en-trade-off",
+      "kind": "word",
+      "text": "a trade-off",
+      "translation": "un compromis",
+      "theme": "anglais",
+      "example": "There's always a trade-off between speed and quality. (Il y a toujours un compromis entre rapidité et qualité.)",
+      "definition": "Ce qu'on perd en échange de ce qu'on gagne."
+    },
+    {
+      "id": "en-downside",
+      "kind": "word",
+      "text": "the downside",
+      "translation": "l'inconvénient",
+      "theme": "anglais",
+      "example": "The downside of living in the city is the noise. (L'inconvénient de vivre en ville, c'est le bruit.)"
+    },
+    {
+      "id": "en-wishful-thinking",
+      "kind": "word",
+      "text": "wishful thinking",
+      "translation": "prendre ses désirs pour des réalités",
+      "theme": "anglais",
+      "example": "Thinking he'll change is just wishful thinking. (Penser qu'il va changer, c'est prendre tes désirs pour des réalités.)"
+    },
+    {
+      "id": "en-gut-feeling",
+      "kind": "word",
+      "text": "a gut feeling",
+      "translation": "une intuition, un pressentiment",
+      "theme": "anglais",
+      "example": "I had a gut feeling something was wrong. (J'avais le pressentiment que quelque chose n'allait pas.)"
+    },
+    {
+      "id": "en-white-lie",
+      "kind": "word",
+      "text": "a white lie",
+      "translation": "un pieux mensonge",
+      "theme": "anglais",
+      "example": "I told her I loved the gift, it was just a white lie. (Je lui ai dit que j'adorais le cadeau, c'était juste un pieux mensonge.)",
+      "definition": "Petit mensonge pour ne pas blesser quelqu'un."
+    },
+    {
+      "id": "en-small-talk",
+      "kind": "word",
+      "text": "small talk",
+      "translation": "les banalités, la conversation de politesse",
+      "theme": "anglais",
+      "example": "I'm terrible at small talk with strangers. (Je suis nul pour faire la conversation avec des inconnus.)",
+      "definition": "Discussion légère sur la météo, le week-end, etc."
+    },
+    {
+      "id": "en-wake-up-call",
+      "kind": "word",
+      "text": "a wake-up call",
+      "translation": "un électrochoc",
+      "theme": "anglais",
+      "example": "The heart attack was a wake-up call for him. (La crise cardiaque a été un électrochoc pour lui.)",
+      "definition": "Événement qui fait prendre conscience d'un problème."
+    },
+    {
+      "id": "en-rule-of-thumb",
+      "kind": "word",
+      "text": "a rule of thumb",
+      "translation": "une règle approximative",
+      "theme": "anglais",
+      "example": "As a rule of thumb, save ten percent of your salary. (En règle générale, mets de côté dix pour cent de ton salaire.)",
+      "definition": "Principe pratique, basé sur l'expérience plutôt que sur un calcul précis."
+    },
+    {
+      "id": "en-elephant-in-the-room",
+      "kind": "word",
+      "text": "the elephant in the room",
+      "translation": "le sujet que tout le monde évite",
+      "theme": "anglais",
+      "example": "Nobody mentioned the layoffs, the elephant in the room. (Personne n'a parlé des licenciements, le sujet que tout le monde évitait.)",
+      "definition": "Problème évident dont personne n'ose parler."
+    },
+    {
+      "id": "en-beat-around-the-bush",
+      "kind": "word",
+      "text": "to beat around the bush",
+      "translation": "tourner autour du pot",
+      "theme": "anglais",
+      "example": "Stop beating around the bush and tell me what happened. (Arrête de tourner autour du pot et dis-moi ce qui s'est passé.)"
+    },
+    {
+      "id": "en-cut-corners",
+      "kind": "word",
+      "text": "to cut corners",
+      "translation": "bâcler, faire des économies de bouts de chandelle",
+      "theme": "anglais",
+      "example": "The builders cut corners and now the roof leaks. (Les ouvriers ont bâclé le travail et maintenant le toit fuit.)",
+      "definition": "Faire quelque chose vite ou à moindre coût, au détriment de la qualité."
+    },
+    {
+      "id": "en-bite-off-more-than-you-can-chew",
+      "kind": "word",
+      "text": "to bite off more than you can chew",
+      "translation": "avoir les yeux plus gros que le ventre",
+      "theme": "anglais",
+      "example": "I bit off more than I could chew with three projects at once. (J'ai eu les yeux plus gros que le ventre avec trois projets en même temps.)",
+      "definition": "Se lancer dans plus que ce qu'on peut gérer."
+    },
+    {
+      "id": "en-sleep-on-it",
+      "kind": "word",
+      "text": "to sleep on it",
+      "translation": "prendre le temps de la réflexion",
+      "theme": "anglais",
+      "example": "Don't answer now, sleep on it. (Ne réponds pas maintenant, laisse la nuit porter conseil.)",
+      "definition": "Attendre le lendemain avant de décider (« la nuit porte conseil »)."
+    },
+    {
+      "id": "en-call-it-a-day",
+      "kind": "word",
+      "text": "to call it a day",
+      "translation": "s'arrêter là pour aujourd'hui",
+      "theme": "anglais",
+      "example": "We've done enough, let's call it a day. (On en a assez fait, arrêtons-nous là pour aujourd'hui.)"
+    },
+    {
+      "id": "en-hit-the-nail-on-the-head",
+      "kind": "word",
+      "text": "to hit the nail on the head",
+      "translation": "mettre le doigt dessus",
+      "theme": "anglais",
+      "example": "You hit the nail on the head, that's exactly the problem. (Tu as mis le doigt dessus, c'est exactement le problème.)",
+      "definition": "Dire exactement ce qu'il fallait, trouver la vraie cause."
+    },
+    {
+      "id": "en-once-in-a-blue-moon",
+      "kind": "word",
+      "text": "once in a blue moon",
+      "translation": "tous les trente-six du mois",
+      "theme": "anglais",
+      "example": "I only go to the cinema once in a blue moon. (Je ne vais au cinéma que tous les trente-six du mois.)",
+      "definition": "Très rarement."
+    },
+    {
+      "id": "en-get-the-hang-of",
+      "kind": "word",
+      "text": "to get the hang of",
+      "translation": "prendre le coup de main",
+      "theme": "anglais",
+      "example": "Driving was hard at first, but I got the hang of it. (Conduire, c'était dur au début, mais j'ai pris le coup de main.)"
+    },
+    {
+      "id": "en-be-on-the-fence",
+      "kind": "word",
+      "text": "to be on the fence",
+      "translation": "hésiter, ne pas savoir quoi choisir",
+      "theme": "anglais",
+      "example": "I'm still on the fence about moving abroad. (J'hésite encore à partir vivre à l'étranger.)"
+    },
+    {
+      "id": "en-pull-someone-s-leg",
+      "kind": "word",
+      "text": "to pull someone's leg",
+      "translation": "faire marcher quelqu'un",
+      "theme": "anglais",
+      "example": "Relax, I'm just pulling your leg! (Détends-toi, je te fais marcher !)"
+    },
+    {
+      "id": "en-spill-the-beans",
+      "kind": "word",
+      "text": "to spill the beans",
+      "translation": "vendre la mèche",
+      "theme": "anglais",
+      "example": "Who spilled the beans about the surprise party? (Qui a vendu la mèche pour la fête surprise ?)"
+    },
+    {
+      "id": "en-take-a-rain-check",
+      "kind": "word",
+      "text": "to take a rain check",
+      "translation": "remettre à une autre fois",
+      "theme": "anglais",
+      "example": "I'm exhausted tonight, can I take a rain check? (Je suis épuisé ce soir, on peut remettre ça à une autre fois ?)",
+      "definition": "Refuser une invitation poliment en proposant de la reporter."
+    },
+    {
+      "id": "en-have-a-lot-on-your-plate",
+      "kind": "word",
+      "text": "to have a lot on your plate",
+      "translation": "avoir beaucoup de choses à gérer",
+      "theme": "anglais",
+      "example": "I can't help this week, I've got a lot on my plate. (Je ne peux pas aider cette semaine, j'ai beaucoup de choses à gérer.)"
+    },
+    {
+      "id": "en-go-the-extra-mile",
+      "kind": "word",
+      "text": "to go the extra mile",
+      "translation": "se donner encore plus",
+      "theme": "anglais",
+      "example": "She always goes the extra mile for her clients. (Elle se donne toujours encore plus pour ses clients.)",
+      "definition": "Faire plus que ce qui est demandé."
+    },
+    {
+      "id": "en-not-my-cup-of-tea",
+      "kind": "word",
+      "text": "not my cup of tea",
+      "translation": "pas mon truc",
+      "theme": "anglais",
+      "example": "Horror films are not really my cup of tea. (Les films d'horreur, ce n'est pas vraiment mon truc.)"
+    },
+    {
+      "id": "en-be-under-the-weather",
+      "kind": "word",
+      "text": "to be under the weather",
+      "translation": "ne pas être dans son assiette",
+      "theme": "anglais",
+      "example": "I'm feeling a bit under the weather today. (Je ne suis pas trop dans mon assiette aujourd'hui.)",
+      "definition": "Être un peu malade ou fatigué."
+    },
+    {
+      "id": "en-cheesy",
+      "kind": "word",
+      "text": "cheesy",
+      "translation": "ringard, kitsch",
+      "theme": "anglais",
+      "example": "The film was so cheesy, but I loved it. (Le film était super ringard, mais j'ai adoré.)",
+      "definition": "Exagérément sentimental ou de mauvais goût."
+    },
+    {
+      "id": "en-nosy",
+      "kind": "word",
+      "text": "nosy",
+      "translation": "curieux, fouineur",
+      "theme": "anglais",
+      "example": "My neighbours are so nosy, they watch everyone who comes in. (Mes voisins sont tellement fouineurs, ils surveillent tous ceux qui entrent.)",
+      "definition": "Qui se mêle de ce qui ne le regarde pas."
+    },
+    {
+      "id": "en-stubborn",
+      "kind": "word",
+      "text": "stubborn",
+      "translation": "têtu",
+      "theme": "anglais",
+      "example": "He's too stubborn to ask for help. (Il est trop têtu pour demander de l'aide.)"
+    },
+    {
+      "id": "en-tipsy",
+      "kind": "word",
+      "text": "tipsy",
+      "translation": "pompette",
+      "theme": "anglais",
+      "example": "After two glasses of wine she was already tipsy. (Après deux verres de vin, elle était déjà pompette.)"
+    },
+    {
+      "id": "en-clumsy",
+      "kind": "word",
+      "text": "clumsy",
+      "translation": "maladroit",
+      "theme": "anglais",
+      "example": "I'm so clumsy, I broke another glass. (Je suis tellement maladroit, j'ai encore cassé un verre.)"
+    },
+    {
+      "id": "en-moody",
+      "kind": "word",
+      "text": "moody",
+      "translation": "lunatique, d'humeur changeante",
+      "theme": "anglais",
+      "example": "Teenagers can be really moody. (Les ados peuvent être vraiment lunatiques.)"
+    },
+    {
+      "id": "en-thoughtful",
+      "kind": "word",
+      "text": "thoughtful",
+      "translation": "attentionné, prévenant",
+      "theme": "anglais",
+      "example": "It was very thoughtful of you to call. (C'était très attentionné de ta part d'appeler.)"
+    },
+    {
+      "id": "en-resourceful",
+      "kind": "word",
+      "text": "resourceful",
+      "translation": "débrouillard, ingénieux",
+      "theme": "anglais",
+      "example": "Travelling alone made me much more resourceful. (Voyager seul m'a rendu beaucoup plus débrouillard.)"
+    },
+    {
+      "id": "en-outspoken",
+      "kind": "word",
+      "text": "outspoken",
+      "translation": "franc, qui dit ce qu'il pense",
+      "theme": "anglais",
+      "example": "She's very outspoken about politics. (Elle dit clairement ce qu'elle pense de la politique.)"
+    },
+    {
+      "id": "en-gullible",
+      "kind": "word",
+      "text": "gullible",
+      "translation": "crédule, naïf",
+      "theme": "anglais",
+      "example": "He's so gullible, he believes everything he reads online. (Il est tellement crédule, il croit tout ce qu'il lit en ligne.)"
+    },
+    {
+      "id": "en-picky",
+      "kind": "word",
+      "text": "picky",
+      "translation": "difficile (surtout pour manger)",
+      "theme": "anglais",
+      "example": "My little brother is a really picky eater. (Mon petit frère est vraiment difficile pour manger.)"
+    },
+    {
+      "id": "en-bossy",
+      "kind": "word",
+      "text": "bossy",
+      "translation": "autoritaire, qui donne des ordres",
+      "theme": "anglais",
+      "example": "Stop being so bossy, you're not my boss! (Arrête d'être aussi autoritaire, t'es pas mon chef !)"
+    },
+    {
+      "id": "en-hectic",
+      "kind": "word",
+      "text": "hectic",
+      "translation": "mouvementé, chargé",
+      "theme": "anglais",
+      "example": "It's been a hectic week, I barely slept. (Ça a été une semaine de dingue, j'ai à peine dormi.)"
+    },
+    {
+      "id": "en-tedious",
+      "kind": "word",
+      "text": "tedious",
+      "translation": "fastidieux, pénible",
+      "theme": "anglais",
+      "example": "Filling in these forms is so tedious. (Remplir ces formulaires est tellement fastidieux.)",
+      "definition": "Long, répétitif et ennuyeux."
+    },
+    {
+      "id": "en-eerie",
+      "kind": "word",
+      "text": "eerie",
+      "translation": "étrange, inquiétant",
+      "theme": "anglais",
+      "example": "The empty streets at night had an eerie feeling. (Les rues vides la nuit avaient quelque chose d'inquiétant.)",
+      "definition": "Bizarre au point de mettre mal à l'aise."
+    },
+    {
+      "id": "en-worn-out",
+      "kind": "word",
+      "text": "worn out",
+      "translation": "épuisé, lessivé",
+      "theme": "anglais",
+      "example": "I'm completely worn out after that hike. (Je suis complètement lessivé après cette randonnée.)"
+    },
+    {
+      "id": "en-unwind",
+      "kind": "word",
+      "text": "to unwind",
+      "translation": "décompresser",
+      "theme": "anglais",
+      "example": "Reading helps me unwind after work. (Lire m'aide à décompresser après le travail.)"
+    },
+    {
+      "id": "en-vent",
+      "kind": "word",
+      "text": "to vent",
+      "translation": "vider son sac",
+      "theme": "anglais",
+      "example": "Sorry, I just needed to vent for a minute. (Désolé, j'avais juste besoin de vider mon sac une minute.)",
+      "definition": "Exprimer sa colère ou sa frustration pour se soulager."
+    },
+    {
+      "id": "en-overthink",
+      "kind": "word",
+      "text": "to overthink",
+      "translation": "trop réfléchir, se prendre la tête",
+      "theme": "anglais",
+      "example": "You're overthinking it, just send the message. (Tu te prends trop la tête, envoie juste le message.)",
+      "definition": "Analyser une situation au point de s'en inquiéter."
+    },
+    {
+      "id": "en-second-guess",
+      "kind": "word",
+      "text": "to second-guess",
+      "translation": "douter après coup, remettre en question",
+      "theme": "anglais",
+      "example": "Stop second-guessing yourself, you made the right choice. (Arrête de douter de toi, tu as fait le bon choix.)",
+      "definition": "Remettre en doute une décision ou soi-même."
+    },
+    {
+      "id": "en-bittersweet",
+      "kind": "word",
+      "text": "bittersweet",
+      "translation": "doux-amer",
+      "theme": "anglais",
+      "example": "Leaving school was a bittersweet moment. (Quitter l'école a été un moment doux-amer.)",
+      "definition": "Mélange de joie et de tristesse."
+    },
+    {
+      "id": "en-hunch",
+      "kind": "word",
+      "text": "a hunch",
+      "translation": "une intuition, une idée",
+      "theme": "anglais",
+      "example": "I have a hunch she's going to say yes. (J'ai l'intuition qu'elle va dire oui.)"
+    },
+    {
+      "id": "en-wing-it",
+      "kind": "word",
+      "text": "to wing it",
+      "translation": "improviser",
+      "theme": "anglais",
+      "example": "I didn't prepare my speech, I just winged it. (Je n'ai pas préparé mon discours, j'ai improvisé.)",
+      "definition": "Faire quelque chose sans s'être préparé."
+    },
+    {
+      "id": "en-no-brainer",
+      "kind": "word",
+      "text": "a no-brainer",
+      "translation": "une évidence",
+      "theme": "anglais",
+      "example": "Taking the free upgrade was a no-brainer. (Accepter le surclassement gratuit, c'était une évidence.)",
+      "definition": "Décision tellement simple qu'il n'y a pas à réfléchir."
+    },
+    {
+      "id": "en-snooze",
+      "kind": "word",
+      "text": "to snooze",
+      "translation": "remettre le réveil, faire un petit somme",
+      "theme": "anglais",
+      "example": "I snoozed my alarm five times this morning. (J'ai repoussé mon réveil cinq fois ce matin.)"
     }
   ]
 }

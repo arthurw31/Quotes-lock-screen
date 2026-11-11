@@ -20,19 +20,35 @@ data class Quote(
     val theme: String?,
     /** Explication facultative de la citation, et exemple concret. */
     val explanation: String? = null,
-    val example: String? = null
-)
+    val example: String? = null,
+    /** "quote" pour une citation, "word" pour un mot anglais. */
+    val kind: String = KIND_QUOTE,
+    /** Pour un mot : définition courte affichée sous la traduction. */
+    val definition: String? = null
+) {
+    /** Pour un mot anglais, [text] est le mot et [author] sa traduction. */
+    val isWord: Boolean get() = kind == KIND_WORD
+
+    companion object {
+        const val KIND_QUOTE = "quote"
+        const val KIND_WORD = "word"
+    }
+}
 
 data class HistoryEntry(
     val id: String,
     val text: String,
     val author: String,
     val source: String?,
-    val shownAt: Long
-)
+    val shownAt: Long,
+    val kind: String = Quote.KIND_QUOTE
+) {
+    val isWord: Boolean get() = kind == Quote.KIND_WORD
+}
 
 data class QuotesInfo(
     val count: Int,
+    val words: Int,
     val fromGithub: Boolean,
     val lastUpdate: Long,
     val lastCheck: Long,
@@ -53,8 +69,10 @@ object QuoteParser {
         val ids = HashSet<String>()
         for (i in 0 until array.length()) {
             val o = array.optJSONObject(i) ?: continue
+            val kind = if (o.str("kind") == Quote.KIND_WORD) Quote.KIND_WORD else Quote.KIND_QUOTE
             val text = o.str("text")
-            val author = o.str("author")
+            // Pour un mot, la traduction tient la place de l'auteur.
+            val author = if (kind == Quote.KIND_WORD) o.str("translation") else o.str("author")
             if (text.isEmpty() || author.isEmpty()) continue
             val id = o.str("id").ifEmpty { "q" + text.hashCode().toUInt().toString(16) }
             if (!ids.add(id)) continue
@@ -63,7 +81,9 @@ object QuoteParser {
                 source = o.str("source").ifEmpty { null },
                 theme = o.str("theme").ifEmpty { null },
                 explanation = o.str("explanation").ifEmpty { null },
-                example = o.str("example").ifEmpty { null }
+                example = o.str("example").ifEmpty { null },
+                kind = kind,
+                definition = o.str("definition").ifEmpty { null }
             )
         }
         return out
@@ -92,7 +112,8 @@ class QuoteRepository(context: Context) {
     }.getOrDefault(emptyList())
 
     fun info(): QuotesInfo = QuotesInfo(
-        count = quotes().size,
+        count = quotes().count { !it.isWord },
+        words = quotes().count { it.isWord },
         fromGithub = cacheFile.exists(),
         lastUpdate = p.getLong("lastUpdate", 0L),
         lastCheck = p.getLong("lastCheck", 0L),
@@ -152,14 +173,21 @@ class QuoteRepository(context: Context) {
         val id = p.getString("currentId", null) ?: return null
         quotes().firstOrNull { it.id == id }?.let { return it }
         // La citation n'est plus dans la liste : on garde celle de l'historique.
-        return history().firstOrNull { it.id == id }?.let { Quote(it.id, it.text, it.author, it.source, null) }
+        return history().firstOrNull { it.id == id }?.let { Quote(it.id, it.text, it.author, it.source, null, kind = it.kind) }
     }
 
     /** Choisit une nouvelle citation : jamais la même, pas de répétition avant d'avoir tout vu, sans celles que tu n'aimes pas. */
     @Synchronized
-    fun next(): Quote? {
-        val all = quotes()
-        if (all.isEmpty()) return null
+    fun next(mode: ContentMode = ContentMode.QUOTES): Quote? {
+        val everything = quotes()
+        if (everything.isEmpty()) return null
+        // Filtre selon le contenu choisi ; « les deux » alterne citation et mot.
+        val wantWord = when (mode) {
+            ContentMode.QUOTES -> false
+            ContentMode.WORDS -> true
+            ContentMode.BOTH -> current()?.isWord != true
+        }
+        val all = everything.filter { it.isWord == wantWord }.ifEmpty { everything }
         val ratings = ratings()
         val currentId = p.getString("currentId", null)
         var shown = p.getStringSet("shown", emptySet())!!.toMutableSet()
@@ -187,19 +215,20 @@ class QuoteRepository(context: Context) {
                 val o = a.getJSONObject(i)
                 HistoryEntry(
                     o.getString("id"), o.getString("text"), o.getString("author"),
-                    if (o.isNull("source")) null else o.optString("source"), o.getLong("at")
+                    if (o.isNull("source")) null else o.optString("source"), o.getLong("at"),
+                    o.optString("kind", Quote.KIND_QUOTE)
                 )
             }
         }.getOrDefault(emptyList())
     }
 
     private fun addHistory(q: Quote) {
-        val list = listOf(HistoryEntry(q.id, q.text, q.author, q.source, System.currentTimeMillis())) +
+        val list = listOf(HistoryEntry(q.id, q.text, q.author, q.source, System.currentTimeMillis(), q.kind)) +
             history().take(MAX_HISTORY - 1)
         val a = JSONArray()
         list.forEach { e ->
             a.put(JSONObject().put("id", e.id).put("text", e.text).put("author", e.author)
-                .put("source", e.source ?: JSONObject.NULL).put("at", e.shownAt))
+                .put("source", e.source ?: JSONObject.NULL).put("at", e.shownAt).put("kind", e.kind))
         }
         p.edit().putString("history", a.toString()).apply()
     }
@@ -234,9 +263,10 @@ class QuoteRepository(context: Context) {
         quotes().forEach { known.putIfAbsent(it.id, it.text to it.author) }
         val seenIds = history().map { it.id }.toSet()
 
+        val words = history().filter { it.isWord }.map { it.id }.toSet() + quotes().filter { it.isWord }.map { it.id }
         fun line(id: String): String {
             val (text, author) = known[id] ?: return "- ($id)"
-            return "- « $text » ($author)"
+            return if (id in words) "- mot anglais : $text ($author)" else "- « $text » ($author)"
         }
 
         val liked = ratings.filterValues { it > 0 }.keys

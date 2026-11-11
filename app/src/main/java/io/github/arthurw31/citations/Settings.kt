@@ -30,6 +30,12 @@ enum class ColorChoice(val label: String, val argb: Int?) {
     BLACK("Noir", 0xFF161616.toInt())
 }
 
+enum class ContentMode(val label: String) {
+    QUOTES("Citations"),
+    WORDS("Mots anglais"),
+    BOTH("Les deux")
+}
+
 enum class Frequency(val label: String, val hours: Int) {
     DAILY("Chaque jour", 24),
     TWICE("2 fois par jour", 12),
@@ -92,6 +98,10 @@ class SettingsStore(context: Context) {
     var frequency: Frequency
         get() = enumOr(p.getString("frequency", null), Frequency.DAILY)
         set(v) = p.edit().putString("frequency", v.name).apply()
+
+    var contentMode: ContentMode
+        get() = enumOr(p.getString("contentMode", null), ContentMode.QUOTES)
+        set(v) = p.edit().putString("contentMode", v.name).apply()
 
     var quotesUrl: String
         get() = p.getString("quotesUrl", null)?.takeIf { it.isNotBlank() } ?: DEFAULT_QUOTES_URL
