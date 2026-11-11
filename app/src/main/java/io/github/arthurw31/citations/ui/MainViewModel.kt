@@ -7,10 +7,9 @@ import android.os.PowerManager
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import io.github.arthurw31.citations.Appearance
-import io.github.arthurw31.citations.ContentMode
 import io.github.arthurw31.citations.ApplyResult
 import io.github.arthurw31.citations.Engine
-import io.github.arthurw31.citations.Frequency
+import io.github.arthurw31.citations.Schedule
 import io.github.arthurw31.citations.HistoryEntry
 import io.github.arthurw31.citations.Photo
 import io.github.arthurw31.citations.Quote
@@ -31,8 +30,8 @@ import kotlinx.coroutines.withContext
 
 data class UiState(
     val appearance: Appearance = Appearance(),
-    val frequency: Frequency = Frequency.DAILY,
-    val contentMode: ContentMode = ContentMode.QUOTES,
+    val quotesPerDay: Int = 2,
+    val wordsPerDay: Int = 4,
     val hasPhoto: Boolean = false,
     val current: Quote? = null,
     val info: QuotesInfo? = null,
@@ -71,7 +70,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         startPreviewLoop()
         viewModelScope.launch(Dispatchers.IO) {
             if (repo.current() == null) {
-                repo.next(settings.contentMode)
+                repo.next(Schedule.current(settings).second.word)
                 Engine.markCurrentSlot(ctx)
             }
             refreshNow()
@@ -89,8 +88,8 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         _ui.update {
             it.copy(
                 appearance = settings.appearance(),
-                frequency = settings.frequency,
-                contentMode = settings.contentMode,
+                quotesPerDay = settings.quotesPerDay,
+                wordsPerDay = settings.wordsPerDay,
                 hasPhoto = Photo.exists(ctx),
                 current = repo.current(),
                 info = repo.info(),
@@ -165,7 +164,7 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         if (Photo.exists(ctx)) {
             report(Engine.next(ctx))
         } else {
-            repo.next(settings.contentMode)
+            repo.next(Engine.manualType(ctx))
             Engine.markCurrentSlot(ctx)
         }
         refreshNow()
@@ -187,17 +186,13 @@ class MainViewModel(app: Application) : AndroidViewModel(app) {
         refreshNow()
     }
 
-    fun setFrequency(f: Frequency) = work {
-        settings.frequency = f
-        Engine.markCurrentSlot(ctx)
+    /** Change le nombre de citations et de mots par jour, et affiche tout de suite l'élément du créneau en cours. */
+    fun setPerDay(quotes: Int, words: Int) = work {
+        settings.quotesPerDay = quotes
+        settings.wordsPerDay = words
+        Engine.tick(ctx, force = true)
         refreshNow()
-    }
-
-    /** Change le type de contenu et passe tout de suite à un élément de ce type. */
-    fun setContentMode(m: ContentMode) {
-        settings.contentMode = m
-        _ui.update { it.copy(contentMode = m) }
-        nextQuote()
+        requestPreview()
     }
 
     fun setUrl(url: String) = work {

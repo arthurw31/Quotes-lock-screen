@@ -1,6 +1,6 @@
 # Citations sur l'écran de verrouillage
 
-Appli Android personnelle qui affiche une citation par-dessus ta photo de fond, directement sur l'écran de verrouillage. La citation change toute seule chaque jour, et la liste se met à jour depuis ce dépôt GitHub, sans réinstaller l'appli.
+Appli Android personnelle qui affiche une citation ou un mot anglais par-dessus ta photo de fond, directement sur l'écran de verrouillage. Le contenu change tout seul plusieurs fois par jour (par défaut 2 citations et 4 mots anglais, entre 7 h et 22 h), et la liste se met à jour depuis ce dépôt GitHub, sans réinstaller l'appli.
 
 ![Aperçu du rendu](docs/apercu.png)
 
@@ -30,7 +30,7 @@ Android ne permet pas à une appli d'écrire directement sur l'écran de verroui
    * touche **Autoriser** pour que l'appli fonctionne sans restriction de batterie (sinon Android peut retarder le changement de citation d'un jour ou plus si tu n'ouvres jamais l'appli) ;
    * touche **Ouvrir les infos de l'appli** et désactive **Suspendre l'activité dans l'appli si elle n'est pas utilisée**. Sans ça, Android peut mettre l'appli en veille au bout de quelques mois.
 
-C'est tout. La citation change ensuite toute seule, peu après minuit.
+C'est tout. Le contenu change ensuite tout seul aux heures du programme. Tu peux régler le nombre de citations et de mots par jour dans l'onglet **Citations**, carte « Contenu et fréquence ».
 
 ## 3. Mettre à jour les citations (chaque mois)
 
@@ -54,7 +54,7 @@ Modifier seulement les citations ne demande pas de nouvelle version de l'appli.
 
 * **Fonds spéciaux** : si tu utilisais un fond animé, un effet de profondeur (horloge derrière le sujet) ou un fond généré par l'IA sur l'écran de verrouillage, il est remplacé par une image fixe.
 * **Notifications** : quand tu as beaucoup de notifications, elles peuvent recouvrir la citation. Place-la plus bas si ça te gêne.
-* **Heure du changement** : Android regroupe les tâches de fond pour économiser la batterie. Le changement a lieu en général dans l'heure qui suit minuit, parfois un peu plus tard.
+* **Heure du changement** : Android regroupe les tâches de fond pour économiser la batterie. Un changement peut donc arriver avec une heure ou deux de décalage par rapport au programme.
 * **Changer de fond d'écran** : si tu changes de photo dans les réglages du Pixel, l'écran de verrouillage sera écrasé jusqu'au prochain changement de citation. Change plutôt la photo dans l'appli Citations.
 * **Vérification des développeurs** : Google déploie progressivement l'obligation de vérifier l'identité des développeurs pour les applis installées hors Play Store. En France, rien ne bloque pour l'instant. Si un jour l'installation est refusée, il restera l'installation par câble (adb) ou un compte développeur gratuit « amateur ».
 

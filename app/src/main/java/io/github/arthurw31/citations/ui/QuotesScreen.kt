@@ -53,8 +53,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.unit.dp
-import io.github.arthurw31.citations.ContentMode
-import io.github.arthurw31.citations.Frequency
+import io.github.arthurw31.citations.Schedule
 import io.github.arthurw31.citations.QuoteRenderer
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
@@ -149,10 +148,14 @@ fun QuotesScreen(vm: MainViewModel, state: UiState) {
         item {
             CardBlock {
                 Text("Contenu et fréquence", style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.primary)
-                Choices("Afficher", ContentMode.entries, state.contentMode, { it.label }) { vm.setContentMode(it) }
-                Hint("« Les deux » alterne une citation et un mot anglais à chaque changement.")
-                Choices("Fréquence", Frequency.entries, state.frequency, { it.label }) { vm.setFrequency(it) }
-                Hint("Le changement se fait après minuit (ou midi), dans l'heure qui suit en général. Android peut le retarder un peu pour économiser la batterie.")
+                Choices("Citations par jour", (0..4).toList(), state.quotesPerDay, { "$it" }) {
+                    vm.setPerDay(it, state.wordsPerDay)
+                }
+                Choices("Mots anglais par jour", (0..6).toList(), state.wordsPerDay, { "$it" }) {
+                    vm.setPerDay(state.quotesPerDay, it)
+                }
+                Hint("Programme : " + Schedule.describe(state.quotesPerDay, state.wordsPerDay) + ".")
+                Hint("Le dernier élément reste affiché pendant la nuit. Android peut décaler un changement d'une heure ou deux pour économiser la batterie.")
             }
         }
 

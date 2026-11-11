@@ -178,16 +178,12 @@ class QuoteRepository(context: Context) {
 
     /** Choisit une nouvelle citation : jamais la même, pas de répétition avant d'avoir tout vu, sans celles que tu n'aimes pas. */
     @Synchronized
-    fun next(mode: ContentMode = ContentMode.QUOTES): Quote? {
+    /** [wantWord] : true pour un mot anglais, false pour une citation, null pour n'importe quoi. */
+    fun next(wantWord: Boolean? = null): Quote? {
         val everything = quotes()
         if (everything.isEmpty()) return null
-        // Filtre selon le contenu choisi ; « les deux » alterne citation et mot.
-        val wantWord = when (mode) {
-            ContentMode.QUOTES -> false
-            ContentMode.WORDS -> true
-            ContentMode.BOTH -> current()?.isWord != true
-        }
-        val all = everything.filter { it.isWord == wantWord }.ifEmpty { everything }
+        val all = if (wantWord == null) everything
+            else everything.filter { it.isWord == wantWord }.ifEmpty { everything }
         val ratings = ratings()
         val currentId = p.getString("currentId", null)
         var shown = p.getStringSet("shown", emptySet())!!.toMutableSet()

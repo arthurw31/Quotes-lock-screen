@@ -18,7 +18,7 @@ import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import java.io.File
-import java.util.TimeZone
+import java.util.Calendar
 import java.util.concurrent.TimeUnit
 import kotlin.math.max
 import kotlin.math.min
@@ -86,7 +86,7 @@ object Engine {
     /** Dessine la citation actuelle sur la photo et l'installe sur l'écran de verrouillage uniquement. */
     fun apply(ctx: Context): ApplyResult {
         val repo = QuoteRepository(ctx)
-        val quote = repo.current() ?: repo.next(SettingsStore(ctx).contentMode) ?: return ApplyResult.NoQuote
+        val quote = repo.current() ?: repo.next(Schedule.current(SettingsStore(ctx)).second.word) ?: return ApplyResult.NoQuote
         val photo = Photo.load(ctx) ?: return ApplyResult.NoPhoto
         return try {
             val size = Screen.size(ctx)
@@ -107,36 +107,83 @@ object Engine {
         }
     }
 
-    /** Passe à la citation suivante puis l'installe. */
+    /** Passe à l'élément suivant (même type que l'actuel) puis l'installe. */
     fun next(ctx: Context): ApplyResult {
-        QuoteRepository(ctx).next(SettingsStore(ctx).contentMode) ?: return ApplyResult.NoQuote
+        QuoteRepository(ctx).next(manualType(ctx)) ?: return ApplyResult.NoQuote
         markCurrentSlot(ctx)
         return apply(ctx)
     }
 
-    /** Appelé régulièrement en arrière-plan : change la citation seulement quand la période est écoulée. */
-    fun tick(ctx: Context) {
-        if (!Photo.exists(ctx)) return
-        val repo = QuoteRepository(ctx)
+    /** Type choisi pour le bouton « Suivante » : on garde le type affiché, sauf s'il est réglé à zéro par jour. */
+    fun manualType(ctx: Context): Boolean {
         val settings = SettingsStore(ctx)
-        val key = slotKey(settings.frequency)
-        if (repo.slotKey == key) return
-        repo.next(settings.contentMode) ?: return
+        val current = QuoteRepository(ctx).current()
+        return when {
+            current == null -> Schedule.current(settings).second.word
+            current.isWord && settings.wordsPerDay == 0 -> false
+            !current.isWord && settings.quotesPerDay == 0 && settings.wordsPerDay > 0 -> true
+            else -> current.isWord
+        }
+    }
+
+    /** Appelé régulièrement en arrière-plan : change l'élément quand on entre dans un nouveau créneau. */
+    fun tick(ctx: Context, force: Boolean = false) {
+        val repo = QuoteRepository(ctx)
+        val (key, slot) = Schedule.current(SettingsStore(ctx))
+        if (!force && repo.slotKey == key) return
+        repo.next(slot.word) ?: return
         repo.slotKey = key
-        apply(ctx)
+        if (Photo.exists(ctx)) apply(ctx)
     }
 
-    /** Évite un changement immédiat quand on vient de choisir la citation à la main ou de changer la fréquence. */
+    /** Évite un changement immédiat quand on vient de choisir un élément à la main. */
     fun markCurrentSlot(ctx: Context) {
-        QuoteRepository(ctx).slotKey = slotKey(SettingsStore(ctx).frequency)
+        QuoteRepository(ctx).slotKey = Schedule.current(SettingsStore(ctx)).first
+    }
+}
+
+/**
+ * Programme de la journée : les changements sont répartis à intervalles réguliers
+ * entre 7 h et 22 h. Les citations sont placées en premier (le matin) puis espacées.
+ */
+object Schedule {
+    private const val START_MIN = 7 * 60
+    private const val END_MIN = 22 * 60
+
+    data class Slot(val minuteOfDay: Int, val word: Boolean)
+
+    fun slots(quotesPerDay: Int, wordsPerDay: Int): List<Slot> {
+        val q = if (quotesPerDay + wordsPerDay == 0) 1 else quotesPerDay
+        val n = q + wordsPerDay
+        val quotePositions = (0 until q).map { k -> k * n / q }.toSet()
+        return (0 until n).map { i ->
+            val minute = if (n == 1) START_MIN else START_MIN + i * (END_MIN - START_MIN) / (n - 1)
+            Slot(minute, i !in quotePositions)
+        }
     }
 
-    /** Les périodes commencent à minuit, heure locale (minuit et midi pour 2 fois par jour, etc.). */
-    private fun slotKey(f: Frequency): String {
-        val now = System.currentTimeMillis()
-        val local = now + TimeZone.getDefault().getOffset(now)
-        return "${f.hours}:${local / (f.hours * 3_600_000L)}"
+    /** Clé du créneau en cours (date + numéro) et créneau correspondant. Avant 7 h, c'est le dernier créneau de la veille. */
+    fun current(settings: SettingsStore, now: Calendar = Calendar.getInstance()): Pair<String, Slot> {
+        val q = settings.quotesPerDay
+        val w = settings.wordsPerDay
+        val list = slots(q, w)
+        val day = now.clone() as Calendar
+        val minute = now.get(Calendar.HOUR_OF_DAY) * 60 + now.get(Calendar.MINUTE)
+        val index = if (minute < list.first().minuteOfDay) {
+            day.add(Calendar.DAY_OF_YEAR, -1)
+            list.lastIndex
+        } else list.indexOfLast { it.minuteOfDay <= minute }
+        val date = "%04d%02d%02d".format(day.get(Calendar.YEAR), day.get(Calendar.MONTH) + 1, day.get(Calendar.DAY_OF_MONTH))
+        return "$date:$index:$q:$w" to list[index]
     }
+
+    /** Texte lisible du programme, par exemple « 7 h citation, 10 h mot ». */
+    fun describe(quotesPerDay: Int, wordsPerDay: Int): String =
+        slots(quotesPerDay, wordsPerDay).joinToString(", ") {
+            val h = it.minuteOfDay / 60
+            val m = it.minuteOfDay % 60
+            (if (m == 0) "$h h" else "$h h %02d".format(m)) + if (it.word) " mot" else " citation"
+        }
 }
 
 class RotateWorker(ctx: Context, params: WorkerParameters) : CoroutineWorker(ctx, params) {
