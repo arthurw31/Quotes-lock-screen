@@ -29,6 +29,15 @@ data class Quote(
     /** Pour un mot anglais, [text] est le mot et [author] sa traduction. */
     val isWord: Boolean get() = kind == KIND_WORD
 
+    /** Phrase d'exemple en anglais et sa traduction, séparées depuis « phrase (traduction) ». */
+    val exampleParts: Pair<String, String?>?
+        get() {
+            val e = example?.trim() ?: return null
+            val open = e.lastIndexOf(" (")
+            return if (open > 0 && e.endsWith(")")) e.substring(0, open).trim() to e.substring(open + 2, e.length - 1).trim()
+            else e to null
+        }
+
     companion object {
         const val KIND_QUOTE = "quote"
         const val KIND_WORD = "word"

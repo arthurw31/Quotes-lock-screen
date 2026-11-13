@@ -162,6 +162,7 @@ private fun AppearanceScreen(vm: MainViewModel, state: UiState, preview: android
         LabeledSlider("Bande sur toute la largeur", a.scrim, 0f..1f, "Aucune", "Marquée") { v -> set { copy(scrim = v) } }
         SwitchRow("Ombre douce", a.shadow) { v -> set { copy(shadow = v) } }
         SwitchRow("Afficher l'auteur", a.showAuthor) { v -> set { copy(showAuthor = v) } }
+        SwitchRow("Phrase d'exemple sous les mots anglais", a.showExample) { v -> set { copy(showExample = v) } }
         SwitchRow("Simuler l'horloge dans l'aperçu", showClock) { showClock = it }
         Hint("L'horloge du Pixel occupe le haut de l'écran et les notifications s'affichent en dessous. Le bas de l'écran (au-dessus des raccourcis) est généralement la zone la plus tranquille.")
         Spacer(Modifier.height(24.dp))

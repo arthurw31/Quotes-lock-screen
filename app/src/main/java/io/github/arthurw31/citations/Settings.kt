@@ -44,7 +44,9 @@ data class Appearance(
     /** Ombrage doux autour du texte (0 = aucun, 1 = très marqué). */
     val halo: Float = 0f,
     val shadow: Boolean = true,
-    val showAuthor: Boolean = true
+    val showAuthor: Boolean = true,
+    /** Pour les mots anglais : afficher la phrase d'exemple sous le mot. */
+    val showExample: Boolean = true
 )
 
 class SettingsStore(context: Context) {
@@ -63,7 +65,8 @@ class SettingsStore(context: Context) {
             scrim = p.getFloat("scrim", d.scrim),
             halo = p.getFloat("halo", d.halo),
             shadow = p.getBoolean("shadow", d.shadow),
-            showAuthor = p.getBoolean("showAuthor", d.showAuthor)
+            showAuthor = p.getBoolean("showAuthor", d.showAuthor),
+            showExample = p.getBoolean("showExample", d.showExample)
         )
     }
 
@@ -80,6 +83,7 @@ class SettingsStore(context: Context) {
             .putFloat("halo", a.halo)
             .putBoolean("shadow", a.shadow)
             .putBoolean("showAuthor", a.showAuthor)
+            .putBoolean("showExample", a.showExample)
             .apply()
     }
 

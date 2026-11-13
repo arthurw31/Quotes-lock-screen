@@ -121,6 +121,15 @@ object QuoteRenderer {
                 val defPaint = paint(size * 0.5f, Typeface.create("sans-serif", Typeface.NORMAL), Locale.FRENCH, 0.02f)
                 lines += Line(build(frenchTypography(it), defPaint, width, alignment, size * 0.08f), 0xC8, size * 0.55f)
             }
+            // Phrase d'exemple en anglais, puis sa traduction, pour voir le mot en contexte.
+            if (a.showExample) quote.exampleParts?.let { (en, fr) ->
+                val enPaint = paint(size * 0.6f, Typeface.create("serif", Typeface.ITALIC), Locale.ENGLISH, 0f)
+                lines += Line(build("“$en”", enPaint, width, alignment, size * 0.1f), 0xEB, size * 0.9f)
+                fr?.let {
+                    val frPaint = paint(size * 0.46f, Typeface.create("sans-serif", Typeface.NORMAL), Locale.FRENCH, 0.02f)
+                    lines += Line(build(frenchTypography(it), frPaint, width, alignment, size * 0.06f), 0xB0, size * 0.3f)
+                }
+            }
             return Block(lines, size)
         }
 

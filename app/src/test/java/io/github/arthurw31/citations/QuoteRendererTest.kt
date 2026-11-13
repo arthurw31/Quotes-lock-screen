@@ -75,7 +75,9 @@ class QuoteRendererTest {
             "clair_moderne_grand" to (true to Appearance(font = FontChoice.SANS_LIGHT, size = 0.8f, color = ColorChoice.BLACK, scrim = 0.6f))
         )
         val word = Quote("en-linger", "to linger", "s'attarder", null, null,
-            kind = Quote.KIND_WORD, definition = "Rester plus longtemps que prévu, avoir du mal à partir.")
+            kind = Quote.KIND_WORD, definition = "Rester plus longtemps que prévu, avoir du mal à partir.",
+            example = "We lingered over coffee long after the meal was finished. (On s'est attardés autour d'un café bien après la fin du repas.)")
+        assertEquals("We lingered over coffee long after the meal was finished.", word.exampleParts?.first)
         File(dir, "mot_sombre.png").outputStream().use {
             QuoteRenderer.render(photo(false), word, Appearance(), 640, 1428).compress(Bitmap.CompressFormat.PNG, 100, it)
         }
